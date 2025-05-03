@@ -1,0 +1,175 @@
+logo: /assets/logo_horiz_darkblue_bgtransparent.svg
+extra_head: []
+lang: ja
+site:
+  author: "イソリア"
+  title: "Tech IT Easy Blog"
+  description: "株式会社イソリア IT Tips ブログのページ"
+  isolang: "ja-JP"
+topnav:
+  links: 
+    - text: アーカイブ
+      href: /archive
+      target: _self
+      icon: archive
+      aria_label: サイト内リンク
+      title: アーカイブページへのリンク
+    - text: イソリア
+      href: https://esolia.co.jp
+      target: _blank
+      icon: building-office
+      aria_label: 外部リンク
+      title: イソリア社ウェブサイトへのリンク
+footernav:
+  links: 
+    - text: アーカイブ
+      href: /archive
+      target: _self
+      icon: archive
+      aria_label: サイト内リンク
+      title: アーカイブページへのリンク
+    - text: サイトマップ
+      href: /sitemap.xml
+      target: _self
+      icon: sitemap
+      aria_label: サイト内リンク
+      title: サイトマップへのリンク
+    - text: プライバシーポリシー
+      href: https://esolia.co.jp/privacy
+      target: _blank
+      icon: privacy
+      aria_label: サイト内リンク
+      title: プライバシーポリシーへのリンク
+    - text: GitHubリポジトリ
+      href: https://github.com/eSolia/blog.esolia.pro
+      target: _blank
+      icon: github-logo
+      aria_label: 外部リンク
+      title: 当サイトのGitHubリポジトリへのリンク
+    - text: イソリア
+      href: https://esolia.co.jp
+      target: _blank
+      icon: building-office
+      aria_label: 外部リンク
+      title: イソリア社ウェブサイトへのリンク
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  lang: ja
+  type: website
+  site: "=site.title || イソリア Tech IT Easy Blog"
+  title: "=title || イソリア Tech IT Easy Blog ブログ ページ"
+  description: "=description || イソリア Tech IT Easy Blog ブログより、一つの記事"
+  author: "イソリア"
+  image: "=image || /assets/blog-esolia-pro-default.png"
+  icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
+  keywords: ["イソリア", "ブログ", "ウェブログ", "プロ", "プロフェッショナル", "東京ITサービス", "日本語", "Tips"]
+  twitter: "@esolia_inc"
+  fediverse: "@esolia.com@bsky.brid.gy"
+  color: ["#ffbc68", "#2d2f63"]
+  robots: true
+  generator: true
+  "twitter:label1": "著者"
+  "twitter:data1": "チーム イソリア"
+  "twitter:label2": "読了目安"
+  "twitter:data2": "$ .reading-info || 2 分"
+jsonLd:
+  "@type": WebSite
+  inLanguage: "=site.isolang"
+  isFamilyFriendly: true
+  url: =url
+  headline: =metas.title
+  name: =site.title
+  description: =metas.description
+  author:
+    "@type": Organization
+    name: =site.author
+  editor:
+      "@type": Organization
+      name: "=site.author"
+
+en:
+  lang: en
+  site:
+    author: "eSolia"
+    title: "Tech IT Easy Blog"
+    description: "IT Tips Blog page from eSolia Inc., Tokyo, Japan"
+    isolang: "en-US"
+  topnav:
+    links: 
+      - text: Archive
+        href: /en/archive
+        target: _self
+        icon: archive
+        aria_label: Site internal link
+        title: Link to the Archive page
+      - text: eSolia Inc.
+        href: https://esolia.com
+        target: _blank
+        icon: building-office
+        aria_label: External link
+        title: Link to eSolia Inc. website
+  footernav:
+    links: 
+      - text: Archive
+        href: /archive
+        target: _self
+        icon: archive
+        aria_label: Site internal link
+        title: Link to the Archive page
+      - text: Sitemap
+        href: /sitemap.xml
+        target: _self
+        icon: sitemap
+        aria_label: Site internal link
+        title: Link to the Sitemap
+      - text: Privacy Policy
+        href: https://esolia.com/privacy
+        target: _blank
+        icon: privacy
+        aria_label: Site internal link
+        title: Link to the Privacy Policy
+      - text: Github Repo
+        href: https://github.com/eSolia/blog.esolia.pro
+        target: _blank
+        icon: github-logo
+        aria_label: External link
+        title: Link to the GitHub Repository for this site
+      - text: eSolia
+        href: https://esolia.com
+        target: _blank
+        icon: building-office
+        aria_label: External link
+        title: Link to eSolia Inc. website
+  metas:
+    lang: en
+    type: website
+    site: "=site.title || eSolia Tech IT Easy Blog"
+    title: "=title || eSolia Tech IT Easy Blog Page"
+    description: "=description || An article from the Tech IT Easy Tips Blog page from eSolia Inc., Tokyo, Japan"
+    author: "eSolia"
+    image: "=image || /assets/blog-esolia-pro-default.png"
+    icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
+    keywords: ["eSolia", "blog", "tips", "weblog", "pro", "professional", "tokyo it service", "japan", "english"]
+    twitter: "@esolia_inc"
+    fediverse: "@esolia.com@bsky.brid.gy"
+    color: ["#ffbc68", "#2d2f63"]
+    robots: true
+    generator: true
+    "twitter:label1": "Written by"
+    "twitter:data1": "Team eSolia"
+    "twitter:label2": "Reading Time"
+    "twitter:data2": "$ .reading-info || 2 min"
+  jsonLd:
+    "@type": WebSite
+    inLanguage: "=site.isolang"
+    isFamilyFriendly: true
+    url: =url
+    headline: =metas.title
+    name: =site.title
+    description: =metas.description
+    author:
+      "@type": Organization
+      name: =site.author
+    editor:
+      "@type": Organization
+      name: "=site.author"

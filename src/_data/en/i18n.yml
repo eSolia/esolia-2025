@@ -1,0 +1,92 @@
+lang: en
+home:
+  welcome: Based in Tokyo and approaching YEARS_IN_BUSINESS years in business, bilingual IT outsourcing company <strong>eSolia</strong> shares practical, field-tested tips that are genuinely useful&mdash;drawn from years of hands-on experience.
+  company: eSolia
+  company_long: eSolia Inc.
+  company_address: Shiodome City Center 5F (Work Styling), 1-5-2 Higashi-Shimbashi, Minato-ku, Tokyo, Japan, 105-7105
+archive: 
+  title: Archive
+  description: Browse our archive of past articles. Use categories and tags to quickly find the topics that interest you, or search from the magnifying glass icon in the navigation bar at the top of the page.
+social:
+  share_placeholder: Check out this new post from eSolia's IT Tips Blog
+  share_ask: Kindly do us a favor?
+  share_title: Share this post on social media!
+  linkedin_label: Follow on LinkedIn
+  linkedin_share: Share on LinkedIn
+  linkedin_profile_url: https://www.linkedin.com/company/esolia
+  twitter_label: Follow on X Twitter
+  twitter_profile_url: https://x.com/esolia_inc
+  bluesky_label: Follow on Bluesky
+  bluesky_profile_url: https://bsky.app/profile/esolia.com
+  github_label: GitHub profile
+  github_profile_url: https://github.com/esolia
+logo:
+  symbol_alt: eSolia symbol logo on IT Tips Blog
+  full_alt: eSolia full logo on IT Tips Blog
+newsletter:
+  title: Stay Informed
+  description: Get notified when we publish something new, by entering your email address below.
+  button: Join
+  placeholder: Email address
+  success: Subscribed!
+  error: Subscription failed
+  reference: https://blog.esolia.pro/en/
+  thanks_url: https://blog.esolia.pro/en/thank-you/
+contact:
+  title: Considering our services?
+  button: Contact us
+  url: https://esolia.com/info-request/
+  aria_label: Contact us via eSolia main site
+  description: |
+    Please click the button to contact us via our main site. We will get back to you from there. We look forward to assisting you!
+nav:
+  toc: Table of Contents
+  next_post: Newer post →
+  previous_post: ← Older post
+  continue_reading: Continue reading
+  archive_title: Archive
+  archive: More posts can be found in <a href="/en/archive/">the archive</a>.
+  back: ← Back
+  page: Page
+  next: Next →
+  previous: ← Previous
+  all_categories: All Categories
+  all_tags: All Tags 
+  all_authors: All Authors
+  all_posts: All Posts
+  return_home: Return to Site Top
+  logo_large_alt: eSolia full size logo linking to site top
+  logo_symbol_alt: eSolia symbol-type logo linking to site top
+  mobile_nav_name: Menu
+  aria_label: Navigation menu links
+post:
+  by: by
+  reading_time: Reading Time
+  minutes: min
+  hot: Hot
+search:
+  by_author: Authored by
+  by_tag: Tag
+  by_category: Category
+  tags: Tags
+  categories: Categories
+  authors: Authors
+  filter_by_author: Filter by Author
+  filter_by_tag: Filter by Tag
+  filter_by_category: Filter by Category
+  close_link: Close (Esc)
+  tooltip: <kbd>Cmd</kbd>+<kbd>k</kbd> (Mac) or <br><kbd>Ctrl</kbd>+<kbd>k</kbd> (Win/Linux) <br>to Search
+comments:
+  title: Comments
+  description: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> from your own account on Mastodon or any other ActivityPub-capable social network that can exchange replies with Mastodon.
+  description_bluesky: |
+    You can leave a comment by replying to <a href=":bluesky:">this Bluesky post</a> from your own account.
+  description_all: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> or <a href=":bluesky:">this Bluesky post</a> from your own account.
+  empty: No comments yet
+punctuation: 
+  open_quote: "“"
+  close_quote: "”"
+  open_single_quote: "‘"
+  close_single_quote: "’"
