@@ -1,0 +1,11 @@
+posts/*.md
+_site
+_bin
+_cache
+node_modules
+package-lock.json
+yarn.lock
+deno.lock
+_seo_report_en.json
+_seo_report_ja.json
+errors.log

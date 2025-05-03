@@ -1,0 +1,94 @@
+lang: ja
+home:
+  welcome: 東京を拠点にYEARS_IN_BUSINESS周年を迎えるバイリンガルITアウトソーシングの<strong>イソリア</strong>は、 長年の経験をもとに、現場の視点で選んだ「知って得するTips」を紹介しています。
+  company: イソリア
+  company_long: 株式会社イソリア
+  company_address: 〒105-7105 東京都港区東新橋1-5-2 汐留シティセンター5F（ワークスタイリング）
+archive: 
+  title: アーカイブ
+  description: 過去の記事を一覧でご紹介しています。カテゴリやタグを活用して、興味のある情報にすばやくアクセスできます。または、ページ上部のナビゲーションバーにある虫眼鏡アイコンから検索してください。
+social:
+  share_placeholder: 役立つIT情報をお届け中！当ブログの最新ポストはこちら
+  share_ask: この記事が役に立ったと思ったら
+  share_title: SNSでシェアしてみませんか？
+  linkedin_label: LinkedInでフォローする
+  linkedin_share: LinkedInでシェアする
+  linkedin_profile_url: https://www.linkedin.com/company/esolia
+  twitter_label: X Twitterでフォローする
+  twitter_share: X Twitterでシェアする
+  twitter_profile_url: https://x.com/esolia_inc
+  bluesky_label: Blueskyでフォローする
+  bluesky_share: Blueskyでシェアする
+  bluesky_profile_url: https://bsky.app/profile/esolia.com
+  github_label: GitHubプロフィール
+  github_profile_url: https://github.com/esolia
+logo:
+  symbol_alt: イソリア ロゴ
+  full_alt: イソリア プロ ブログ
+newsletter:
+  title: 最新情報を受け取る
+  description: 最新の記事情報をいち早くお届けします。読み逃しを防ぐためにも、今すぐご登録を。
+  button: 登録
+  placeholder: メールアドレス
+  success: 登録完了しました！
+  error: 登録に失敗しました
+  reference: https://blog.esolia.pro
+  thanks_url: https://blog.esolia.pro/thank-you/
+contact:
+  title: 弊社サービスをご検討される場合
+  button: お問い合わせ
+  aria_label: 当社本サイトにてお問い合わせをする
+  url: https://esolia.co.jp/info-request/
+  description: |
+    サービス導入をご検討の際は、ぜひ本サイトのフォームよりお問い合わせください。担当より迅速にご連絡いたします。
+nav:
+  toc: 目次
+  next_post: より新しいポスト →
+  previous_post: ← より古いポスト
+  continue_reading: つづきを読む
+  archive_title: アーカイブ
+  archive: 更に<a href="/archive/">アーカイブ</a>にて、ポストの閲覧できます
+  back: ← 戻る
+  page: ページ
+  next: 次へ →
+  previous: ← 前へ
+  all_categories: すべてのカテゴリ
+  all_tags: すべてのタグ
+  all_authors: すべての著者
+  all_posts: すべてのポスト
+  return_home: サイトトップへ戻る
+  logo_large_alt: サイトのトップへリンクするイソリア社フルサイズのロゴマーク
+  logo_symbol_alt: サイトのトップへリンクするイソリア社シンボルタイプのロゴマーク
+  mobile_nav_name: メニュー
+  aria_label: ナビゲーションメニューのリンク
+post:
+  by: 著者
+  reading_time: 読了目安
+  minutes: 分
+  hot: 人気
+search:
+  by_author: 著者
+  by_tag: タグ
+  by_category: カテゴリ
+  tags: タグ
+  categories: カテゴリ
+  authors: 著者
+  filter_by_author: 著者でフィルター
+  filter_by_tag: タグでフィルター
+  filter_by_category: カテゴリーでフィルター
+  close_link: 閉じる (Esc)
+  tooltip: <kbd>Cmd</kbd>+<kbd>k</kbd> (Mac) または <br><kbd>Ctrl</kbd>+<kbd>k</kbd> (Win/Linux) <br>で検索
+comments:
+  title: Comments
+  description: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> from your own account on Mastodon or any other ActivityPub_capable social network that can exchange replies with Mastodon.
+  description_bluesky: |
+    You can leave a comment by replying to <a href=":bluesky:">this Bluesky post</a> from your own account.
+  description_all: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> or <a href=":bluesky:">this Bluesky post</a> from your own account.
+  empty: No comments yet
+punctuation: 
+  open_quote: "『"
+  close_quote: "』"
+  open_single_quote: "「"
+  close_single_quote: "」"

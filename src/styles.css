@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+/* @plugin "daisyui@5.0.27"; */
+/* @plugin "flyonui@2.0.0"; */
+/* @plugin "tailwind-every-layout@latest"; */
+@import "css/alerts.css";
+/* @import "css/vendor/splidejs/splide-skyblue.min.css"; */
+
+@layer base {
+  a {
+    @apply text-zinc-500 dark:text-zinc-100 hover:text-sky-600 dark:hover:text-sky-400; /* Example base link styles */
+    transition: color 0.15s ease-in-out;
+    text-decoration-thickness: 1px; /* Set your desired default thickness here as well */
+    text-decoration-color: theme('colors.zinc.500'); /* Match the text color */
+  }
+
+  /* You could also style specific link states globally */
+  a:focus {
+    @apply outline-none ring-2 ring-sky-700/50 ring-offset-2;
+  }
+}
+@layer components {
+  /* Apply base styles to tables with not-prose */
+  table not-prose {
+    @apply table-fixed w-full text-left text-sm; 
+  }
+
+  table.not-prose thead {
+    @apply bg-zinc-50 text-zinc-700 dark:bg-zinc-600 dark:text-zinc-300 text-left;
+  }
+
+  table.not-prose th,
+  table.not-prose td {
+    @apply p-2;
+  }
+
+  table.not-prose th {
+    @apply font-semibold;
+  }
+
+  table.not-prose tbody {
+    @apply divide-y divide-zinc-200 dark:divide-zinc-700;
+  }
+  table.not-prose caption {
+    @apply caption-bottom text-left p-2 text-xs text-zinc-400;
+  }
+    /* Override the prose <a> tag hover classes */
+  .prose :where(a) {
+    @apply hover:opacity-60;
+  }
+
+  .prose figure + p {
+    margin-top: 1.3333333em; /* Add top margin to paragraphs after figures */
+  }
+
+  .prose p {
+    margin-bottom: 1.3333333em; /* Add bottom margin to all paragraphs */
+  }
+
+  /* Optional: Adjust top margin for the very first paragraph in the prose block */
+  .prose > *:first-child:is(p) {
+    margin-top: 0;
+  }
+}
+
+/* prose-a:text-sky-900 dark:prose-a:text-sky-200  prose-a:decoration-sky-700 prose-a:underline  */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --header-top: 1rem;
+  --font-sans: textface, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* eSolia Yellow Logo Color #FFBC68 is 500 */
+  --color-esoliaamber-50: oklch(98.69% 0.021 95.28);
+  --color-esoliaamber-100: oklch(97.31% 0.037 91.69);
+  --color-esoliaamber-200: oklch(94.19% 0.068 87.91);
+  --color-esoliaamber-300: oklch(91.16% 0.088 82.51);
+  --color-esoliaamber-400: oklch(87.86% 0.106 76.63);
+  --color-esoliaamber-500: oklch(84.08% 0.127 70.8);
+  --color-esoliaamber-600: oklch(78.6% 0.169 67.8);
+  --color-esoliaamber-700: oklch(71.02% 0.152 71.84);
+  --color-esoliaamber-800: oklch(61.31% 0.128 78.57);
+  --color-esoliaamber-900: oklch(49.21% 0.101 86.39);
+  --color-esoliaamber-950: oklch(39.79% 0.081 91.8);
+  /* eSolia Blue Logo Color #FFBC68 is 800 */
+  --color-esoliablue-50: oklch(90.41% 0.024 212.91);
+  --color-esoliablue-100: oklch(88.36% 0.026 221.6);
+  --color-esoliablue-200: oklch(83.99% 0.035 233.13);
+  --color-esoliablue-300: oklch(79.87% 0.042 243.84);
+  --color-esoliablue-400: oklch(74.61% 0.054 254.73);
+  --color-esoliablue-500: oklch(68.8% 0.07 263.14);
+  --color-esoliablue-600: oklch(60.47% 0.097 270.94);
+  --color-esoliablue-700: oklch(51.84% 0.128 274.22);
+  --color-esoliablue-800: oklch(33.29% 0.09 278.66);
+  --color-esoliablue-900: oklch(27.79% 0.061 275.21);
+  --color-esoliablue-950: oklch(27.06% 0.05 269.88);
+  /* eSolia Pale Yellow Logo Color #FFFAD7 is 500 */
+  --color-esoliapaleyellow-50: oklch(99.67% 0.005 95.1);
+  --color-esoliapaleyellow-100: oklch(99.67% 0.005 95.1);
+  --color-esoliapaleyellow-200: oklch(99.21% 0.017 99.59);
+  --color-esoliapaleyellow-300: oklch(98.88% 0.022 98.63);
+  --color-esoliapaleyellow-400: oklch(98.41% 0.035 100.11);
+  --color-esoliapaleyellow-500: oklch(98.01% 0.046 100.49);
+  --color-esoliapaleyellow-600: oklch(90.95% 0.181 99.31);
+  --color-esoliapaleyellow-700: oklch(83.09% 0.172 97.79);
+  --color-esoliapaleyellow-800: oklch(71.89% 0.149 98.21);
+  --color-esoliapaleyellow-900: oklch(56.97% 0.118 98.01);
+  --color-esoliapaleyellow-950: oklch(44.52% 0.092 98.87);
+}
+
+.lede {
+  @apply text-lg font-light leading-relaxed;
+}
+
+body article > div > p:first-of-type {
+  @apply text-base text-lg lg:text-xl font-light leading-relaxed text-zinc-800 dark:text-zinc-200;
+}
+
+body article > div > figure > picture > img {
+  @apply shadow-md rounded-md;
+}
+
+/* MDN keyboard shortcut style for kbd tag */
+kbd {
+  @apply bg-zinc-200 rounded border border-zinc-400 shadow-md text-zinc-800 inline-block text-[0.85em] font-semibold leading-none px-1 py-0.5 whitespace-nowrap
+}
+
+/*----------------------------
+* 検索ボックス via Lume Pagefind
+*----------------------------*/
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--color-sky-500);
+  --pagefind-ui-text: var(--color-zinc-900);
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: var(--color-zinc-200);
+  --pagefind-ui-tag: var(--color-zinc-200);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: textface, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  .dark {
+    --pagefind-ui-primary: var(--color-sky-500);
+    --pagefind-ui-text: var(--color-zinc-200);
+    --pagefind-ui-background: var(--color-zinc-900);
+    --pagefind-ui-border: var(--color-zinc-700);
+    --pagefind-ui-tag: var(--color-sky-400);
+  }
+}
+#search mark {
+  background-color: var(--color-sky-300);
+}
+
+/*----------------------------
+* テキスト選択ハイライト
+*----------------------------*/
+mark {
+  background-color: var(--color-sky-300);
+}
+:root {
+  ::selection {
+    background-color: var(--color-sky-300);
+    color: var(--color-zinc-900); 
+  }
+  
+/* light-theme-here */
+
+  .dark {
+    ::selection {
+      background-color: var(--color-sky-300);
+      color: var(--color-zinc-900);
+    }
+
+/* dark-theme-here */
+
+  }
+}
+
+
+/*----------------------------
+* Hamburger 開閉ボタン
+*----------------------------*/
+.mobile-menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #fff; */
+  color: #fff;
+  border: none;
+}
+
+/*----------------------------
+* Hamburger Menu 本体
+*----------------------------*/
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #808080;
+  background-color: rgba(85, 85, 85, 0.7); /* Gray background with 70% opacity */
+}
+.mobile-menu__item{
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/*----------------------------
+* Hamburger アニメーション部分
+*----------------------------*/
+
+/* Hamburger アニメーション前のメニューの状態 */
+.mobile-menu {
+  transform: translateX(100vw);
+  transition: all .3s linear;
+}
+/* Hamburger アニメーション後のメニューの状態 */
+.mobile-menu.is-active {
+  transform: translateX(0);
+}
+
+/* lume-google-fonts-here */

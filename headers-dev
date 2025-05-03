@@ -1,0 +1,2 @@
+/*
+  Basic-Auth: ${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}
