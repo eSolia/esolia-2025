@@ -31,17 +31,17 @@ window.addEventListener('scroll', () => {
 
   // Handle nav opacity changes based on scroll position
   if (scrollPosition > 50) {
-      topNavBG.classList.remove('bg-zinc-50/50', 'dark:bg-zinc-700/50', 'bg-zinc-50/70', 'dark:bg-zinc-700/70');
-      topNavBG.classList.add('bg-zinc-50/95', 'dark:bg-zinc-700/95');
+      topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/70', 'dark:bg-stone-700/70');
+      topNavBG.classList.add('bg-stone-50/95', 'dark:bg-stone-700/95');
   } else if (scrollPosition > 30 && scrollPosition <= 50) {
-      topNavBG.classList.remove('bg-zinc-50/50', 'dark:bg-zinc-700/50', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/70', 'dark:bg-zinc-700/70');
+      topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+      topNavBG.classList.add('bg-stone-50/70', 'dark:bg-stone-700/70');
   } else if (scrollPosition > 10 && scrollPosition <= 30) {
-      topNavBG.classList.remove('bg-zinc-50/70', 'dark:bg-zinc-700/70', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/50', 'dark:bg-zinc-700/50');
+      topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+      topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
   } else {
-      topNavBG.classList.remove('bg-zinc-50/70', 'dark:bg-zinc-700/70', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/50', 'dark:bg-zinc-700/50');
+      topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+      topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
   }
 });
 

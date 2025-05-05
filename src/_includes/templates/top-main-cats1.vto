@@ -1,11 +1,11 @@
 <!-- ===== top-main-tags1.vto TEMPLATE START ===== -->
-<div class="flex space-x-2 bg-zinc-100 dark:bg-zinc-700 p-2 rounded-md">
+<div class="flex space-x-2 bg-stone-100 dark:bg-stone-700 p-2 rounded-md">
   {{# <span class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">M365</span> #}}
   {{
     set pageCats = search.pages(`type=category lang=${lang}`, "category=desc-locale")
   }}
   {{ if pageCats.length }}
-    <div class="text-zinc-500 ml-1 mt-2">
+    <div class="text-stone-500 ml-1 mt-2">
       <nav class="">
         <ul class="flex flex-wrap space-x-2 space-y-2">
           {{ for page of pageCats }}

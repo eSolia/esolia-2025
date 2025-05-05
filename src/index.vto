@@ -9,6 +9,8 @@ script: /js/fathom-post-list-event.js
 <!-- ===== index.vto LAYOUT START ===== -->
 <main class="flex-auto">
   {{ include "templates/top-welcome-header.vto" }}
+  
+
   {{# {{ include "templates/slider1.vto" }} #}}
   <div class="mt-12 sm:px-8 md:mt-16">
     <div class="mx-auto w-full max-w-7xl lg:px-8">
@@ -18,6 +20,7 @@ script: /js/fathom-post-list-event.js
             class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-1"
           >
             <div class="flex flex-col gap-6">
+              {{ include "templates/top-welcome-header1.vto" }}
               {{ include "templates/top-main-cats1.vto" }}
               {{ include "templates/top-post-cards1.vto" }}
             </div>
