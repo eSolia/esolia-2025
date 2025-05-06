@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <!-- ===== base.vto LAYOUT START ===== -->
-
 <html lang="{{ it.lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ it.title || metas.title }} - {{ site.title }}</title>
-
     <meta name="supported-color-schemes" content="light dark">
     <meta
       name="theme-color"
@@ -18,7 +16,6 @@
       content="hsl(237.79 38% 28.000000000000004%)"
       media="(prefers-color-scheme: dark)"
     >
-
     <link
       rel="stylesheet"
       href="/styles.css?cb={{ cacheBuster }} "
@@ -44,30 +41,16 @@
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
     {{ it.extra_head?.join("\n") }}
   </head>
-  <body class="flex h-full bg-stone-50 dark:bg-black">
-    <!-- Container start -->
-    <div class="flex w-full">
-      <div class="fixed inset-0 flex justify-center sm:px-8">
-        <div class="flex w-full max-w-7xl lg:px-8">
-          <div
-            class="w-full bg-white ring-1 ring-stone-100 dark:bg-stone-900 dark:ring-stone-300/20"
-          >
-          </div>
-        </div>
-      </div>
-      <div class="relative flex w-full flex-col">
-        {{ include "templates/top-nav.vto" }}
-        <div class="flex-none" style="height: var(--content-offset)"></div>
-
-        {{ content }}
-
-        <!-- Current page: {{ url }} -->
-        {{ include "templates/footer.vto" }}
-        {{ include "templates/search-modal.vto" }}
-      </div>
-    </div>
-    <!-- Container end -->
+  <body class="bg-accent-100 lg:p-10 lg:pb-0 mx-auto relative overflow-x-hidden">
+    <div class="flex flex-col min-h-dvh xl:max-w-[100rem] mx-auto"> 
+    <!-- inner start -->
+      {{ content }}
+    <!-- inner end -->
+    <!-- Current page: {{ url }} -->
+      {{ include "templates/footer.vto" }}
+      {{ include "templates/search-modal.vto" }}
+    </div> 
     <script src="{{ script }}"></script>
   </body>
-  <!-- ===== base.vto LAYOUT END ===== -->
+<!-- ===== base.vto LAYOUT END ===== -->
 </html>
