@@ -1,0 +1,57 @@
+lang: en
+id: home
+layout: layouts/home.vto
+bodyClass: body-home
+title: Home
+script: /js/fathom-post-list-event.js
+hero: 
+  title: "Your Virtual IT Department in Japan"
+  copy: "eSolia works as a team, bringing to bear all the skills a typical IT department has, to resolve your Japan challenges. We are multilingual professionals who communicate effectively with both the HQ and Japan teams, negotiating on your behalf with local vendors. We work hard to exceed your mandate, using our well-developed support systems to document and communicate clearly."
+  ticker: "Japan office build-out — onsite and remote IT support — project management — web development — SaaS database — cloud services — procurement processing and inventory control — Information Security — IT consulting — helpdesk —"
+partners:
+  title: "Our Partners"
+  copy: "We partner with industry leaders to deliver the best services."
+  list: 
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "Softbank IT-EX"
+      logo: /assets/softbank-itex-logo.png
+      height: h-7
+    - name: "Foresoft DBFlex"
+      logo: /assets/foresoft-dbflex-logo.svg
+      height: h-6
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "AWS"
+      logo: /assets/AmazonWebservices_Logo.svg
+      height: h-8
+    - name: "Epson"
+      logo: /assets/Epson_logo.svg
+      height: h-6
+services:
+  section: "Our Services"
+  title: "Your Challenges are our Service Mandates"
+  subtitle: "eSolia provides a full range of IT services based in Tokyo, supporting your Japan business success."
+  ctatop: "Learn"
+  ctabottom: "More"
+  list:
+    - name: "Remote and Onsite IT Support"
+      description: "Comprehensive IT support for your Japan business."
+    - name: "Project Management"
+      description: "Practical project management to ensure Japan project success."
+    - name: "Web Development and Localization"
+      description: "Custom web development solutions."
+    - name: "Reliable PaaS Cloud Database PROdb"
+      description: "Rock-solid cloud database service for operational applications."
+    - name: "Information Security"
+      description: "Protecting your data with top-notch security."
+    - name: "IT Consulting"
+      description: "Expert IT consulting to guide your strategy."
+    - name: "Helpdesk"
+      description: "Bilingual helpdesk support for your Japan team."
+    - name: "Procurement and Inventory Processing"
+      description: "Streamlined procurement processing for efficiency."
+    - name: "IT Asset Management"
+      description: "Comprehensive asset management for your IT resources."
