@@ -4,6 +4,8 @@ layout: layouts/home.vto
 bodyClass: body-home
 title: ホーム
 script: /js/fathom-post-list-event.js
+alert: 
+  update: "最新情報"
 hero: 
   title: "日本担当の<br>バーチャルIT部門"
   copy: "eSoliaはチームとして機能し、典型的なIT部門が持つすべてのスキルを活かして、日本での課題を解決します。私たちは多言語に対応できるプロフェッショナルであり、本社と日本のチームとの間で効果的にコミュニケーションを取り、現地のベンダーと交渉します。私たちは、明確に文書化し、コミュニケーションを行うための十分に発展したサポートシステムを使用して、あなたの期待を超えるよう努めています。"
@@ -55,3 +57,52 @@ services:
       description: "効率的な調達処理。"
     - name: "IT資産管理"
       description: "ITリソースの包括的な資産管理。"
+certifications:
+  title: "認証"
+  copy: "私たちの経験豊富なバイリンガルプロフェッショナルは、業界認証を取得するだけでなく、毎日のクイズ形式で知識を継続的に磨いています。"
+  list:
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "CompTIA"
+      logo: /assets/Comptia-logo.svg
+      height: h-7
+    - name: "eSolia"
+      logo: /assets/logo_horiz_darkblue_bgtransparent.svg
+      height: h-8
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "IPA IT Passport"
+      logo: /assets/ipa-it-passport-exam-logo-symbol.png
+      height: h-8
+    - name: "Joho Gakushu"
+      logo: /assets/joho-gakushu_logo2.jpg
+      height: h-6
+    - name: "IDEO U"
+      logo: /assets/ideo-u-logo.png
+      height: h-8
+trackrecord:
+  section: "実績" 
+  title: "日本におけるプロジェクト成功のための信頼できるチーム" 
+  subtitle: "弊社は日本において、<mark>YEARS_IN_BUSINESS</mark>年近くにわたり、様々な有力外資系企業および日系企業にサービスを提供してまいりました。これにより、お客様のニーズを深く理解し、日本におけるプロジェクトを成功に導いてきた確かな実績がございます。eSoliaは多文化・多言語の組織であり、お客様のシステムやプロセスのあらゆる課題に対し、最適な解決策を見つけ出す自信があります。" 
+  list:
+    - name: "過去5年間の総作業時間" 
+      stat: "60,000+"
+      color: "text-yellow-500"
+    - name: "年間対応チケット数" 
+      stat: "3,000+"
+      color: "text-yellow-500"
+    - name: "1社あたりの担当者数" 
+      stat: "2人"
+      color: "text-esoliablue-600"
+    - name: "管理チーム経験年数" 
+      stat: "100+ years"
+      color: "text-pink-600"
+recentprojects:
+  section: "当社の仕事" 
+  title: "最新のプロジェクト成功事例" 
+  subtitle: "弊社は、お客様の本社IT部門と連携し、プロジェクトの成功を確実にするため、日本の現地ベンダーとは日本語で調整を行い、本社ITマネジメントには英語で説明を行っています。ここに、いくつか最新の成果をご紹介します。" 
+  url: "https://esolia.co.jp/success-stories"
+  cta: "当社のプロジェクト一覧を見る"
+

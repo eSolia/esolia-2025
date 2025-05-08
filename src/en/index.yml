@@ -4,6 +4,8 @@ layout: layouts/home.vto
 bodyClass: body-home
 title: Home
 script: /js/fathom-post-list-event.js
+alert: 
+  update: "Update"
 hero: 
   title: "Your Virtual IT Department in Japan"
   copy: "eSolia works as a team, bringing to bear all the skills a typical IT department has, to resolve your Japan challenges. We are multilingual professionals who communicate effectively with both the HQ and Japan teams, negotiating on your behalf with local vendors. We work hard to exceed your mandate, using our well-developed support systems to document and communicate clearly."
@@ -55,3 +57,52 @@ services:
       description: "Streamlined procurement processing for efficiency."
     - name: "IT Asset Management"
       description: "Comprehensive asset management for your IT resources."
+certifications:
+  title: "Certifications"
+  copy: "Our experienced bilingual professionals achieve not just industry certifications, but sharpen their knowledge continually in the form of a required daily quiz."
+  list: 
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "CompTIA"
+      logo: /assets/Comptia-logo.svg
+      height: h-7
+    - name: "eSolia"
+      logo: /assets/logo_horiz_darkblue_bgtransparent.svg
+      height: h-8
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "IPA IT Passport"
+      logo: /assets/ipa-it-passport-exam-logo-symbol.png
+      height: h-8
+    - name: "Joho Gakushu"
+      logo: /assets/joho-gakushu_logo2.jpg
+      height: h-6
+    - name: "IDEO U"
+      logo: /assets/ideo-u-logo.png
+      height: h-8
+trackrecord: 
+  section: "Our Track Record"
+  title: "A Trusted Team for Japan Project Success"
+  subtitle: "Because we have served a variety of blue-chip foreign and Japanese organizations in Japan for approaching <mark>YEARS_IN_BUSINESS</mark> years, we have the experience to understand your needs and a real track record for delivering success for Japan projects. eSolia is itself a multi-cultural, multi-language organization, and we have the confidence to find solutions for all your system and process challenges."
+  list:
+    - name: "Hours Booked over 5 Years"
+      stat: "60,000+"
+      color: "text-yellow-500"
+    - name: "Tickets Resolved Annually"
+      stat: "3,000+"
+      color: "text-yellow-500"
+    - name: "Pros per Account"
+      stat: "2"
+      color: "text-esoliablue-600"
+    - name: "Management Team Experience"
+      stat: "100+ years"
+      color: "text-pink-600"
+recentprojects:
+  section: "Our Work"
+  title: "Recent Project Success"
+  subtitle: "We work with the HQ IT departments of our clients, to ensure project success, coordinating with local vendors in Japanese, and explaining to HQ IT management in English. Here are a couple recent achievements."
+  url: "https://esolia.com/success-stories"
+  cta: "See all our projects"
+  
