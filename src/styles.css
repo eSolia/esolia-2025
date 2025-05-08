@@ -297,18 +297,18 @@ kbd {
   }
 }
 #search mark {
-  background-color: var(--color-sky-300);
+  background-color: var(--color-yellow-300);
 }
 
 /*----------------------------
 * テキスト選択ハイライト
 *----------------------------*/
 mark {
-  background-color: var(--color-sky-300);
+  background-color: var(--color-yellow-300);
 }
 :root {
   ::selection {
-    background-color: var(--color-sky-300);
+    background-color: var(--color-pink-300);
     color: var(--color-stone-900); 
   }
   
