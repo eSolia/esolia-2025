@@ -3,8 +3,11 @@ layout: layouts/base.vto
 bodyClass: body-tag
 ---
 <!-- ===== home.vto LAYOUT START ===== -->
+  {{ include "templates/top-infoalert.vto" }}
+   
+
 <section class="bg-white overflow-hidden relative"> 
-  <div class="2xl:max-w-7xl mx-auto px-8 md:px-16 max-w-6xl py-4">     
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-4">     
     <div class="grid grid-cols-3 items-center">
       <a
         aria-label="{{ i18n.nav.return_home }}"
