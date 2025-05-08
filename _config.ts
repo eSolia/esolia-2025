@@ -363,6 +363,7 @@ site.use(
   }),
 );
 import { japaneseCommonWords } from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/japanese_common_words.js";
+import o from "https://deno.land/x/lz4@v0.1.2/wasm.js";
 site.use(
   seo({
     output: "./_seo_report_ja.json",
