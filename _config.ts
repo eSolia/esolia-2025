@@ -475,7 +475,25 @@ site.process([".html"], (pages) => {
   }
 });
 
+// Prepare script to get future holidays from dbflex
+site.script("getholidays", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Work%20Holiday/API%20Holidays%20Today%20or%20Later/select.json -o futureholidays.json");
+// Prepare script to get next holiday from dbflex
+site.script("getnextholiday", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Work%20Holiday/API%20Holidays%20Next/select.json -o nextholiday.json");
+// Prepare script to get webinfo from dbflex
+site.script("getwebinfo", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Information/API%20List%20All/select.json -o webinfo.json");
+// Prepare script to get webinfolast from dbflex
+site.script("getwebinfolast", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Information/API%20List%20All/select.json?top=1 -o webinfolast.json");
+// Prepare script to get projects from dbflex
+site.script("getprojects", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Project/API%20List%20All/select.json -o projects.json");
+site.script("getprojectslast", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Project/API%20List%20All/select.json?top=3 -o projectslast.json");
 
+// Execute scripts before build
+site.addEventListener("beforeBuild", "getholidays");
+site.addEventListener("beforeBuild", "getnextholiday");
+site.addEventListener("beforeBuild", "getwebinfo");
+site.addEventListener("beforeBuild", "getwebinfolast");
+site.addEventListener("beforeBuild", "getprojects");
+site.addEventListener("beforeBuild", "getprojectslast");
 
 // site.filter("tdate", (value: string | undefined, locale: string, timezone: string) => {
 //   if (!value) {
