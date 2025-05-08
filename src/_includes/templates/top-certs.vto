@@ -1,0 +1,22 @@
+<!-- ===== top-certs.vto TEMPLATE START ===== -->
+<section class="bg-accent-50 overflow-hidden relative"> 
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl pt-8 pb-8">  
+    <div class="grid grid-cols-1 gap-12 items-center lg:grid-cols-4 md:grid-cols-2"> 
+      <div class="col-span-full lg:col-span-1 lg:max-w-none lg:mr-auto mx-auto"> 
+        <h3 class="text-sm text-accent-500 text-balance">  
+          {{ certifications.copy }}
+        </h3> 
+      </div> 
+      <div class="md:col-span-3"> 
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Logos used under fair use, copyrighted to their respective owners --> 
+          {{ for cert of certifications.list |> shuffle }}
+          <img src="{{ cert.logo }}" alt="#_" loading="lazy" decoding="async" class="{{ cert.height }} grayscale">
+          {{ /for }} 
+        </div> 
+      </div> 
+    </div>  
+  </div> 
+</section>
+<!-- ===== top-certs.vto TEMPLATE END ===== -->
+
