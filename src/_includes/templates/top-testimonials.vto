@@ -1,0 +1,52 @@
+<!-- ===== top-testimonials.vto TEMPLATE START ===== -->
+<section class="bg-white overflow-hidden relative"> 
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-16">  
+    <div class="grid lg:grid-cols-2 gap-12 items-start"> 
+      <div> 
+        <div class="relative max-w-xs"> 
+          <div class="absolute inset-0 flex items-center" aria-hidden="true"> 
+            <div class="w-full">
+              <div class="h-0.25 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-100 dark:via-yellow-200"></div>
+            </div>
+          </div> 
+          <div class="relative flex justify-left md:justify-center"> 
+            <h2 class="bg-white p-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider  text-yellow-500 font-medium [font-variant:small-caps]">{{ testimonials.section }}</h2>
+          </div> 
+        </div>  
+        <h3 class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter font-display text-esoliablue-800 text-balance mt-12">
+          {{ testimonials.title }}  
+        </h3>  
+        <p class="text-lg sm:text-xl md:text-2xl text-accent-500 mt-8 text-balance">  
+          {{ testimonials.subtitle }}
+        </p> 
+      </div> 
+    </div>  
+  </div> 
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl pb-16">  
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      {{ for testimonial of testimonials.list |> shuffle }}
+      <div class="flex flex-col pb-10 sm:pb-16 lg:pr-8 lg:pb-0 xl:pr-20 rounded-2xl bg-{{ testimonial.color }}-50 p-6 shadow-lg ring-1 ring-accent-900/5">
+        <img
+          class="size-24 fill-{{ testimonial.color }}-600"
+          src='{{ "quotes" |> icon("phosphor", "duotone") }}'
+          inline>
+
+        <aside class="flex flex-auto flex-col justify-between">
+          <blockquote class="font-thin text-xl sm:text-2xl md:text-3xl  text-accent-900 text-pretty">
+            <p class="pb-8">“{{ testimonial.quote }}”</p>
+          </blockquote>
+        </aside>
+      </div>
+      {{ /for }}
+
+
+    </div>
+
+    
+
+
+  </div> 
+</section>
+
+<!-- ===== top-testimonials.vto TEMPLATE END ===== -->

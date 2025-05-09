@@ -106,8 +106,8 @@ recentprojects:
   url: "https://esolia.com/success-stories"
   cta: "See all our projects"
 whyesolia:
-  section: "Reasons to Choose eSolia"
-  title: "Why choose eSolia?"
+  section: "Why eSolia"
+  title: "What are the reasons to choose eSolia?"
   subtitle: "Client requirements are primary, as we deliver our services. We use a range of tools and techniques to accommodate your directives, standards and mandate, in the most flexible manner possible. Please get in touch for a discussion, and we will be happy to provide a proposal and quote for your consideration."
   list:
     - name: "Expertise"
@@ -122,6 +122,16 @@ whyesolia:
       description: "We are committed to professionalism in all our work, ensuring that we maintain the highest standards of conduct and ethics. Our members pledge to honor security and confidentiality, protect privacy, share knowledge, listen and learn actively, and improve iteratively."
     - name: "Tools & Techniques"
       description: "Experience has let us design, assemble or develop various tools and techniques used in our professional practice, from work instructions and templates, to database applications built in our PaaS PROdb for time and expense, work logging for helpdesk and projects, and ongoing learning."
+testimonials:
+  section: "Testimonials"
+  title: "What our clients say"
+  subtitle: "We are fortunate to have received positive feedback (and repeat business!) from our clients. Here's what they have to say:"
+  list:
+    - name: "Client A"
+      quote: "eSolia helped us to see the light at the end of the tunnel, when they successfully managed our complex, multi-year project."
+      color: "yellow"
+    - name: "Client B"
+      quote: "eSolia's technical knowledge was second-to-none, and they could explain difficult solutions in layman's terms so that everyone understood every detail."
+      color: "pink"
 biglogo:
   copy: "Your next Japan IT partner"
-  
