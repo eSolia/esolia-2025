@@ -25,37 +25,36 @@
     </div>
   <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
   {{>
-  // Define an array of your desired gradient class combinations.
-  // You can include dark mode variants within each option.
+  // Define gradient class combinations including dark mode.
     const gradientOptions = [
     {
-      // Example 1: Your current yellow gradient
+      // Yellow gradient
       light: 'bg-gradient-to-br from-yellow-800 via-yellow-600 to-yellow-500',
-      dark: 'dark:bg-gradient-to-br dark:from-yellow-900 dark:via-yellow-700 dark:to-yellow-600' // Example dark variant
+      dark: 'dark:bg-gradient-to-br dark:from-yellow-900 dark:via-yellow-700 dark:to-yellow-600' 
     },
     {
-      // Example 2: A cool blue-cyan gradient
+      // Blue-cyan gradient
       light: 'bg-gradient-to-br from-blue-700 to-cyan-500',
-      dark: 'dark:bg-gradient-to-br dark:from-blue-900 dark:to-cyan-700' // Example dark variant
+      dark: 'dark:bg-gradient-to-br dark:from-blue-900 dark:to-cyan-700' 
     },
     {
-      // Example 3: A purple-pink gradient
+      // Purple-pink gradient
       light: 'bg-gradient-to-br from-purple-700 to-pink-500',
-      dark: 'dark:bg-gradient-to-br dark:from-purple-900 dark:to-pink-700' // Example dark variant
+      dark: 'dark:bg-gradient-to-br dark:from-purple-900 dark:to-pink-700' 
     },
     {
-      // Example 4: A green-teal gradient
+      // Green-teal gradient
       light: 'bg-gradient-to-br from-green-700 to-teal-500',
-      dark: 'dark:bg-gradient-to-br dark:from-green-900 dark:to-teal-700' // Example dark variant
+      dark: 'dark:bg-gradient-to-br dark:from-green-900 dark:to-teal-700' 
     }
-    // Add more objects here for more gradient options
+    // Add more objects if needed
     ];
   }}
   {{ for project of projectslast |> shuffle }}
     {{>
-    // Get a random index based on the number of options
+    // Base random index on the number of gradient options
     const randomIndex = Math.floor(Math.random() * gradientOptions.length);
-    // Select the gradient option for this loop iteration
+    // Set gradient for this loop iteration based on random index
     const selectedGradient = gradientOptions[randomIndex];
     }}
     <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl
@@ -75,7 +74,6 @@
         </p>
       </article>
     {{ /for }}
-    <!-- More posts... -->
     </div>
   </div>
 </section>
