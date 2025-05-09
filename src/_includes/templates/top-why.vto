@@ -1,0 +1,49 @@
+<!-- ===== top-why.vto TEMPLATE START ===== -->
+<section class="bg-accent-500 relative overflow-hidden"> 
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-24">  
+    <img
+      class="absolute w-full h-full opacity-[0.2] z-0 -left-60 sm:-left-196 -bottom-0 rotate-110 size-60 fill-accent-400"
+      src='{{ "flower-tulip" |> icon("phosphor", "duotone") }}'
+      inline>
+  {{# <img 
+      src="/assets/symbol_nocolor_bgtransparent.svg" 
+      alt="#_" 
+      loading="lazy" 
+      decoding="async" 
+      class="fill-accent-400 rotate-90 absolute origin-bottom-left scale-87 xs:scale-110 sm:scale-150 md:scale-183 lg:scale-230 xl:scale-285 1xl:scale-321 2xl:scale-360 3xl:scale-375 4xl:scale-375 -bottom-7 xs:-bottom-10 sm:-bottom-13 md:-bottom-15 lg:-bottom-20 xl:-bottom-23 1xl:-bottom-28 2xl:-bottom-30 3xl:-bottom-32 4xl:-bottom-32 -left-5 sm:-left-10 md:-left-15 lg:-left-23" 
+    inline> #}}
+
+    <div class="px-8 py-24 mx-auto max-w-6xl md:px-16"> 
+      <div class="flex flex-col max-w-xl lg:ml-auto"> 
+        <div class="relative max-w-xs"> 
+          <div class="absolute inset-0 flex items-center" aria-hidden="true"> 
+            <div class="w-full">
+              <div class="h-0.25 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-100 dark:via-yellow-200"></div>
+            </div>
+          </div> 
+          <div class="relative flex justify-left md:justify-center"> 
+            <h2 class="bg-accent-500 p-2 text-lg text-yellow-400 font-medium [font-variant:small-caps]">{{ whyesolia.section }}</h2>
+          </div> 
+        </div> 
+        <h3 class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight font-display text-esoliablue-400 mt-12 text-balance">  
+          {{ whyesolia.title }}
+        </h3> 
+        <p class="text-lg sm:text-xl md:text-2xl text-accent-100 mt-8 text-balance">  
+          {{ whyesolia.subtitle }}
+        </p> 
+      </div> 
+      
+      <dl class="grid gap-12 lg:grid-cols-2 mt-24 lg:mt-48 lg:max-w-xl lg:ml-auto"> 
+        {{ for reason of whyesolia.list |> shuffle }}
+        <div> 
+          <dt class="font-display text-esoliablue-300 text-2xl">{{ reason.name }}</dt> 
+          <dd class="text-accent-100 text-base mt-4 text-pretty"> {{ reason.description }} </dd> 
+        </div>
+        {{ /for }}
+         
+      </dl> 
+    </div>  
+  </div> 
+</section> 
+
+<!-- ===== top-why.vto TEMPLATE END ===== -->

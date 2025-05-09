@@ -105,5 +105,23 @@ recentprojects:
   subtitle: "We work with the HQ IT departments of our clients, to ensure project success, coordinating with local vendors in Japanese, and explaining to HQ IT management in English. Here are a couple recent achievements."
   url: "https://esolia.com/success-stories"
   cta: "See all our projects"
+whyesolia:
+  section: "Reasons to Choose eSolia"
+  title: "Why choose eSolia?"
+  subtitle: "Client requirements are primary, as we deliver our services. We use a range of tools and techniques to accommodate your directives, standards and mandate, in the most flexible manner possible. Please get in touch for a discussion, and we will be happy to provide a proposal and quote for your consideration."
+  list:
+    - name: "Expertise"
+      description: "Our team comprises multilingual certified professionals possessing real-world experience in a wide range of IT disciplines."
+    - name: "Secure & Private"
+      description: "We follow ISO 27001 and other standards to prioritize security and privacy in all our services, practices and developed systems, ensuring that your data is protected at all times."
+    - name: "Proven Track Record"
+      description: "We have a proven track record of success in delivering IT solutions to clients in Japan for over a quarter century since 1999, with a steadfast focus on quality and customer satisfaction."
+    - name: "Service Value"
+      description: "We are not a temp staff company, and our value is achieved because we strive as a team on behalf of our clients, responsibly performing the services consigned to us."
+    - name: "Professionalism"
+      description: "We are committed to professionalism in all our work, ensuring that we maintain the highest standards of conduct and ethics. Our members pledge to honor security and confidentiality, protect privacy, share knowledge, listen and learn actively, and improve iteratively."
+    - name: "Tools & Techniques"
+      description: "Experience has let us design, assemble or develop various tools and techniques used in our professional practice, from work instructions and templates, to database applications built in our PaaS PROdb for time and expense, work logging for helpdesk and projects, and ongoing learning."
 biglogo:
   copy: "Your next Japan IT partner"
+  
