@@ -133,5 +133,20 @@ testimonials:
     - name: "クライアントB" 
       quote: "eSoliaの技術的な知識は卓越しており、難しいソリューションも専門知識のない人にも分かりやすく説明してくれたため、全員が細部まで理解できました。" 
       color: "pink"
+hireus:
+  section: "依頼方法" 
+  title: "IT業務の成功に向けて準備はOKですか？" 
+  subtitle: "サービス導入をご検討でしたら、次のステップをご確認ください。" 
+  steps:
+    - name: "1. お問い合わせ" 
+      description: "お客様のニーズと、弊社がお手伝いできる内容についてお話しさせていただきます。" 
+    - name: "2. ご提案" 
+      description: "お客様に最適なご提案と概算を作成いたします。" 
+    - name: "3. ご契約" 
+      description: "内容確認の上、ご契約を結ばせていただきます。" 
+    - name: "4. 作業開始" 
+      description: "お客様の目標達成に向けて、共同での取り組みを開始します。" 
+  url: "https://esolia.co.jp/info-request/"
+  cta: "始めよう！" 
 biglogo:
   copy: "御社の良き日本ITパートナー"

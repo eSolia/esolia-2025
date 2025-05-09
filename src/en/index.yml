@@ -108,7 +108,7 @@ recentprojects:
 whyesolia:
   section: "Why eSolia"
   title: "What are the reasons to choose eSolia?"
-  subtitle: "Client requirements are primary, as we deliver our services. We use a range of tools and techniques to accommodate your directives, standards and mandate, in the most flexible manner possible. Please get in touch for a discussion, and we will be happy to provide a proposal and quote for your consideration."
+  subtitle: "Client requirements are our first in our minds as we deliver our services. We use a range of tools and techniques to accommodate your directives, standards and mandate, in the most flexible manner possible. Please get in touch for a discussion, and we will be happy to provide a proposal and quote for your consideration."
   list:
     - name: "Expertise"
       description: "Our team comprises multilingual certified professionals possessing real-world experience in a wide range of IT disciplines."
@@ -133,5 +133,20 @@ testimonials:
     - name: "Client B"
       quote: "eSolia's technical knowledge was second-to-none, and they could explain difficult solutions in layman's terms so that everyone understood every detail."
       color: "pink"
+hireus:
+  section: "Hire eSolia"
+  title: "Ready to Succeed in Japan?"
+  subtitle: "If you want to explore further, the next steps are:"
+  steps:
+    - name: "1. Contact Us"
+      description: "We will discuss your needs and how we can help."
+    - name: "2. Proposal"
+      description: "We will prepare a proposal and estimate for your consideration."
+    - name: "3. Agreement"
+      description: "We will finalize the agreement and get started."
+    - name: "4. Kickoff"
+      description: "We will start working together to achieve your goals."
+  url: "https://esolia.com/info-request/"
+  cta: "Get Started!"
 biglogo:
   copy: "Your next Japan IT partner"
