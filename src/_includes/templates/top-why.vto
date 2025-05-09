@@ -22,7 +22,7 @@
             </div>
           </div> 
           <div class="relative flex justify-left md:justify-center"> 
-            <h2 class="bg-accent-500 p-2 text-lg text-yellow-400 font-medium [font-variant:small-caps]">{{ whyesolia.section }}</h2>
+            <h2 class="bg-accent-500 p-2 text-lg sm:text-lg md:text-xl lg:text-2xl tracking-wider text-yellow-400 font-medium [font-variant:small-caps]">{{ whyesolia.section }}</h2>
           </div> 
         </div> 
         <h3 class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight font-display text-esoliablue-400 mt-12 text-balance">  
@@ -32,7 +32,6 @@
           {{ whyesolia.subtitle }}
         </p> 
       </div> 
-      
       <dl class="grid gap-12 lg:grid-cols-2 mt-24 lg:mt-48 lg:max-w-xl lg:ml-auto"> 
         {{ for reason of whyesolia.list |> shuffle }}
         <div> 
@@ -40,10 +39,8 @@
           <dd class="text-accent-100 text-base mt-4 text-pretty"> {{ reason.description }} </dd> 
         </div>
         {{ /for }}
-         
       </dl> 
     </div>  
   </div> 
 </section> 
-
 <!-- ===== top-why.vto TEMPLATE END ===== -->
