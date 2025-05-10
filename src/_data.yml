@@ -8,18 +8,12 @@ site:
   isolang: "ja-JP"
 topnav:
   links: 
-    - text: アーカイブ
-      href: /archive
-      target: _self
-      icon: archive
-      aria_label: サイト内リンク
-      title: アーカイブページへのリンク
-    - text: イソリア
-      href: https://esolia.co.jp
+    - text: ブログ
+      href: https://blog.esolia.pro
       target: _blank
       icon: building-office
       aria_label: 外部リンク
-      title: イソリア社ウェブサイトへのリンク
+      title: イソリア社ブログサイトへのリンク
 footernav:
   links: 
     - text: サイトマップ
@@ -90,18 +84,12 @@ en:
     isolang: "en-US"
   topnav:
     links: 
-      - text: Archive
-        href: /en/archive
-        target: _self
-        icon: archive
-        aria_label: Site internal link
-        title: Link to the Archive page
-      - text: eSolia Inc.
-        href: https://esolia.com
+      - text: Blog
+        href: https://blog.esolia.pro/en
         target: _blank
         icon: building-office
         aria_label: External link
-        title: Link to eSolia Inc. website
+        title: Link to eSolia Inc. blog site
   footernav:
     links: 
       - text: Sitemap

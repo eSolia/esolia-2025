@@ -4,39 +4,7 @@ bodyClass: body-tag
 ---
 <!-- ===== home.vto LAYOUT START ===== -->
   {{ include "templates/top-infoalert.vto" }}
-   
-
-<section class="bg-white overflow-hidden relative"> 
-  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-4">     
-    <div class="grid grid-cols-3 items-center">
-      <a
-        aria-label="{{ i18n.nav.return_home }}"
-        type="button"
-        class="pointer-events-auto block origin-left"
-        href="/{{ if it.lang === "en"}}{{ it.lang }}/{{ /if }}"
-      ><img
-          id="large-logo"
-          alt="{{ i18n.nav.logo_large_alt}}"
-          loading="lazy"
-          fetchpriority="high"
-          decoding="async"
-          class="-ml-4 w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-opacity duration-300"
-          src="/assets/logo_horiz_darkblue_bgtransparent_2.svg"
-      /></a>
-
-      <div class="items-center gap-2 flex col-span-2"> 
-        <a href="/system/overview" class="hover:text-pink-500 ml-auto">
-          Overview
-        </a> 
-        <div class="flex"> 
-          <a href="#" class="flex transition text-center justify-center items-center duration-300 focus:ring-2 focus:outline-none focus:ring-offset-2 text-white bg-accent-500 hover:bg-accent-600 focus:ring-accent-600 h-9 px-4 py-2 text-sm rounded-md">  
-          CTA &nbsp; &rarr;
-          </a> 
-        </div>
-      </div> 
-    </div> 
-  </div>
-</section>
+  {{ include "templates/top-nav.vto" }}
 <main class="grow">
   {{ include "templates/top-hero-text.vto" }}
   {{ include "templates/top-hero-ticker-image.vto" }}
@@ -49,10 +17,6 @@ bodyClass: body-tag
   {{ include "templates/top-testimonials.vto" }}
   {{ include "templates/top-hireus.vto" }}
   {{ include "templates/top-biglogo.vto" }} 
-
-
-
-
 </main>
 <!-- ===== home.vto LAYOUT END ===== -->
 
