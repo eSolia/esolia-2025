@@ -19,15 +19,20 @@
         {{ services.subtitle }}
       </p> 
   </div> 
-    <div class="flex flex-col flex-shrink-0 gap-8 md:flex-row md:gap-12 mt-12 md:items-center"> 
+    <div class="flex flex-col flex-shrink-0 gap-8 md:flex-row md:gap-12 mt-12 md:items-center no-external-icon"> 
       <ul role="list" class="flex flex-col gap-y-2 max-w-xl w-full"> 
         {{ for service of services.list |> shuffle }}
         <li class="text-accent-400 text-xl"> {{ service.name }} </li>
         {{ /for }}
       </ul> 
-      <a href="/services/home" 
+      <a 
+        href="{{ services.ctaurl }}" 
+        target="_blank" 
+        rel="noopener" 
+        title="{{ services.ctacopy }}" 
+        aria-label="{{ services.ctaaria }}"
         class="flex flex-col size-32 text-sm md:text-base lg:text-2xl xl:text-3xl text-center md:size-32 shrink-0 lg:size-52 2xl:size-64 text-white hover:bg-pink-900 hover:text-base-200 duration-300 items-center justify-center rounded-full bg-pink-600"> 
-          <span>{{ services.ctatop }}</span> <span>{{ services.ctabottom }}</span> 
+        <span>{{ services.ctatop }}</span> <span>{{ services.ctabottom }}</span> 
       </a> 
     </div>  
   </div> 

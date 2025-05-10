@@ -38,6 +38,8 @@ services:
   subtitle: "eSoliaは東京を拠点に、日本ビジネスの成功をサポートするITサービスを提供しています。"
   ctatop: "更に"
   ctabottom: "詳しく見る"
+  ctaurl: "https://esolia.co.jp/services"
+  ctaaria: "詳しく見るボタン"
   list:
     - name: "リモートおよびオンサイトITサポート"
       description: "日本ビジネス向けの包括的なITサポート。"
@@ -146,7 +148,8 @@ hireus:
       description: "内容確認の上、ご契約を結ばせていただきます。" 
     - name: "4. 作業開始" 
       description: "お客様の目標達成に向けて、共同での取り組みを開始します。" 
-  url: "https://esolia.co.jp/info-request/"
-  cta: "始めよう！" 
+  ctaurl: "https://esolia.co.jp/info-request/"
+  ctacopy: "始めよう！" 
+  ctaaria: "始めよう！ボタン"
 biglogo:
   copy: "御社の良き日本ITパートナー"

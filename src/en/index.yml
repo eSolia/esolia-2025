@@ -36,6 +36,9 @@ services:
   section: "Our Services"
   title: "Your Challenges are our Service Mandates"
   subtitle: "eSolia provides a full range of IT services based in Tokyo, supporting your Japan business success."
+  ctaurl: "https://esolia.com/services"
+  ctaaria: "Learn more button"
+  ctacopy: "Learn more"
   ctatop: "Learn"
   ctabottom: "More"
   list:
@@ -146,7 +149,8 @@ hireus:
       description: "We will finalize the agreement and get started."
     - name: "4. Kickoff"
       description: "We will start working together to achieve your goals."
-  url: "https://esolia.com/info-request/"
-  cta: "Get Started!"
+  ctaurl: "https://esolia.com/info-request/"
+  ctacopy: "Get Started!"
+  ctaaria: "Get Started button"
 biglogo:
   copy: "Your next Japan IT partner"
