@@ -65,7 +65,7 @@ import feed from "lume/plugins/feed.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 
 // Checks
-import seo from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/mod.ts";
+import seo from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/new_mod.ts";
 
 // Final minification and compression 
 // import minify_html from "lume/plugins/minify_html.ts";
