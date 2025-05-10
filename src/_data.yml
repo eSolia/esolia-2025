@@ -3,8 +3,8 @@ extra_head: []
 lang: ja
 site:
   author: "イソリア"
-  title: "Tech IT Easy Blog"
-  description: "株式会社イソリア IT Tips ブログのページ"
+  title: "会社概要トップ"
+  description: "株式会社イソリア 会社概要ウェブページ"
   isolang: "ja-JP"
 topnav:
   links: 
@@ -56,13 +56,13 @@ footernav:
 metas:
   lang: ja
   type: website
-  site: "=site.title || イソリア Tech IT Easy Blog"
-  title: "=title || イソリア Tech IT Easy Blog ブログ ページ"
-  description: "=description || イソリア Tech IT Easy Blog ブログより、一つの記事"
+  site: "=site.title || イソリア 会社概要ウェブサイト"
+  title: "=title || イソリア 会社概要ウェブサイト ページ"
+  description: "=description || イソリア 会社概要ウェブサイトより、一つのページ"
   author: "イソリア"
-  image: "=image || /assets/blog-esolia-pro-default.png"
+  image: "=image || /assets/esolia-main-site-default-ja.png"
   icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
-  keywords: ["イソリア", "ブログ", "ウェブログ", "プロ", "プロフェッショナル", "東京ITサービス", "日本語", "Tips"]
+  keywords: ["イソリア", "バイリンガル IT", "プロ", "プロフェッショナル", "東京ITサービス", "和英", "ヘルプデスク"]
   twitter: "@esolia_inc"
   fediverse: "@esolia.com@bsky.brid.gy"
   color: ["#ffbc68", "#2d2f63"]
@@ -91,8 +91,8 @@ en:
   lang: en
   site:
     author: "eSolia"
-    title: "Tech IT Easy Blog"
-    description: "IT Tips Blog page from eSolia Inc., Tokyo, Japan"
+    title: "Company Overview Top"
+    description: "Company Overview Web page for eSolia Inc., Tokyo, Japan"
     isolang: "en-US"
   topnav:
     links: 
@@ -143,13 +143,13 @@ en:
   metas:
     lang: en
     type: website
-    site: "=site.title || eSolia Tech IT Easy Blog"
-    title: "=title || eSolia Tech IT Easy Blog Page"
-    description: "=description || An article from the Tech IT Easy Tips Blog page from eSolia Inc., Tokyo, Japan"
+    site: "=site.title || eSolia Company Overview Site"
+    title: "=title || eSolia Company Overview Page"
+    description: "=description || A page from the Company Overview Site of eSolia Inc., Tokyo, Japan"
     author: "eSolia"
-    image: "=image || /assets/blog-esolia-pro-default.png"
+    image: "=image || /assets/esolia-main-site-default-en.png"
     icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
-    keywords: ["eSolia", "blog", "tips", "weblog", "pro", "professional", "tokyo it service", "japan", "english"]
+    keywords: ["eSolia", "bilingual", "professional", "tokyo it service", "japan it helpdesk", "japan", "english"]
     twitter: "@esolia_inc"
     fediverse: "@esolia.com@bsky.brid.gy"
     color: ["#ffbc68", "#2d2f63"]
