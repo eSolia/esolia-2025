@@ -22,12 +22,6 @@ topnav:
       title: イソリア社ウェブサイトへのリンク
 footernav:
   links: 
-    - text: アーカイブ
-      href: /archive
-      target: _self
-      icon: archive
-      aria_label: サイト内リンク
-      title: アーカイブページへのリンク
     - text: サイトマップ
       href: /sitemap.xml
       target: _self
@@ -41,17 +35,17 @@ footernav:
       aria_label: サイト内リンク
       title: プライバシーポリシーへのリンク
     - text: GitHubリポジトリ
-      href: https://github.com/eSolia/blog.esolia.pro
+      href: https://github.com/eSolia/esolia-2025
       target: _blank
       icon: github-logo
       aria_label: 外部リンク
       title: 当サイトのGitHubリポジトリへのリンク
-    - text: イソリア
-      href: https://esolia.co.jp
+    - text: ブログ
+      href: https://blog.esolia.pro
       target: _blank
       icon: building-office
       aria_label: 外部リンク
-      title: イソリア社ウェブサイトへのリンク
+      title: イソリア社ブログサイトへのリンク
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
   lang: ja
@@ -110,12 +104,6 @@ en:
         title: Link to eSolia Inc. website
   footernav:
     links: 
-      - text: Archive
-        href: /archive
-        target: _self
-        icon: archive
-        aria_label: Site internal link
-        title: Link to the Archive page
       - text: Sitemap
         href: /sitemap.xml
         target: _self
@@ -129,17 +117,17 @@ en:
         aria_label: Site internal link
         title: Link to the Privacy Policy
       - text: Github Repo
-        href: https://github.com/eSolia/blog.esolia.pro
+        href: https://github.com/eSolia/esolia-2025
         target: _blank
         icon: github-logo
         aria_label: External link
         title: Link to the GitHub Repository for this site
-      - text: eSolia
-        href: https://esolia.com
+      - text: Blog
+        href: https://blog.esolia.pro/en
         target: _blank
         icon: building-office
         aria_label: External link
-        title: Link to eSolia Inc. website
+        title: Link to eSolia Inc. blog site
   metas:
     lang: en
     type: website
