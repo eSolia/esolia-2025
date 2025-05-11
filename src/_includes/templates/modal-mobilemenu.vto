@@ -8,19 +8,34 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
     </svg>
   </button>
-
   <div class="mt-6"> 
-    <ul class="flex flex-col space-y-4">
+    <ul 
+      class="flex flex-col space-y-4"
+      role="menubar"
+      aria-label="Main menu">
+      {{ if alternates && alternates.length > 1 }}
+      {{- for alt of alternates }}{{ if alt.lang !== lang }}
       <li> 
-        <a href="/" title="ホーム" class="text-accent-800 hover:text-pink-600">日本語</a>
+        <a href="{{ alt.url }}" title="{{ alt.title |> escape }}" class="text-white bg-pink-500 hover:text-accent-50 hover:bg-pink-600">{{ if alt.lang == "ja" }}日本語{{ else }}English{{ /if }}
+        </a>
       </li>
-      <li><a href="/en/archive" class="text-accent-800 hover:text-pink-600">Archive</a></li>
-      <li><a href="https://esolia.com" class="text-accent-800 hover:text-pink-600">eSolia Inc.</a></li>
-    
-      
+      {{ /if }}{{ /for }}
+      {{ /if }}
+      {{- for item of it.topnav.links }}
+      <li>
+        <a 
+          href="{{ item.href }}" 
+          class="text-accent-800 hover:text-pink-600 {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
+          {{- if item.target === '_blank' }}rel="noopener"{{ /if -}}
+          role="menuitem"
+          aria-label="{{ item.aria_label }}"
+          title="{{ item.title }}"
+        >{{ item.text |> toUpperCase }}
+        <span class="sr-only"> ({{ item.aria_label }}) </span>
+        </a>
+      </li>
+      {{ /for }}
     </ul>
   </div>
 </div>
-
-
 <!-- ===== modal-mobilemenu.vto TEMPLATE END ===== -->
