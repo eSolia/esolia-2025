@@ -1,189 +1,142 @@
 <!-- ===== top-nav.vto TEMPLATE START ===== -->
-<header
-  class="pointer-events-none relative z-50 flex flex-none flex-col"
-  style="height: var(--header-height); margin-bottom: var(--header-mb)"
->
-  <div class="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"></div>
-  <div
-    class="top-0 order-last -mb-3 pt-3 sm:px-8"
-    style="position: var(--header-position)"
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav
+    class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+    aria-label="Global"
   >
-    <div class="mx-auto w-full max-w-7xl lg:px-8">
-      <div class="relative px-4 sm:px-8 lg:px-12">
-        <div class="mx-auto max-w-2xl lg:max-w-5xl">
-          <div
-            class="top-(--avatar-top,--spacing(3)) w-full"
-            style="position: var(--header-inner-position)"
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">eSolia Inc.</span>
+        {{# <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt=""> #}}
+        {{ if it.logo }}
+          <img
+            class="h-8 w-auto dark:invert"
+            src="{{ it.logo }}"
+            alt="{{ page.title || slug }}"
           >
-            <div class="relative">
-              <div
-                class="absolute top-3 left-0 h-10 w-10 origin-left rounded-full bg-white/90 p-0.5 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition-opacity dark:bg-zinc-800/90 dark:ring-white/10"
-                style="opacity: var(--avatar-border-opacity, 0); transform: var(--avatar-border-transform)"
-              >
-              </div>
-              <a
-                aria-label="Home"
-                class="pointer-events-auto block h-16 w-16 origin-left"
-                style="transform: var(--avatar-image-transform)"
-                href="/"
-              ><img
-                  alt=""
-                  fetchpriority="high"
-                  width="512"
-                  height="512"
-                  decoding="async"
-                  class="h-16 w-16 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-                  sizes="4rem"
-                  srcset="
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=16&amp;q=75     16w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=32&amp;q=75     32w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=48&amp;q=75     48w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=64&amp;q=75     64w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=96&amp;q=75     96w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=128&amp;q=75   128w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=256&amp;q=75   256w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=384&amp;q=75   384w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=640&amp;q=75   640w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=750&amp;q=75   750w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=828&amp;q=75   828w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1080&amp;q=75 1080w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1200&amp;q=75 1200w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1920&amp;q=75 1920w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=2048&amp;q=75 2048w,
-                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=3840&amp;q=75 3840w
-                          "
-                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=3840&amp;q=75"
-                /></a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {{ else }}
+          <strong>{{ metas.site }}</strong>
+        {{ /if }}
+      </a>
     </div>
-  </div>
-  <div
-    class="top-0 z-10 h-16 pt-6"
-    style="position: var(--header-position)"
-  >
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          data-slot="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      {{- for item of it.topnav.links }}
+        <a
+          href="{{ item.href }}"
+          {{ if item.target }}
+            target="{{ item.target }}"{{ /if }}
+          class="text-sm/6 font-semibold text-gray-900 dark:text-gray-300"
+        >{{ item.text }}</a>
+      {{ /for -}}
+    </div>
+
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <script>
+        // Check and apply the user's stored preference or the system preference on page load
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      // User actions to explicitly choose themes
+      function toggleTheme(isDark) {
+        localStorage.theme = isDark ? "dark" : "light"; // Save preference
+        document.documentElement.classList.toggle("dark", isDark);
+      }
+      </script>
+      <button class="button" onclick="toggleTheme()">
+        <span class="icon text-sm/6 text-red-900">◐</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-50"></div>
     <div
-      class="top-(--header-top,--spacing(6)) w-full sm:px-8"
-      style="position: var(--header-inner-position)"
+      class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
     >
-      <div class="mx-auto w-full max-w-7xl lg:px-8">
-        <div class="relative px-4 sm:px-8 lg:px-12">
-          <div class="mx-auto max-w-2xl lg:max-w-5xl">
-            <div class="relative flex gap-4">
-              <div class="flex flex-1"></div>
-              <div class="flex flex-1 justify-end md:justify-center">
-                <div
-                  class="pointer-events-auto md:hidden"
-                  data-headlessui-state=""
-                >
-                  <button
-                    class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
-                    type="button"
-                    aria-expanded="false"
-                    data-headlessui-state=""
-                  >
-                    Menu<svg
-                      viewBox="0 0 8 6"
-                      aria-hidden="true"
-                      class="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400"
-                    >
-                      <path
-                        d="M1.75 1.75 4 4.25l2.25-2.5"
-                        fill="none"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                      </path>
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  hidden=""
-                  style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; display: none"
-                >
-                </div>
-                <nav class="pointer-events-auto hidden md:block">
-                  <ul
-                    class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"
-                  >
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/about"
-                      >About</a>
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/articles"
-                      >Articles</a>
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/projects"
-                      >Projects</a>
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/speaking"
-                      >Speaking</a>
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/uses"
-                      >Uses</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="flex justify-end md:flex-1">
-                <div class="pointer-events-auto">
-                  <button
-                    type="button"
-                    aria-label="Toggle theme"
-                    class="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                      class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600"
-                    >
-                      <path
-                        d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"
-                      >
-                      </path>
-                      <path
-                        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-                        fill="none"
-                      >
-                      </path>
-                    </svg>
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400"
-                    >
-                      <path
-                        d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                      </path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+      <div class="flex items-center justify-between">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">eSolia Inc.</span>
+          <img
+            class="h-8 w-auto"
+            src="/assets/symbol_darkblue_bgtransparent_2.svg"
+            alt=""
+          >
+        </a>
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Close menu</span>
+          <svg
+            class="size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >Product</a>
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >Features</a>
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >Resources</a>
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >Company</a>
+          </div>
+          <div class="py-6">
+            <a
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >Log in</a>
           </div>
         </div>
       </div>

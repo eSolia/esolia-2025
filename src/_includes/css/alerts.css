@@ -7,7 +7,7 @@ body {
   border-left: solid 4px var(--color);
   background-color: var(--bgcolor);
   font: var(--font-sans);
-  color: var(--color-zinc-500);
+  color: var(--color-stone-500);
 
     & :last-child {
       margin-bottom: 0;
@@ -15,7 +15,7 @@ body {
   }
 
   .markdown-alert-title {
-    color: var(--color-zinc-800);
+    color: var(--color-stone-800);
     font: var(--font-sans);
     margin: 0;
     display: flex;
@@ -60,7 +60,7 @@ body {
 
 .dark  {
   .markdown-alert-title {
-    color: var(--color-zinc-800);
+    color: var(--color-stone-800);
   }
   .markdown-alert-important {
     --color: var(--color-fuchsia-800);

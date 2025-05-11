@@ -37,6 +37,7 @@ import source_maps from "lume/plugins/source_maps.ts";
 // Modify URLs
 import basePath from "lume/plugins/base_path.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import checkUrls from "lume/plugins/check_urls.ts";
 
 // Images
 import favicon from "lume/plugins/favicon.ts";
@@ -64,10 +65,10 @@ import feed from "lume/plugins/feed.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 
 // Checks
-import seo from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/mod.ts";
+import seo from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/new_mod.ts";
 
 // Final minification and compression 
-import minify_html from "lume/plugins/minify_html.ts";
+// import minify_html from "lume/plugins/minify_html.ts";
 import brotli from "lume/plugins/brotli.ts";
 
 
@@ -256,6 +257,9 @@ site.use(source_maps());
 // Modify URLs
 site.use(basePath());
 site.use(resolveUrls());
+site.use(checkUrls({
+  external: true,
+}));
 
 // Images 
 site.use(favicon({
@@ -359,6 +363,7 @@ site.use(
   }),
 );
 import { japaneseCommonWords } from "https://raw.githubusercontent.com/timthepost/cushytext/refs/heads/main/src/_plugins/seo/japanese_common_words.js";
+import o from "https://deno.land/x/lz4@v0.1.2/wasm.js";
 site.use(
   seo({
     output: "./_seo_report_ja.json",
@@ -382,7 +387,7 @@ site.use(
 );
 
 // Optimize HTML
-site.use(minify_html());
+// site.use(minify_html());
 site.use(brotli());
 
 
@@ -470,7 +475,25 @@ site.process([".html"], (pages) => {
   }
 });
 
+// Prepare script to get future holidays from dbflex
+site.script("getholidays", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Work%20Holiday/API%20Holidays%20Today%20or%20Later/select.json -o futureholidays.json");
+// Prepare script to get next holiday from dbflex
+site.script("getnextholiday", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Work%20Holiday/API%20Holidays%20Next/select.json -o nextholiday.json");
+// Prepare script to get webinfo from dbflex
+site.script("getwebinfo", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Information/API%20List%20All/select.json -o webinfo.json");
+// Prepare script to get webinfolast from dbflex
+site.script("getwebinfolast", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Information/API%20List%20All/select.json?top=1 -o webinfolast.json");
+// Prepare script to get projects from dbflex
+site.script("getprojects", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Project/API%20List%20All/select.json -o projects.json");
+site.script("getprojectslast", "cd src/_data && curl https://pro.dbflex.net/secure/api/v2/15331/${API_KEY_01}/Web%20Project/API%20List%20All/select.json?top=3 -o projectslast.json");
 
+// Execute scripts before build
+site.addEventListener("beforeBuild", "getholidays");
+site.addEventListener("beforeBuild", "getnextholiday");
+site.addEventListener("beforeBuild", "getwebinfo");
+site.addEventListener("beforeBuild", "getwebinfolast");
+site.addEventListener("beforeBuild", "getprojects");
+site.addEventListener("beforeBuild", "getprojectslast");
 
 // site.filter("tdate", (value: string | undefined, locale: string, timezone: string) => {
 //   if (!value) {

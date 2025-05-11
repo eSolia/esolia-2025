@@ -5,13 +5,13 @@
       <div class="mx-auto max-w-2xl lg:max-w-5xl">
         <div class="max-w-2xl">
           <h1
-            class="text-4xl tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
+            class="text-4xl tracking-tight text-stone-800 sm:text-5xl dark:text-stone-100"
           >
             {{# <span class="font-light">{{ i18n.home.company }}</span>
             <br class="block sm:hidden"> #}}
             <span class="font-light subpixel-antialiased">{{ site.title }}</span>
           </h1>
-          <p class="mt-6 text-base text-zinc-800 dark:text-zinc-400">
+          <p class="mt-6 text-base text-stone-800 dark:text-stone-400">
             {{ i18n.home.welcome |> replace("YEARS_IN_BUSINESS", (new Date().getFullYear() - 1999)) }}
           </p>
           <div class="mt-6 flex gap-6 no-external-icon">
@@ -44,7 +44,7 @@
               target="_blank"
               rel="noopener"
             ><img
-                class="h-6 w-6 fill-black-600 dark:fill-zinc-50 transition hover:scale-110"
+                class="h-6 w-6 fill-black-600 dark:fill-stone-50 transition hover:scale-110"
                 src='{{ "x-logo" |> icon("phosphor", "duotone") }}'
                 inline
               ></a>

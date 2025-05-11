@@ -1,0 +1,26 @@
+<!-- ===== modal-mobilemenu.vto TEMPLATE START ===== -->
+<div id="mobile-menu-modal-overlay" class="fixed inset-0 bg-black/50 z-[9998] hidden"></div> 
+{{# Modal Panel, hidden by default #}}
+<div id="mobile-menu-modal-panel" class="fixed top-0 right-0 bottom-0 w-64 bg-white z-[9999] overflow-y-auto p-4 hidden"> 
+  {{# Modal Content Here #}}
+  <button id="mobile-menu-close-button" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <div class="mt-6"> 
+    <ul class="flex flex-col space-y-4">
+      <li> 
+        <a href="/" title="ホーム" class="text-gray-800 hover:text-pink-600">日本語</a>
+      </li>
+      <li><a href="/en/archive" class="text-gray-800 hover:text-pink-600">Archive</a></li>
+      <li><a href="https://esolia.com" class="text-gray-800 hover:text-pink-600">eSolia Inc.</a></li>
+    
+      
+    </ul>
+  </div>
+</div>
+
+
+<!-- ===== modal-mobilemenu.vto TEMPLATE END ===== -->

@@ -1,0 +1,156 @@
+lang: en
+id: home
+layout: layouts/home.vto
+bodyClass: body-home
+title: Home
+script: /js/fathom-post-list-event.js
+alert: 
+  update: "Update"
+hero: 
+  title: "Your Virtual IT Department in Japan"
+  copy: "eSolia works as a team, bringing to bear all the skills a typical IT department has, to resolve your Japan challenges. We are multilingual professionals who communicate effectively with both the HQ and Japan teams, negotiating on your behalf with local vendors. We work hard to exceed your mandate, using our well-developed support systems to document and communicate clearly."
+  ticker: "Japan office build-out — onsite and remote IT support — project management — web development — SaaS database — cloud services — procurement processing and inventory control — Information Security — IT consulting — helpdesk —"
+partners:
+  title: "Our Partners"
+  copy: "We partner with industry leaders to deliver the best services."
+  list: 
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "Softbank IT-EX"
+      logo: /assets/softbank-itex-logo.png
+      height: h-7
+    - name: "Foresoft DBFlex"
+      logo: /assets/foresoft-dbflex-logo.svg
+      height: h-6
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "AWS"
+      logo: /assets/AmazonWebservices_Logo.svg
+      height: h-8
+    - name: "Epson"
+      logo: /assets/Epson_logo.svg
+      height: h-6
+services:
+  section: "Our Services"
+  title: "Your Challenges are our Service Mandates"
+  subtitle: "eSolia provides a full range of IT services based in Tokyo, supporting your Japan business success."
+  ctaurl: "https://esolia.com/services"
+  ctaaria: "Learn more button"
+  ctacopy: "Learn more"
+  ctatop: "Learn"
+  ctabottom: "More"
+  list:
+    - name: "Remote and Onsite IT Support"
+      description: "Comprehensive IT support for your Japan business."
+    - name: "Project Management"
+      description: "Practical project management to ensure Japan project success."
+    - name: "Web Development and Localization"
+      description: "Custom web development solutions."
+    - name: "Reliable PaaS Cloud Database PROdb"
+      description: "Rock-solid cloud database service for operational applications."
+    - name: "Information Security"
+      description: "Protecting your data with top-notch security."
+    - name: "IT Consulting"
+      description: "Expert IT consulting to guide your strategy."
+    - name: "Helpdesk"
+      description: "Bilingual helpdesk support for your Japan team."
+    - name: "Procurement and Inventory Processing"
+      description: "Streamlined procurement processing for efficiency."
+    - name: "IT Asset Management"
+      description: "Comprehensive asset management for your IT resources."
+certifications:
+  title: "Certifications"
+  copy: "Our experienced bilingual professionals achieve not just industry certifications, but sharpen their knowledge continually in the form of a required daily quiz."
+  list: 
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "CompTIA"
+      logo: /assets/Comptia-logo.svg
+      height: h-7
+    - name: "eSolia"
+      logo: /assets/logo_horiz_darkblue_bgtransparent.svg
+      height: h-8
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "IPA IT Passport"
+      logo: /assets/ipa-it-passport-exam-logo-symbol.png
+      height: h-8
+    - name: "Joho Gakushu"
+      logo: /assets/joho-gakushu_logo2.jpg
+      height: h-6
+    - name: "IDEO U"
+      logo: /assets/ideo-u-logo.png
+      height: h-8
+trackrecord: 
+  section: "Our Track Record"
+  title: "A Trusted Team for Japan Project Success"
+  subtitle: "Because we have served a variety of blue-chip foreign and Japanese organizations in Japan for approaching <mark>YEARS_IN_BUSINESS</mark> years, we have the experience to understand your needs and a real track record for delivering success for Japan projects. eSolia is itself a multi-cultural, multi-language organization, and we have the confidence to find solutions for all your system and process challenges."
+  list:
+    - name: "Hours Booked over 5 Years"
+      stat: "60,000+"
+      color: "text-yellow-500"
+    - name: "Tickets Resolved Annually"
+      stat: "3,000+"
+      color: "text-yellow-500"
+    - name: "Pros per Account"
+      stat: "2"
+      color: "text-esoliablue-600"
+    - name: "Management Team Experience"
+      stat: "100+ years"
+      color: "text-pink-600"
+recentprojects:
+  section: "Our Work"
+  title: "Recent Project Success"
+  subtitle: "We work with the HQ IT departments of our clients, to ensure project success, coordinating with local vendors in Japanese, and explaining to HQ IT management in English. Here are a couple recent achievements."
+  url: "https://esolia.com/success-stories"
+  cta: "See all our projects"
+whyesolia:
+  section: "Why eSolia"
+  title: "What are the reasons to choose eSolia?"
+  subtitle: "Client requirements are our first in our minds as we deliver our services. We use a range of tools and techniques to accommodate your directives, standards and mandate, in the most flexible manner possible. Please get in touch for a discussion, and we will be happy to provide a proposal and quote for your consideration."
+  list:
+    - name: "Expertise"
+      description: "Our team comprises multilingual certified professionals possessing real-world experience in a wide range of IT disciplines."
+    - name: "Secure & Private"
+      description: "We follow ISO 27001 and other standards to prioritize security and privacy in all our services, practices and developed systems, ensuring that your data is protected at all times."
+    - name: "Proven Track Record"
+      description: "We have a proven track record of success in delivering IT solutions to clients in Japan for over a quarter century since 1999, with a steadfast focus on quality and customer satisfaction."
+    - name: "Service Value"
+      description: "We are not a temp staff company, and our value is achieved because we strive as a team on behalf of our clients, responsibly performing the services consigned to us."
+    - name: "Professionalism"
+      description: "We are committed to professionalism in all our work, ensuring that we maintain the highest standards of conduct and ethics. Our members pledge to honor security and confidentiality, protect privacy, share knowledge, listen and learn actively, and improve iteratively."
+    - name: "Tools & Techniques"
+      description: "Experience has let us design, assemble or develop various tools and techniques used in our professional practice, from work instructions and templates, to database applications built in our PaaS PROdb for time and expense, work logging for helpdesk and projects, and ongoing learning."
+testimonials:
+  section: "Testimonials"
+  title: "What our clients say"
+  subtitle: "We are fortunate to have received positive feedback (and repeat business!) from our clients. Here's what they have to say:"
+  list:
+    - name: "Client A"
+      quote: "eSolia helped us to see the light at the end of the tunnel, when they successfully managed our complex, multi-year project."
+      color: "yellow"
+    - name: "Client B"
+      quote: "eSolia's technical knowledge was second-to-none, and they could explain difficult solutions in layman's terms so that everyone understood every detail."
+      color: "pink"
+hireus:
+  section: "Hire eSolia"
+  title: "Ready to Succeed in Japan?"
+  subtitle: "If you want to explore further, the next steps are:"
+  steps:
+    - name: "1. Contact Us"
+      description: "We will discuss your needs and how we can help."
+    - name: "2. Proposal"
+      description: "We will prepare a proposal and estimate for your consideration."
+    - name: "3. Agreement"
+      description: "We will finalize the agreement and get started."
+    - name: "4. Kickoff"
+      description: "We will start working together to achieve your goals."
+  ctaurl: "https://esolia.com/info-request/"
+  ctacopy: "Get Started!"
+  ctaaria: "Get Started button"
+biglogo:
+  copy: "Your next Japan IT partner"

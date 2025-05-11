@@ -23,7 +23,7 @@
         >
         </div> #}}
         <div
-          class="absolute inset-0 bg-zinc-50/30 dark:bg-zinc-800/60 rounded-2xl transition-opacity duration-300 mix-blend-luminosity dark:mix-blend-color"
+          class="absolute inset-0 bg-stone-50/30 dark:bg-stone-800/60 rounded-2xl transition-opacity duration-300 mix-blend-luminosity dark:mix-blend-color"
         >
         </div>
         <img
@@ -61,7 +61,7 @@
             <a
               href="{{ post.url }}"
               data-faid="{{ post.lang }}-{{ if post.id.length > 0 }}{{ post.id }}{{ else }}{{ loop.index }}{{ /if }}"
-              class="data-fatrigger text-zinc-800 hover:text-sky-500 dark:text-zinc-50 dark:hover:text-sky-500"
+              class="data-fatrigger text-stone-800 hover:text-sky-500 dark:text-stone-50 dark:hover:text-sky-500"
               {{ if post.url == url }}
                 aria-current="page"{{ /if }}
             >
@@ -72,7 +72,7 @@
                 </span>{{ /if }} #}}
             </a>
           </h3>
-          <p class="mt-5 line-clamp-3 text-sm/6 text-zinc-600 dark:text-zinc-300">
+          <p class="mt-5 line-clamp-3 text-sm/6 text-stone-600 dark:text-stone-300">
             {{ post.excerpt |> md(true) }}
           </p>
         </div>

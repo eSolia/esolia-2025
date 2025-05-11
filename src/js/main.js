@@ -16,58 +16,58 @@ function loadVendorScript(src, attributes, callback) {
 // Swap logo on scroll and make nav bg more opaque
 window.addEventListener('scroll', () => {
   const largeLogo = document.getElementById('large-logo');
-  const smallLogo = document.getElementById('small-logo');
-  const topNavBG = document.getElementById('top-nav-bg');
+  // const smallLogo = document.getElementById('small-logo');
+  // const topNavBG = document.getElementById('top-nav-bg');
   const scrollPosition = window.scrollY;
 
   // Handle logo swap
   if (scrollPosition > 10) {
       largeLogo.classList.add('opacity-0');
-      smallLogo.classList.remove('opacity-0');
+      // smallLogo.classList.remove('opacity-0');
   } else {
       largeLogo.classList.remove('opacity-0');
-      smallLogo.classList.add('opacity-0');
+      // smallLogo.classList.add('opacity-0');
   }
 
   // Handle nav opacity changes based on scroll position
-  if (scrollPosition > 50) {
-      topNavBG.classList.remove('bg-zinc-50/50', 'dark:bg-zinc-700/50', 'bg-zinc-50/70', 'dark:bg-zinc-700/70');
-      topNavBG.classList.add('bg-zinc-50/95', 'dark:bg-zinc-700/95');
-  } else if (scrollPosition > 30 && scrollPosition <= 50) {
-      topNavBG.classList.remove('bg-zinc-50/50', 'dark:bg-zinc-700/50', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/70', 'dark:bg-zinc-700/70');
-  } else if (scrollPosition > 10 && scrollPosition <= 30) {
-      topNavBG.classList.remove('bg-zinc-50/70', 'dark:bg-zinc-700/70', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/50', 'dark:bg-zinc-700/50');
-  } else {
-      topNavBG.classList.remove('bg-zinc-50/70', 'dark:bg-zinc-700/70', 'bg-zinc-50/95', 'dark:bg-zinc-700/95');
-      topNavBG.classList.add('bg-zinc-50/50', 'dark:bg-zinc-700/50');
-  }
+  // if (scrollPosition > 50) {
+  //     topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/70', 'dark:bg-stone-700/70');
+  //     topNavBG.classList.add('bg-stone-50/95', 'dark:bg-stone-700/95');
+  // } else if (scrollPosition > 30 && scrollPosition <= 50) {
+  //     topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+  //     topNavBG.classList.add('bg-stone-50/70', 'dark:bg-stone-700/70');
+  // } else if (scrollPosition > 10 && scrollPosition <= 30) {
+  //     topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+  //     topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
+  // } else {
+  //     topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
+  //     topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
+  // }
 });
 
 // Theme Toggle with Alpine.js
-document.addEventListener('alpine:init', () => {
-  Alpine.data('themeToggle', () => ({
-      darkMode: localStorage.getItem('darkMode') === 'true' || false,
-      init() {
-          this.$watch('darkMode', value => {
-              localStorage.setItem('darkMode', value);
-              document.body.classList.toggle('dark', value);
-          });
-          // Ensure the correct class is applied on page load
-          document.body.classList.toggle('dark', this.darkMode);
-      }
-  }));
-});
+// document.addEventListener('alpine:init', () => {
+//   Alpine.data('themeToggle', () => ({
+//       darkMode: localStorage.getItem('darkMode') === 'true' || false,
+//       init() {
+//           this.$watch('darkMode', value => {
+//               localStorage.setItem('darkMode', value);
+//               document.body.classList.toggle('dark', value);
+//           });
+//           // Ensure the correct class is applied on page load
+//           document.body.classList.toggle('dark', this.darkMode);
+//       }
+//   }));
+// });
   
 // Load Mastodon Comments from a local file
 import Comments from "./comments.js";
 customElements.define("mastodon-comments", Comments);
 
 // Load Alpine.js with defer
-loadVendorScript('https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', { 'defer': '' }, function() {
-  console.log('Alpine.js loaded with defer');
-});
+// loadVendorScript('https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', { 'defer': '' }, function() {
+//   console.log('Alpine.js loaded with defer');
+// });
 
 // Load Fathom Analytics script with data-site attribute and defer
 loadVendorScript('https://cdn.usefathom.com/script.js', { 'data-site': 'OIXGEUHR', 'defer': '' }, function() {
@@ -84,46 +84,136 @@ buttons.forEach(button => {
   });
 });
 
-// Search modal
-const modal = document.getElementById("searchModal");
-const searchButton = document.getElementById("search-button"); // Select the button by its ID
-const close = document.getElementById("modal-close");
+// SEARCH AND MOBILE MENU MODAL CONTROL
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('--- DOM Content Loaded ---');
+  // --- Search Modal Control ---
+  // Get references to the search modal elements
+  const searchModal = document.getElementById("searchModal");
+  const searchButton = document.getElementById("search-button"); // Select the button by its ID
+  const searchModalCloseButton = document.getElementById("modal-close"); // Use a distinct ID for clarity
 
-searchButton.onclick = function() { // Change the event listener target to the button
-  modal.style.display = "block";
-  // Focus on the Pagefind input if it exists after the modal is shown
-  const pageFind = modal.querySelector(".pagefind-ui__search-input");
-  if (pageFind) {
-    pageFind.focus();
-  }
-}
-close.onclick = function () {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-// Close modal on Escape key press
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape' || event.keyCode === 27) { // Check for Escape key
-    if (modal.style.display === 'block') {
-    modal.style.display = 'none';
-    }
- }
-});
-// Open modal on Cmd+K (Mac) or Ctrl+K (Windows/Linux)
-document.addEventListener('keydown', function(event) {
-    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-    const isCmdOrCtrl = isMac ? event.metaKey : event.ctrlKey;
+  // Check if all search modal elements were found before adding listeners
+  if (searchModal && searchButton && searchModalCloseButton) {
 
-    if (isCmdOrCtrl && event.key === 'k') {
-        event.preventDefault(); // Prevent browser's default search shortcut
-        modal.style.display = 'block';
-        const pageFind = modal.querySelector(".pagefind-ui__search-input");
-        if (pageFind) {
+    // Open search modal on button click
+    searchButton.addEventListener("click", function() { // Use addEventListener
+      searchModal.style.display = "block";
+      // Focus on the Pagefind input if it exists after the modal is shown
+      const pageFind = searchModal.querySelector(".pagefind-ui__search-input");
+      if (pageFind) {
         pageFind.focus();
+      }
+    });
+
+    // Close search modal on close button click
+    searchModalCloseButton.addEventListener("click", function () { // Use addEventListener
+      searchModal.style.display = "none";
+    });
+
+    // Close search modal on clicking outside the modal content (on the modal background)
+    window.addEventListener("click", function(event) { // Add listener to window
+        if (event.target === searchModal) { // Use === for precise target check
+            searchModal.style.display = "none";
         }
-    }
-});
+    });
+
+    // Close search modal on Escape key press
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') { // Use event.key for modern browsers
+        if (searchModal.style.display === 'block') { // Check if visible
+          searchModal.style.display = 'none';
+        }
+      }
+    });
+
+    // Open search modal on Cmd+K (Mac) or Ctrl+K (Windows/Linux)
+    document.addEventListener('keydown', function(event) {
+        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+        const isCmdOrCtrl = isMac ? event.metaKey : event.ctrlKey;
+
+        if (isCmdOrCtrl && event.key === 'k') {
+            event.preventDefault(); // Prevent browser's default search shortcut
+            searchModal.style.display = 'block';
+            const pageFind = searchModal.querySelector(".pagefind-ui__search-input");
+            if (pageFind) {
+              pageFind.focus();
+            }
+        }
+    });
+
+  } // End check for search modal elements
+
+  // --- Mobile Menu Modal Control ---
+  // Get references to the mobile menu modal elements
+  const mobileMenuOverlay = document.getElementById("mobile-menu-modal-overlay");
+  const mobileMenuPanel = document.getElementById("mobile-menu-modal-panel");
+  const mobileMenuButton = document.getElementById("mobile-menu-button"); // The "Menu" button
+  const mobileMenuCloseButton = document.getElementById("mobile-menu-close-button"); // The close X button inside the modal
+
+  console.log({mobileMenuButton}, {mobileMenuCloseButton}, {mobileMenuOverlay}, {mobileMenuPanel}); // Log the elements to check if they are null
+  // Check if the elements are null
+
+  // Check if all mobile menu modal elements were found before adding listeners
+  if (mobileMenuOverlay && mobileMenuPanel && mobileMenuButton && mobileMenuCloseButton) {
+    console.log('All mobile menu elements found. Attempting to attach listeners.');
+      // Function to show the mobile menu modal
+      function showMobileMenuModal() {
+        console.log('--- Calling showMobileMenuModal ---'); // Check if this logs
+        if (mobileMenuOverlay && mobileMenuPanel) {
+          console.log('Removing hidden class from overlay and panel'); // Check if this logs
+          mobileMenuOverlay.classList.remove("hidden");
+          mobileMenuPanel.classList.remove("hidden");
+        } else {
+          console.log('Error: Modal elements are null inside showMobileMenuModal'); // Should NOT log if previous checks work
+        }
+      }
+
+      // Function to hide the mobile menu modal
+      function hideMobileMenuModal() {
+        console.log('--- Calling hideMobileMenuModal ---'); // Check if this logs
+        if (mobileMenuOverlay && mobileMenuPanel) {
+          console.log('Adding hidden class to overlay and panel'); // Check if this logs
+          mobileMenuOverlay.classList.add("hidden");
+          mobileMenuPanel.classList.add("hidden");
+        } else {
+            console.log('Error: Modal elements are null inside hideMobileMenuModal'); // Should NOT log
+        }
+      }
+
+      // --- Event Listeners ---
+
+      // Open modal on "Menu" button click
+      mobileMenuButton.addEventListener("click", function() {
+        console.log('--- Mobile menu button clicked ---');
+          showMobileMenuModal();
+      });
+
+      // Close modal on close button click
+      mobileMenuCloseButton.addEventListener("click", function () {
+          hideMobileMenuModal();
+      });
+
+      // Close modal when clicking outside the panel (on the overlay)
+       // Use click event on the overlay itself, not the window for more precise targeting
+      mobileMenuOverlay.addEventListener("click", function(event) {
+           if (event.target === mobileMenuOverlay) { // Check if the clicked element is the overlay
+               hideMobileMenuModal();
+           }
+       });
+
+
+      // Close modal on Escape key press
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          // Check if the modal is currently visible (check if the panel does NOT have the hidden class)
+          if (!mobileMenuPanel.classList.contains('hidden')) {
+            hideMobileMenuModal();
+          }
+        }
+      });
+
+  } // End check for mobile menu modal elements
+
+}); // End DOMContentLoaded listener

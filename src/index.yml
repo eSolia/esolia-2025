@@ -1,0 +1,155 @@
+lang: ja
+id: home
+layout: layouts/home.vto
+bodyClass: body-home
+title: ホーム
+script: /js/fathom-post-list-event.js
+alert: 
+  update: "最新情報"
+hero: 
+  title: "日本担当の<br>バーチャルIT部門"
+  copy: "eSoliaはチームとして機能し、典型的なIT部門が持つすべてのスキルを活かして、日本での課題を解決します。私たちは多言語に対応できるプロフェッショナルであり、本社と日本のチームとの間で効果的にコミュニケーションを取り、現地のベンダーと交渉します。私たちは、明確に文書化し、コミュニケーションを行うための十分に発展したサポートシステムを使用して、あなたの期待を超えるよう努めています。"
+  ticker: "日本オフィス移転IT支援 — オンサイトおよびリモートITサポート — プロジェクト管理 — ウェブ開発 — SaaSデータベース — クラウドサービス — 調達処理と在庫管理 — 情報セキュリティ — ITコンサルティング — ヘルプデスク —"
+partners: 
+  title: "私たちのパートナー"
+  copy: "私たちは、業界リーダーのパートナーと提携し、最高のサービスを提供しています。"
+  list: 
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "Softbank IT-EX"
+      logo: /assets/softbank-itex-logo.png
+      height: h-7
+    - name: "Foresoft DBFlex"
+      logo: /assets/foresoft-dbflex-logo.svg
+      height: h-6
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "AWS"
+      logo: /assets/AmazonWebservices_Logo.svg
+      height: h-8
+    - name: "Epson"
+      logo: /assets/Epson_logo.svg
+      height: h-6
+services:
+  section: "私たちのサービス"
+  title: "あなたの課題は私たちのサービスの使命です"
+  subtitle: "eSoliaは東京を拠点に、日本ビジネスの成功をサポートするITサービスを提供しています。"
+  ctatop: "更に"
+  ctabottom: "詳しく見る"
+  ctaurl: "https://esolia.co.jp/services"
+  ctaaria: "詳しく見るボタン"
+  list:
+    - name: "リモートおよびオンサイトITサポート"
+      description: "日本ビジネス向けの包括的なITサポート。"
+    - name: "プロジェクト管理"
+      description: "日本でのプロジェクト成功を確実にする実践的なプロジェクト管理。"
+    - name: "ウェブ開発とローカリゼーション"
+      description: "カスタムウェブ開発ソリューション。"
+    - name: "信頼性の高いPaaSクラウドデータベースPROdb"
+      description: "業務アプリケーション向けの堅牢なクラウドデータベースサービス。"
+    - name: "情報セキュリティ"
+      description: "最高レベルのセキュリティでデータを保護。"
+    - name: "ITコンサルティング"
+      description: "戦略を導く専門的なITコンサルティング。"
+    - name: "ヘルプデスク"
+      description: "日本チーム向けのバイリンガルヘルプデスクサポート。"
+    - name: "調達および在庫処理"
+      description: "効率的な調達処理。"
+    - name: "IT資産管理"
+      description: "ITリソースの包括的な資産管理。"
+certifications:
+  title: "認証"
+  copy: "私たちの経験豊富なバイリンガルプロフェッショナルは、業界認証を取得するだけでなく、毎日のクイズ形式で知識を継続的に磨いています。"
+  list:
+    - name: "Microsoft 365"
+      logo: /assets/Microsoft_365_Copilot.svg
+      height: h-8
+    - name: "CompTIA"
+      logo: /assets/Comptia-logo.svg
+      height: h-7
+    - name: "eSolia"
+      logo: /assets/logo_horiz_darkblue_bgtransparent.svg
+      height: h-8
+    - name: "Fortinet"
+      logo: /assets/Fortinet-logo-rgb-black-red.svg
+      height: h-13
+    - name: "IPA IT Passport"
+      logo: /assets/ipa-it-passport-exam-logo-symbol.png
+      height: h-8
+    - name: "Joho Gakushu"
+      logo: /assets/joho-gakushu_logo2.jpg
+      height: h-6
+    - name: "IDEO U"
+      logo: /assets/ideo-u-logo.png
+      height: h-8
+trackrecord:
+  section: "実績" 
+  title: "日本におけるプロジェクト成功のための信頼できるチーム" 
+  subtitle: "弊社は日本において、<mark>YEARS_IN_BUSINESS</mark>年近くにわたり、様々な有力外資系企業および日系企業にサービスを提供してまいりました。これにより、お客様のニーズを深く理解し、日本におけるプロジェクトを成功に導いてきた確かな実績がございます。eSoliaは多文化・多言語の組織であり、お客様のシステムやプロセスのあらゆる課題に対し、最適な解決策を見つけ出す自信があります。" 
+  list:
+    - name: "過去5年間の総作業時間" 
+      stat: "60,000+"
+      color: "text-yellow-500"
+    - name: "年間対応チケット数" 
+      stat: "3,000+"
+      color: "text-yellow-500"
+    - name: "1社あたりの担当者数" 
+      stat: "2人"
+      color: "text-esoliablue-600"
+    - name: "管理チーム経験年数" 
+      stat: "100+ years"
+      color: "text-pink-600"
+recentprojects:
+  section: "当社の仕事" 
+  title: "最新のプロジェクト成功事例" 
+  subtitle: "弊社は、お客様の本社IT部門と連携し、プロジェクトの成功を確実にするため、日本の現地ベンダーとは日本語で調整を行い、本社ITマネジメントには英語で説明を行っています。ここに、いくつか最新の成果をご紹介します。" 
+  url: "https://esolia.co.jp/success-stories"
+  cta: "当社のプロジェクト一覧を見る"
+whyesolia:
+  section: "何故イソリアか?"
+  title: "イソリアが有益である根本的な理由"
+  subtitle: "サービス提供にあたり、お客様の要件を最優先に考えております。お客様のご要望、基準、規定に可能な限り柔軟に対応するため、様々なツールや手法を活用しています。ぜひ、一度お打ち合わせの機会をいただけますと幸いです。喜んでお客様のご検討のためのご提案書とお見積もりを作成いたします。"
+  list:
+    - name: "専門性" 
+      description: "弊社のチームは、多岐にわたるIT分野で実務経験を有する、多言語対応の認定プロフェッショナルで構成されています。" 
+    - name: "セキュリティとプライバシー" 
+      description: "ISO 27001をはじめとする各種規格に準拠し、全てのサービス、業務プロセス、開発システムにおいてセキュリティとプライバシーを最優先。お客様のデータは常に安全に保護される体制を確保しています。" 
+    - name: "確かな実績" 
+      description: "1999年創業以来、四半世紀以上にわたり、日本のお客様へITソリューションを提供し、数々の成功を収めてまいりました。品質と顧客満足を常に最優先する揺るぎない姿勢がその基盤です。" 
+    - name: "提供付加価値" 
+      description: "弊社は一時的な人材派遣ではなく、お客様のためにチーム一丸となって取り組み、委託されたサービスを責任をもって遂行することで真の価値を提供しています。" 
+    - name: "プロ意識" 
+      description: "弊社は全ての業務においてプロフェッショナルとしての意識を高く持ち、最高水準の行動規範と倫理を遵守しています。メンバー一人ひとりが、セキュリティと機密性の尊重、プライバシー保護、知識の共有、積極的な傾聴と学習、反復的な改善を誓約し実践しています。" 
+    - name: "活用ツールと手法" 
+      description: "長年の経験に基づき、業務の実践で使用する様々なツールや手法を独自に設計、開発、または選定してきました。これには、標準化された作業手順書やテンプレート、自社開発PaaSであるPROdb上の時間・経費管理、ヘルプデスクやプロジェクトの進捗管理と作業記録、さらには継続的な学習を支援するデータベースアプリケーションなどが含まれます。" 
+testimonials:
+  section: "お客様の声" 
+  title: "褒めていただいて、感謝しております" 
+  subtitle: "幸いなことに、お客様より温かいお言葉 (及びリピートビジネス！) をいただいております。いくつかご紹介させていただきます。" 
+  list:
+    - name: "クライアントA" 
+      quote: "複雑な複数年にわたるプロジェクトを成功に導いてくれた時、eSoliaはまさにトンネルの先の光を見せてくれました。" 
+      color: "yellow"
+    - name: "クライアントB" 
+      quote: "eSoliaの技術的な知識は卓越しており、難しいソリューションも専門知識のない人にも分かりやすく説明してくれたため、全員が細部まで理解できました。" 
+      color: "pink"
+hireus:
+  section: "依頼方法" 
+  title: "IT業務の成功に向けて準備はOKですか？" 
+  subtitle: "サービス導入をご検討でしたら、次のステップをご確認ください。" 
+  steps:
+    - name: "1. お問い合わせ" 
+      description: "お客様のニーズと、弊社がお手伝いできる内容についてお話しさせていただきます。" 
+    - name: "2. ご提案" 
+      description: "お客様に最適なご提案と概算を作成いたします。" 
+    - name: "3. ご契約" 
+      description: "内容確認の上、ご契約を結ばせていただきます。" 
+    - name: "4. 作業開始" 
+      description: "お客様の目標達成に向けて、共同での取り組みを開始します。" 
+  ctaurl: "https://esolia.co.jp/info-request/"
+  ctacopy: "始めよう！" 
+  ctaaria: "始めよう！ボタン"
+biglogo:
+  copy: "御社の良き日本ITパートナー"

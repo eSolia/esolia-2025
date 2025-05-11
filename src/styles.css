@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/container-queries";
-/* @plugin "daisyui@5.0.27"; */
+/* @plugin "daisyui@latest"; */
 /* @plugin "flyonui@2.0.0"; */
 /* @plugin "tailwind-every-layout@latest"; */
 @import "css/alerts.css";
@@ -10,7 +10,7 @@
 
 @layer base {
   a {
-    @apply text-zinc-500 dark:text-zinc-100 hover:text-sky-600 dark:hover:text-sky-400; /* Example base link styles */
+    @apply text-stone-500 dark:text-stone-100 hover:text-sky-600 dark:hover:text-sky-400; /* Example base link styles */
     transition: color 0.15s ease-in-out;
     text-decoration-thickness: 1px; /* Set your desired default thickness here as well */
     text-decoration-color: theme('colors.zinc.500'); /* Match the text color */
@@ -28,7 +28,7 @@
   }
 
   table.not-prose thead {
-    @apply bg-zinc-50 text-zinc-700 dark:bg-zinc-600 dark:text-zinc-300 text-left;
+    @apply bg-stone-50 text-stone-700 dark:bg-stone-600 dark:text-stone-300 text-left;
   }
 
   table.not-prose th,
@@ -41,10 +41,10 @@
   }
 
   table.not-prose tbody {
-    @apply divide-y divide-zinc-200 dark:divide-zinc-700;
+    @apply divide-y divide-stone-200 dark:divide-stone-700;
   }
   table.not-prose caption {
-    @apply caption-bottom text-left p-2 text-xs text-zinc-400;
+    @apply caption-bottom text-left p-2 text-xs text-stone-400;
   }
     /* Override the prose <a> tag hover classes */
   .prose :where(a) {
@@ -64,13 +64,71 @@
     margin-top: 0;
   }
 }
+@layer utilities {
+  .transition-max-w {
+    transition: max-width 0.5s ease-in-out;
+  }
+  /* Keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes rightMarquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  /* Animation Utility Classes */
+  .animate-marquee {
+    animation: var(--animate-marquee);
+  }
+
+  .animate-rightMarquee {
+    animation: var(--animate-rightMarquee);
+  }
+
+  .animate-slowMarquee {
+    animation: var(--animate-slowMarquee);
+  }
+
+  .animate-verticalMarquee {
+    animation: var(--animate-verticalMarquee);
+  }
+}
 
 /* prose-a:text-sky-900 dark:prose-a:text-sky-200  prose-a:decoration-sky-700 prose-a:underline  */
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --default-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1, "palt" 0, "zero" 1, "sups" 0, "frac" 0, "ordn" 0;
+  /* 23.4375 is 375rem, 27.5 is 440px, 30rem 480px, 90rem 1440px, 100rem 1600px, 108rem 1728px, 120rem 1920px, 160rem 2560px */
+  --breakpoint-2xs: 23.4375rem;
+  --breakpoint-1xs: 27.5rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-1xl: 90rem;
+  --breakpoint-2xlb: 100rem;
+  --breakpoint-3xl: 108rem;
+  --breakpoint-4xl: 120rem;
+  --breakpoint-5xl: 160rem;
+  --default-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1, "palt" 0, "zero" 1, "sups" 0, "frac" 0, "ordn" 0, "smcp" 1, "onum" 0, "tnum" 0, "swsh" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0, "ss07" 0, "ss08" 0, "ss09" 0;
   --default-font-variant-ligatures: common-ligatures;
   --header-top: 1rem;
   --font-sans: textface, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -112,6 +170,99 @@
   --color-esoliapaleyellow-800: oklch(71.89% 0.149 98.21);
   --color-esoliapaleyellow-900: oklch(56.97% 0.118 98.01);
   --color-esoliapaleyellow-950: oklch(44.52% 0.092 98.87);
+
+  /* base shades */
+  /* --color-base-50: oklch(98.69% 0.003 303.69);
+  --color-base-100: oklch(97.31% 0.005 300.99);
+  --color-base-200: oklch(94.19% 0.008 302.94);
+  --color-base-300: oklch(87.86% 0.015 307.53);
+  --color-base-400: oklch(78.6% 0.023 309.13);
+  --color-base-500: oklch(68.8% 0.029 309.99);
+  --color-base-600: oklch(60.47% 0.034 310.3);
+  --color-base-700: oklch(51.84% 0.037 310.56);
+  --color-base-800: oklch(46.6% 0.038 310.92);
+  --color-base-900: oklch(42.76% 0.038 311.68);
+  --color-base-950: oklch(27.06% 0.033 316.77); */
+
+  --color-base-50: var(--color-gray-50);
+  --color-base-100: var(--color-gray-100);
+  --color-base-200: var(--color-gray-200);
+  --color-base-300: var(--color-gray-300);
+  --color-base-400: var(--color-gray-400);
+  --color-base-500: var(--color-gray-500);
+  --color-base-600: var(--color-gray-600);
+  --color-base-700: var(--color-gray-700);
+  --color-base-800: var(--color-gray-800);
+  --color-base-900: var(--color-gray-900);
+  --color-base-950: var(--color-gray-950);
+
+  /* accent Shades */
+  /* --color-accent-50: oklch(98.01% 0.003 150.32);
+  --color-accent-100: oklch(94.75% 0.005 150.03);
+  --color-accent-200: oklch(88.36% 0.009 150.49);
+  --color-accent-300: oklch(80.36% 0.014 150.95);
+  --color-accent-400: oklch(71.89% 0.02 151.79);
+  --color-accent-500: oklch(60.47% 0.029 152.44);
+  --color-accent-600: oklch(51.84% 0.036 152.77);
+  --color-accent-700: oklch(45.52% 0.038 153.15);
+  --color-accent-800: oklch(39.79% 0.04 153.57);
+  --color-accent-900: oklch(35.29% 0.042 153.85);
+  --color-accent-950: oklch(21.9% 0.04 155.54); */
+
+  --color-accent-50: var(--color-stone-50);
+  --color-accent-100: var(--color-stone-100);
+  --color-accent-200: var(--color-stone-200);
+  --color-accent-300: var(--color-stone-300);
+  --color-accent-400: var(--color-stone-400);
+  --color-accent-500: var(--color-stone-500);
+  --color-accent-600: var(--color-stone-600);
+  --color-accent-700: var(--color-stone-700);
+  --color-accent-800: var(--color-stone-800);
+  --color-accent-900: var(--color-stone-900);
+  --color-accent-950: var(--color-stone-950);
+
+  /* --color-accent-50: var(--color-yellow-50);
+  --color-accent-100: var(--color-yellow-100);
+  --color-accent-200: var(--color-yellow-200);
+  --color-accent-300: var(--color-yellow-300);
+  --color-accent-400: var(--color-yellow-400);
+  --color-accent-500: var(--color-yellow-500);
+  --color-accent-600: var(--color-yellow-600);
+  --color-accent-700: var(--color-yellow-700);
+  --color-accent-800: var(--color-yellow-800);
+  --color-accent-900: var(--color-yellow-900);
+  --color-accent-950: var(--color-yellow-950); */
+
+  /* Yellow Shades */
+  --color-yellow-50: oklch(97.59% 0.015 84.79);
+  --color-yellow-100: oklch(93.65% 0.033 77.94);
+  --color-yellow-200: oklch(87.55% 0.06 73.36);
+  --color-yellow-300: oklch(80.54% 0.092 70.22);
+  --color-yellow-400: oklch(74.61% 0.123 68.42);
+  --color-yellow-500: oklch(68.8% 0.154 67.1);
+  --color-yellow-600: oklch(60.47% 0.178 65.51);
+  --color-yellow-700: oklch(51.84% 0.182 63.87);
+  --color-yellow-800: oklch(45.52% 0.176 62.48);
+  --color-yellow-900: oklch(39.79% 0.162 61.32);
+  --color-yellow-950: oklch(21.9% 0.136 56.32);
+  /* Pink Shades */
+  --color-pink-50: oklch(98.01% 0.005 350.21);
+  --color-pink-100: oklch(95.9% 0.014 349.54);
+  --color-pink-200: oklch(91.97% 0.028 349.34);
+  --color-pink-300: oklch(86.1% 0.049 349.22);
+  --color-pink-400: oklch(78.6% 0.076 349.34);
+  --color-pink-500: oklch(71.89% 0.107 349.57);
+  --color-pink-600: oklch(60.47% 0.155 349.88);
+  --color-pink-700: oklch(51.84% 0.176 350.2);
+  --color-pink-800: oklch(45.52% 0.183 350.39);
+  --color-pink-900: oklch(39.79% 0.184 350.6);
+  --color-pink-950: oklch(21.9% 0.172 351.91);
+
+  /* Animation Variables */
+  --animate-marquee: marquee 12s linear infinite;
+  --animate-rightMarquee: rightMarquee 300s linear infinite;
+  --animate-slowMarquee: marquee 300s linear infinite;
+  --animate-verticalMarquee: vertical 30s linear infinite;
 }
 
 .lede {
@@ -119,7 +270,7 @@
 }
 
 body article > div > p:first-of-type {
-  @apply text-base text-lg lg:text-xl font-light leading-relaxed text-zinc-800 dark:text-zinc-200;
+  @apply text-base text-lg lg:text-xl font-light leading-relaxed text-stone-800 dark:text-stone-200;
 }
 
 body article > div > figure > picture > img {
@@ -128,7 +279,7 @@ body article > div > figure > picture > img {
 
 /* MDN keyboard shortcut style for kbd tag */
 kbd {
-  @apply bg-zinc-200 rounded border border-zinc-400 shadow-md text-zinc-800 inline-block text-[0.85em] font-semibold leading-none px-1 py-0.5 whitespace-nowrap
+  @apply bg-stone-200 rounded border border-stone-400 shadow-md text-stone-800 inline-block text-[0.85em] font-semibold leading-none px-1 py-0.5 whitespace-nowrap
 }
 
 /*----------------------------
@@ -137,10 +288,10 @@ kbd {
 :root {
   --pagefind-ui-scale: 1;
   --pagefind-ui-primary: var(--color-sky-500);
-  --pagefind-ui-text: var(--color-zinc-900);
+  --pagefind-ui-text: var(--color-stone-900);
   --pagefind-ui-background: #ffffff;
-  --pagefind-ui-border: var(--color-zinc-200);
-  --pagefind-ui-tag: var(--color-zinc-200);
+  --pagefind-ui-border: var(--color-stone-200);
+  --pagefind-ui-tag: var(--color-stone-200);
   --pagefind-ui-border-width: 1px;
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 8px;
@@ -148,26 +299,26 @@ kbd {
   --pagefind-ui-font: textface, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   .dark {
     --pagefind-ui-primary: var(--color-sky-500);
-    --pagefind-ui-text: var(--color-zinc-200);
-    --pagefind-ui-background: var(--color-zinc-900);
-    --pagefind-ui-border: var(--color-zinc-700);
+    --pagefind-ui-text: var(--color-stone-200);
+    --pagefind-ui-background: var(--color-stone-900);
+    --pagefind-ui-border: var(--color-stone-700);
     --pagefind-ui-tag: var(--color-sky-400);
   }
 }
 #search mark {
-  background-color: var(--color-sky-300);
+  background-color: var(--color-yellow-300);
 }
 
 /*----------------------------
 * テキスト選択ハイライト
 *----------------------------*/
 mark {
-  background-color: var(--color-sky-300);
+  background-color: var(--color-yellow-300);
 }
 :root {
   ::selection {
-    background-color: var(--color-sky-300);
-    color: var(--color-zinc-900); 
+    background-color: var(--color-pink-300);
+    color: var(--color-stone-900); 
   }
   
 /* light-theme-here */
@@ -175,7 +326,7 @@ mark {
   .dark {
     ::selection {
       background-color: var(--color-sky-300);
-      color: var(--color-zinc-900);
+      color: var(--color-stone-900);
     }
 
 /* dark-theme-here */

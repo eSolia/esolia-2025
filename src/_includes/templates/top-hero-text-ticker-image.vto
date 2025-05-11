@@ -1,0 +1,22 @@
+<!-- ===== top-hero-text-ticker-image.vto TEMPLATE START ===== -->
+<section class="bg-white overflow-hidden relative"> 
+  <div class="2xl:max-w-7xl mx-auto px-8 pb-0 py-12 lg:pt-24">  
+    <div class="grid items-end gap-4 lg:grid-cols-4 max-w-5xl mx-auto"> 
+      <div class="lg:col-span-2"> 
+        <h1 class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter font-display text-accent-800 text-balance">  
+        {{ hero.title }}
+        </h1>
+      </div> 
+      <p class="text-base font-medium text-accent-500 lg:col-span-2">  
+      {{ hero.copy }}
+      </p> 
+    </div> 
+    <img src="/assets/denys-nevozhai--F3wMFrZ7z0-unsplash.jpg" alt="#_" width="1200" height="630" loading="lazy" decoding="async" class="w-full max-h-[80vh] rounded-t-2xl relative object-cover object-middle mt-12 grayscale"> 
+    <div class="bg-accent-200 text-accent-600 font-medium relative rounded-b-2xl z-10 py-2 px-4 bottom-0 w-full overflow-x-hidden">
+      <div class="items-center relative animate-marquee flex whitespace-nowrap"> 
+      {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }}
+      </div> 
+    </div> 
+  </div> 
+</section>
+<!-- ===== top-hero-text-ticker-image.vto TEMPLATE END ===== -->
