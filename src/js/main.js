@@ -127,3 +127,71 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Mobile Menu Modal Control
+const mobileMenuOverlay = document.getElementById("mobile-menu-modal-overlay");
+const mobileMenuPanel = document.getElementById("mobile-menu-modal-panel");
+const mobileMenuButton = document.getElementById("mobile-menu-button"); // The "Menu" button
+const mobileMenuCloseButton = document.getElementById("mobile-menu-close-button"); // The close X button inside the modal
+
+// Function to show the mobile menu modal
+function showMobileMenuModal() {
+  if (mobileMenuOverlay && mobileMenuPanel) { // Check if elements exist
+    mobileMenuOverlay.classList.remove("hidden"); // Remove hidden class to show overlay
+    mobileMenuPanel.classList.remove("hidden"); // Remove hidden class to show panel
+    // Optional: Add logic here to prevent body scrolling when modal is open
+    // document.body.style.overflow = 'hidden';
+  }
+}
+
+// Function to hide the mobile menu modal
+function hideMobileMenuModal() {
+  if (mobileMenuOverlay && mobileMenuPanel) { // Check if elements exist
+    mobileMenuOverlay.classList.add("hidden"); // Add hidden class to hide overlay
+    mobileMenuPanel.classList.add("hidden"); // Add hidden class to hide panel
+    // Optional: Add logic here to re-enable body scrolling
+    // document.body.style.overflow = '';
+  }
+}
+
+// --- Event Listeners ---
+
+// Open modal on "Menu" button click
+if (mobileMenuButton) { // Ensure the button exists before adding listener
+  mobileMenuButton.addEventListener("click", function() {
+    showMobileMenuModal();
+  });
+}
+
+// Close modal on close button click
+if (mobileMenuCloseButton) { // Ensure the button exists before adding listener
+  mobileMenuCloseButton.addEventListener("click", function () {
+    hideMobileMenuModal();
+  });
+}
+
+// Close modal when clicking outside the panel (on the overlay)
+if (mobileMenuOverlay) { // Ensure the overlay exists before adding listener
+  // Use click event on the overlay itself, not the window for more precise targeting
+   mobileMenuOverlay.addEventListener("click", function(event) {
+       if (event.target === mobileMenuOverlay) { // Check if the clicked element is the overlay
+           hideMobileMenuModal();
+       }
+   });
+}
+
+
+// Close modal on Escape key press
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') { // Use event.key for modern browsers
+    // Check if the modal is currently visible (check if the panel does NOT have the hidden class)
+    if (mobileMenuPanel && !mobileMenuPanel.classList.contains('hidden')) {
+      hideMobileMenuModal();
+    }
+  }
+});
+
+// Note: The logic for opening on Cmd+K/Ctrl+K is specific to the search modal
+// and is not included in this script for the mobile menu modal.
+// The logic for focusing an input is also specific to the search modal.
+
