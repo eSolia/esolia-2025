@@ -12,10 +12,10 @@
     {{ alert.update }} 
     {{ if lang === "ja" }}
       {{ webinfolast.map(item => item['DateJP']) }}:</span>
-      {{ webinfolast.map(item => item['記事']) }}
+      <span class="text-accent-900 font-base">{{ webinfolast.map(item => item['記事']) }}</span>
     {{ else }}
       {{ webinfolast.map(item => item['Date']) }}:</span>
-      {{ webinfolast.map(item => item['Description']) }}
+      <span class="text-accent-900 font-base">{{ webinfolast.map(item => item['Description']) }}</span>
     {{ /if }}
   </span>
 </div>
