@@ -128,7 +128,7 @@
   --breakpoint-3xl: 108rem;
   --breakpoint-4xl: 120rem;
   --breakpoint-5xl: 160rem;
-  --default-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1, "palt" 0, "zero" 1, "sups" 0, "frac" 0, "ordn" 0, "smcp" 1, "onum" 0, "tnum" 0, "swsh" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0, "ss07" 0, "ss08" 0, "ss09" 0;
+  --default-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1, "palt" 0, "zero" 1, "sups" 0, "frac" 0, "ordn" 0, "smcp" 0, "onum" 0, "tnum" 0, "swsh" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0, "ss07" 0, "ss08" 0, "ss09" 0;
   --default-font-variant-ligatures: common-ligatures;
   --header-top: 1rem;
   --font-sans: textface, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
