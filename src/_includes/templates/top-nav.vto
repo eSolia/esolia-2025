@@ -16,18 +16,6 @@
           class="-ml-4 w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-opacity duration-300"
           src="/assets/logo_horiz_darkblue_bgtransparent_2.svg"
       /></a>
-
-      {{# <div class="items-center gap-2 flex col-span-2"> 
-        <a href="/system/overview" class="hover:text-pink-500 ml-auto">
-          Overview
-        </a> 
-        <div class="flex"> 
-          <a href="#" class="flex transition text-center justify-center items-center duration-300 focus:ring-2 focus:outline-none focus:ring-offset-2 text-white bg-accent-500 hover:bg-accent-600 focus:ring-accent-600 h-9 px-4 py-2 text-sm rounded-md">  
-          CTA &nbsp; &rarr;
-          </a> 
-        </div>
-      </div> #}}
-
         {{# Start right nav grouping #}}
         <div class="flex items-center space-x-1">
           <nav class="pointer-events-auto hidden md:block">
@@ -56,29 +44,23 @@
           </nav>
           {{# Mobile menu #}}
           <div class="pointer-events-auto md:hidden"> 
-              <button type="button" id="mobile-menu-button" aria-label="Open menu"
+              <button type="button" id="mobile-menu-button" aria-label="{{ i18n.nav.mobile_nav_name }}"
                       class="rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-pink-600 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-esoliaamber-500 dark:text-accent-200 hover:text-white dark:hover:text-pink-500">
                 {{ i18n.nav.mobile_nav_name }}
               </button>
             </div>
-
-
           <div class="flex justify-end md:flex-1 z-50 space-x-1 items-center">
           {{ if alternates && alternates.length > 1 }}
             <div class="pointer-events-auto hidden md:block">
-              
-                {{- for alt of alternates }}{{ if alt.lang !== lang }}
-                    <a
-                      class="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-pink-600 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-esoliaamber-500 dark:text-accent-200 hover:text-white dark:hover:text-pink-500 dark:group-hover:text-base-100"
-                      href="{{ alt.url }}"
-                      title="{{ alt.title |> escape }}"
-                    >
-                      {{ if alt.lang == "ja" }}日本語{{ else }}English{{
-                        /if
-                      }}<span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-accent-500/0 via-accent-500/40 to-accent-500/0 dark:from-accent-400/0 dark:via-accent-400/40 dark:to-accent-400/0 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-                    </a>
-                  {{ /if }}{{ /for }}
-              
+            {{- for alt of alternates }}{{ if alt.lang !== lang }}
+              <a
+                class="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-pink-600 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-esoliaamber-500 dark:text-accent-200 hover:text-white dark:hover:text-pink-500 dark:group-hover:text-base-100"
+                href="{{ alt.url }}"
+                title="{{ alt.title |> escape }}"
+              >
+                {{ if alt.lang == "ja" }}日本語{{ else }}English{{ /if }}<span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-accent-500/0 via-accent-500/40 to-accent-500/0 dark:from-accent-400/0 dark:via-accent-400/40 dark:to-accent-400/0 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+              </a>
+              {{ /if }}{{ /for }}
             </div>
           {{ /if }} 
         <div
