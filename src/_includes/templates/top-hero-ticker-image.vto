@@ -1,19 +1,27 @@
 <!-- ===== top-hero-ticker-image.vto TEMPLATE START ===== -->
 <section class="bg-white overflow-hidden relative"> 
-    <div class="2xl:max-w-7xl mx-auto px-8 pb-0 py-12 lg:pt-4 mb-12">  
-      <img 
-        src="/assets/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Photo by Scott Graham" 
-        width="1200" 
-        height="630" 
-        loading="lazy" 
-        decoding="async" 
-        class="w-full max-h-[80vh] rounded-t-2xl relative object-cover object-middle mt-12" 
-        transform-images="avif webp png jpeg 1280@2"> 
-      <div class="bg-accent-200 text-accent-600 font-medium relative rounded-b-2xl z-10 py-2 px-4 bottom-0 w-full overflow-x-hidden">
-        <div class="items-center relative animate-marquee flex whitespace-nowrap"> 
-        {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }}
-        </div> 
+  <div class="2xl:max-w-7xl mx-auto px-8 pb-0 py-12 lg:pt-4 mb-12"> 
+    {{>
+    const randomIndex = Math.floor(Math.random() * it.hero.images.length);
+    const randomImage = it.hero.images[randomIndex];
+    const defaultSrc = '/assets/scott-graham-5fNmWej4tAA-unsplash.jpg';
+    const defaultAlt = 'Image by Scott Graham on Unsplash';
+    }}
+    {{ if randomImage }} 
+    <img 
+      src="{{ randomImage.src || defaultSrc }}" alt="{{ randomImage.alt || defaultAlt }}" 
+      width="1200" 
+      height="630" 
+      loading="lazy" 
+      decoding="async" 
+      class="w-full max-h-[80vh] rounded-t-2xl relative object-cover object-middle mt-12 border-1 border-accent-200" 
+      transform-images="avif webp png jpeg 1280@2"> 
+    {{ /if }}
+    <div class="bg-accent-200 text-accent-600 font-medium relative rounded-b-2xl z-10 py-2 px-4 bottom-0 w-full overflow-x-hidden">
+      <div class="items-center relative animate-marquee flex whitespace-nowrap"> 
+      {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }} {{ hero.ticker }}
       </div> 
     </div> 
-  </section>
+  </div> 
+</section>
 <!-- ===== top-hero-ticker-image.vto TEMPLATE END ===== -->
