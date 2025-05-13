@@ -27,7 +27,7 @@
               {{- for item of it.topnav.links }}
                 <li>
                   <a
-                    class="group relative block whitespace-nowrap px-3 py-1 transition text-esoliaamber-500 dark:text-accent-200 hover:text-pink-600 dark:hover:text-pink-500 dark:group-hover:text-base-100
+                    class="group relative block whitespace-nowrap px-3 py-1 transition text-sky-600 dark:text-accent-200 hover:text-esoliaamber-700 dark:hover:text-esoliaamber-500 dark:group-hover:text-accent-100
                   {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
                     href="{{ item.href }}"
                     {{- if item.target }}target="{{ item.target }}"{{ /if -}}
@@ -54,7 +54,7 @@
             <div class="pointer-events-auto hidden md:block">
             {{- for alt of alternates }}{{ if alt.lang !== lang }}
               <a
-                class="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-pink-600 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-esoliaamber-500 dark:text-accent-200 hover:text-white dark:hover:text-pink-500 dark:group-hover:text-base-100"
+                class="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-esoliaamber-700 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-sky-600 dark:text-accent-200 hover:text-white dark:hover:text-esoliaamber-500 dark:group-hover:text-base-100"
                 href="{{ alt.url }}"
                 title="{{ alt.title |> escape }}"
               >
@@ -74,7 +74,7 @@
           >
             <span>
               <img
-                class="h-5 w-5 fill-esoliaamber-500 stroke-esoliaamber-800 dark:fill-sky-300 dark:stroke-sky-500 transition group-hover:fill-esoliaamber-600 group-hover:stroke-esoliaamber-900 dark:group-hover:fill-sky-400 dark:group-hover:stroke-sky-600 transition hover:scale-110"
+                class="h-5 w-5 fill-sky-500 stroke-sky-800 dark:fill-sky-300 dark:stroke-sky-500 transition group-hover:fill-esoliaamber-600 group-hover:stroke-esoliaamber-900 dark:group-hover:fill-sky-400 dark:group-hover:stroke-sky-600 transition hover:scale-110"
                 src='{{ "magnifying-glass" |> icon("phosphor", "duotone") }}'
                 inline
               />
