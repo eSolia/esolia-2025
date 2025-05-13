@@ -10,6 +10,19 @@ hero:
   title: "日本担当の<br>バーチャルIT部門"
   copy: "eSoliaはチームとして機能し、典型的なIT部門が持つすべてのスキルを活かして、日本での課題を解決します。私たちは多言語に対応できるプロフェッショナルであり、本社と日本のチームとの間で効果的にコミュニケーションを取り、現地のベンダーと交渉します。私たちは、明確に文書化し、コミュニケーションを行うための十分に発展したサポートシステムを使用して、あなたの期待を超えるよう努めています。"
   ticker: "日本オフィス移転IT支援 — オンサイトおよびリモートITサポート — プロジェクト管理 — ウェブ開発 — SaaSデータベース — クラウドサービス — 調達処理と在庫管理 — 情報セキュリティ — ITコンサルティング — ヘルプデスク —"
+  images: 
+    - src: /assets/scott-graham-5fNmWej4tAA-unsplash.jpg
+      alt: Image by Scott Graham on Unsplash
+    - src: /assets/chase-chappell-m29D0DvAhF0-unsplash.jpg
+      alt: Image by Chase Chappell on Unsplash
+    - src: /assets/paymo-gY430v3SD6c-unsplash.jpg
+      alt: Image by Paymo on Unsplash 
+    - src: /assets/eliott-reyna-qtMasDNcPQo-unsplash.jpg
+      alt: Image by Eliott Reyna on Unsplash1
+    - src: /assets/ilyuza-mingazova-HaTIYO87qWQ-unsplash.jpg
+      alt: Image by Ilyuza Mingazova on Unsplash
+    - src: /assets/chase-chappell-HLS3XGNS4Z8-unsplash.jpg
+      alt: Image by Chase Chappell on Unsplash
 partners: 
   title: "私たちのパートナー"
   copy: "私たちは、業界リーダーのパートナーと提携し、最高のサービスを提供しています。"
