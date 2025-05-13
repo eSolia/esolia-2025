@@ -1,23 +1,30 @@
 <!-- ===== top-infoalert.vto TEMPLATE START ===== -->
-<div class="relative isolate bg-accent-200 border-accent-300 rounded-t border-b px-1 py-1.5 text-center text-[11px] sm:text-sm">
+<section role="note" class="relative isolate bg-accent-200 border-accent-300 rounded-t border-b px-2 py-1.5 text-center text-[11px] sm:text-sm flex">
   <div class="absolute top-1/2 left-[-1rem] lg:left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl scale-15 sm:scale-30 md:scale-70 lg:scale-100" aria-hidden="true">
     <div class="aspect-577/310 w-[36.0625rem] bg-linear-to-r from-[#00a6f4] to-[#ffbc68] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
   </div>
   <div class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl hidden xl:block scale-100" aria-hidden="true">
     <div class="aspect-577/310 w-[36.0625rem] bg-linear-to-r from-[#ffbc68] to-[#0069a8] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
   </div>
-
-  <span class="block max-w-prose mx-auto">
-    <span class="text-pink-700 font-medium">
-    {{ alert.update }} 
-    {{ if lang === "ja" }}
-      {{ webinfolast.map(item => item['DateJP']) }}:</span>
-      <span class="text-accent-900 font-base">{{ webinfolast.map(item => item['記事']) }}</span>
-    {{ else }}
-      {{ webinfolast.map(item => item['Date']) }}:</span>
-      <span class="text-accent-900 font-base">{{ webinfolast.map(item => item['Description']) }}</span>
-    {{ /if }}
-  </span>
-</div>
+  <aside class="block max-w-9/10 mx-auto flex items-center text-center sm:text-left" role="status">  
+    <div class="inline-block">
+      <span class="text-pink-700 font-medium inline-flex items-center mr-1 align-middle">
+        <img
+          class="size-5 fill-pink-600 align-text-bottom mr-1"
+          src='{{ "info" |> icon("phosphor", "duotone") }}'
+          inline
+        >
+      {{ alert.update }} 
+      {{ if lang === "ja" }}
+        {{ webinfolast.map(item => item['DateJP']) }}:</span>
+        <span class="text-accent-900 font-base align-middle">{{ webinfolast.map(item => item['記事']) }}</span>
+      {{ else }}
+        {{ webinfolast.map(item => item['Date']) }}:</span>
+        <span class="text-accent-900 font-base align-middle">{{ webinfolast.map(item => item['Description']) }}</span>
+      {{ /if }}
+      </span>
+    </div>
+  </aside>
+</section>
 <!-- ===== top-infoalert.vto TEMPLATE END ===== -->
 
