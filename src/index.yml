@@ -111,13 +111,13 @@ certifications:
       height1: 6
       height2: 8
 trackrecord:
-  section: "実績" 
+  section: "プロジェクト実績" 
   title: "日本でのプロジェクトを成功に導く、信頼のITパートナー" 
   subtitle: "弊社は、<strong>YEARS_IN_BUSINESS</strong>年間にわたり、日本国内のグローバル企業および日系企業に幅広いサービスを提供してまいりました。その中で培った豊富な経験を背景に、クライアントのニーズを的確に捉え、日本における数々のプロジェクトを成功に導いてきた実績があります。私たちeSoliaは、多文化・多言語のバックグラウンドを活かし、システムや業務プロセスに関する複雑な課題にも柔軟に対応し、最適なソリューションをご提案します。" 
   list:
     - name: "過去5年間の総作業時間" 
       stat: "60,000+"
-      color: "text-yellow-500"
+      color: "text-sky-500"
     - name: "年間対応チケット数" 
       stat: "3,000+"
       color: "text-yellow-500"
@@ -160,7 +160,7 @@ testimonials:
       color: "yellow"
     - name: "クライアントB" 
       quote: "eSoliaの技術的な知識は卓越しており、難しいソリューションも専門知識のない人にも分かりやすく説明してくれたため、全員が細部まで理解できました。" 
-      color: "pink"
+      color: "sky"
 hireus:
   section: "依頼方法" 
   title: "IT業務の成功に向けて準備はOKですか？" 

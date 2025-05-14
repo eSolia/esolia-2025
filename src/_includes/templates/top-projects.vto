@@ -4,23 +4,25 @@
     <div class="mx-auto max-w-2xl text-left md:text-center">
       <div class="relative">
         <div class="absolute inset-0 flex items-center" aria-hidden="true">
-          <div class="w-full">
-            <div class="h-0.25 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400">
-            </div>
+          <div class="w-3/4 md:hidden ml-6">
+            <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
+          </div>
+          <div class="w-full hidden md:block">
+            <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
           </div>
         </div>
         <div class="relative flex justify-left md:justify-center">
-          <h2 class="bg-white p-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider  text-yellow-500 font-light [font-variant:small-caps]">{{ recentprojects.section }}</h2>
+          <h2 class="bg-white pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ recentprojects.section }}</h2>
         </div>
       </div>
-      <h3 class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter font-display text-esoliablue-800 text-shadow-xs text-balance mt-12">
+      <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-900 text-shadow-xs text-balance mt-4 md:mt-6">
       {{ recentprojects.title }}  
       </h3>
-      <p class="prose prose-stone text-lg sm:text-xl md:text-2xl mt-8 text-balance">  
+      <p class="prose prose-stone prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
       {{ recentprojects.subtitle }}
       </p>
       <div class="mt-6 flex items-center justify-start md:justify-center">
-        <a href="{{ recentprojects.url }}" target="_blank" rel="noopener" class="rounded-md bg-pink-600 px-3.5 py-2.5 text-l 2xs:text-xl md:text-2xl font-base text-white shadow-xs hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{{ recentprojects.cta }}</a>
+        <a href="{{ recentprojects.url }}" target="_blank" rel="noopener" class="rounded-md bg-yellow-500 px-3.5 py-2.5 text-l 2xs:text-xl md:text-2xl font-base text-white shadow-xs hover:bg-yellow-600 hover:text-accent-200 duration-300  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{{ recentprojects.cta }}</a>
       </div>
     </div>
   <div class="mx-auto mt-1 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 mt-8 sm:mt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 flex-wrap">
@@ -28,24 +30,44 @@
   // Define gradient class combinations including dark mode.
     const gradientOptions = [
     {
-      // Yellow gradient
-      light: 'bg-gradient-to-br from-yellow-800 via-yellow-600 to-yellow-500',
-      dark: 'dark:bg-gradient-to-br dark:from-yellow-900 dark:via-yellow-700 dark:to-yellow-600' 
+      // All sky gradient
+      light: 'bg-gradient-to-tr from-sky-800 via-sky-600 to-sky-700',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
     },
     {
-      // Blue-cyan gradient
-      light: 'bg-gradient-to-br from-blue-700 to-cyan-500',
-      dark: 'dark:bg-gradient-to-br dark:from-blue-900 dark:to-cyan-700' 
+      // All Sky gradient
+      light: 'bg-gradient-to-br from-sky-900 via-sky-600 to-sky-500',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
     },
     {
-      // Purple-pink gradient
-      light: 'bg-gradient-to-br from-purple-700 to-pink-500',
-      dark: 'dark:bg-gradient-to-br dark:from-purple-900 dark:to-pink-700' 
+      // All sky gradient
+      light: 'bg-gradient-to-tl from-sky-800 via-sky-600 to-sky-700',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
     },
     {
-      // Green-teal gradient
-      light: 'bg-gradient-to-br from-green-700 to-teal-500',
-      dark: 'dark:bg-gradient-to-br dark:from-green-900 dark:to-teal-700' 
+      // All Sky gradient
+      light: 'bg-gradient-to-bl from-sky-900 via-sky-600 to-sky-500',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
+    },
+    {
+      // Sky-cyan gradient
+      light: 'bg-gradient-to-br from-sky-700 to-cyan-500',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:to-cyan-700' 
+    },
+    {
+      // Sky-cyan gradient
+      light: 'bg-gradient-to-bl from-sky-700 via-sky-800 to-cyan-500',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 via-sky-950 dark:to-cyan-700' 
+    },
+    {
+      // Teal-cyan-sky gradient
+      light: 'bg-gradient-to-br from-teal-700 via-cyan-500 to-sky-600',
+      dark: 'dark:bg-gradient-to-br dark:from-teal-900 via-cyan-800 dark:to-sky-700' 
+    },
+    {
+      // Sky-teal gradient
+      light: 'bg-gradient-to-br from-sky-700 to-teal-500',
+      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:to-teal-700' 
     }
     // Add more objects if needed
     ];
@@ -60,8 +82,8 @@
     <article class="relative isolate flex flex-col overflow-hidden rounded-2xl
     {{ selectedGradient.light }} {{ selectedGradient.dark }} 
     px-8 pt-8 pb-8 sm:pt-10 lg:pt-12">
-      <div class="absolute inset-0 -z-10 rounded-2xl bg-accent-900/40"></div>
-      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-accent-900/10 ring-inset"></div>
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-accent-900/40 blur opacity-50"></div>
+      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-accent-900/10 ring-inset blur opacity-25"></div>
       <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-accent-300">
         <time datetime="{{ project['DateYYYY-MM-DD'] }}" class="mr-8">{{ if lang === "ja" }}{{ project['DateJP'] }}{{ else }}{{ project['Date'] }}{{ /if }}</time>
         </div>
