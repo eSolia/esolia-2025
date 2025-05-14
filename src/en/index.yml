@@ -29,22 +29,28 @@ partners:
   list: 
     - name: "Microsoft 365"
       logo: /assets/Microsoft_365_Copilot.svg
-      height: h-8
+      height1: 6
+      height2: 8
     - name: "Softbank IT-EX"
       logo: /assets/softbank-itex-logo.png
-      height: h-7
+      height1: 5
+      height2: 7
     - name: "Foresoft DBFlex"
       logo: /assets/foresoft-dbflex-logo.svg
-      height: h-6
+      height1: 4
+      height2: 6
     - name: "Fortinet"
       logo: /assets/Fortinet-logo-rgb-black-red.svg
-      height: h-13
+      height1: 11
+      height2: 13
     - name: "AWS"
       logo: /assets/AmazonWebservices_Logo.svg
-      height: h-8
+      height1: 6
+      height2: 8
     - name: "Epson"
       logo: /assets/Epson_logo.svg
-      height: h-6
+      height1: 4
+      height2: 6
 services:
   section: "Our Services"
   title: "Your Challenges are our Service Mandates"
@@ -75,29 +81,36 @@ services:
       description: "Comprehensive asset management for your IT resources."
 certifications:
   title: "Certifications"
-  copy: "Our experienced bilingual professionals achieve not just industry certifications, but sharpen their knowledge continually in the form of a required daily quiz."
+  copy: "Our experienced bilingual professionals achieve not just industry certifications, but sharpen their knowledge continually via extensive internal training and testing."
   list: 
     - name: "Microsoft 365"
       logo: /assets/Microsoft_365_Copilot.svg
-      height: h-8
+      height1: 6
+      height2: 8
     - name: "CompTIA"
       logo: /assets/Comptia-logo.svg
-      height: h-7
+      height1: 5
+      height2: 7
     - name: "eSolia"
       logo: /assets/logo_horiz_darkblue_bgtransparent.svg
-      height: h-8
+      height1: 6
+      height2: 8
     - name: "Fortinet"
       logo: /assets/Fortinet-logo-rgb-black-red.svg
-      height: h-13
+      height1: 11
+      height2: 13
     - name: "IPA IT Passport"
       logo: /assets/ipa-it-passport-exam-logo-symbol.png
-      height: h-8
+      height1: 6
+      height2: 8
     - name: "Joho Gakushu"
       logo: /assets/joho-gakushu_logo2.jpg
-      height: h-6
+      height1: 4
+      height2: 6
     - name: "IDEO U"
       logo: /assets/ideo-u-logo.png
-      height: h-8
+      height1: 6
+      height2: 8
 trackrecord: 
   section: "Our Track Record"
   title: "A Trusted Team for Japan Project Success"

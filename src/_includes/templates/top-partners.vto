@@ -8,10 +8,10 @@
         </h3> 
       </div> 
       <div class="md:col-span-3"> 
-        <div class="flex flex-wrap justify-between items-center">
+        <div class="flex flex-wrap justify-around items-center gap-1">
           <!-- Logos used under fair use, copyrighted to their respective owners --> 
           {{ for partner of partners.list |> shuffle }}
-          <img src="{{ partner.logo }}" alt="#_" loading="lazy" decoding="async" class="{{ partner.height }} grayscale">
+          <img src="{{ partner.logo }}" alt="#_" loading="lazy" decoding="async" class="h-{{ partner.height1 }} 2xl:h-{{ partner.height2 }} grayscale">
           {{ /for }} 
         </div> 
       </div> 

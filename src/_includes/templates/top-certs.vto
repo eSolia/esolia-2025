@@ -8,10 +8,10 @@
         </h3> 
       </div> 
       <div class="md:col-span-3"> 
-        <div class="flex flex-wrap justify-between items-center">
+        <div class="flex flex-wrap justify-around items-center gap-1">
           <!-- Logos used under fair use, copyrighted to their respective owners --> 
           {{ for cert of certifications.list |> shuffle }}
-          <img src="{{ cert.logo }}" alt="#_" loading="lazy" decoding="async" class="{{ cert.height }} grayscale">
+          <img src="{{ cert.logo }}" alt="#_" loading="lazy" decoding="async" class="h-{{ cert.height1 }} 2xl:h-{{ cert.height2 }} grayscale">
           {{ /for }} 
         </div> 
       </div> 
