@@ -68,50 +68,6 @@
   .transition-max-w {
     transition: max-width 0.5s ease-in-out;
   }
-  /* Keyframes */
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes rightMarquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  @keyframes vertical {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
-  }
-
-  /* Animation Utility Classes */
-  .animate-marquee {
-    animation: var(--animate-marquee);
-  }
-
-  .animate-rightMarquee {
-    animation: var(--animate-rightMarquee);
-  }
-
-  .animate-slowMarquee {
-    animation: var(--animate-slowMarquee);
-  }
-
-  .animate-verticalMarquee {
-    animation: var(--animate-verticalMarquee);
-  }
 }
 
 /* prose-a:text-sky-900 dark:prose-a:text-sky-200  prose-a:decoration-sky-700 prose-a:underline  */
