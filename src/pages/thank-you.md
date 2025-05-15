@@ -4,6 +4,10 @@ id: subscribe-thanks
 layout: layouts/page.vto
 title: ご登録ありがとうございます
 url: /thank-you/
+category: ユーティリティ
+tags: 
+  - ありがとうございます
+contact: false
 ---
 
 イソリアのIT Tips BlogのNewsletterにご登録いただき、ありがとうございます！
