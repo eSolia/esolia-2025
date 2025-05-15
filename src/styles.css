@@ -165,7 +165,7 @@
   --color-accent-900: oklch(35.29% 0.042 153.85);
   --color-accent-950: oklch(21.9% 0.04 155.54); */
 
-  --color-accent-50: var(--color-stone-50);
+  /* --color-accent-50: var(--color-stone-50);
   --color-accent-100: var(--color-stone-100);
   --color-accent-200: var(--color-stone-200);
   --color-accent-300: var(--color-stone-300);
@@ -175,7 +175,31 @@
   --color-accent-700: var(--color-stone-700);
   --color-accent-800: var(--color-stone-800);
   --color-accent-900: var(--color-stone-900);
-  --color-accent-950: var(--color-stone-950);
+  --color-accent-950: var(--color-stone-950); */
+
+  /* --color-accent-50: var(--color-zinc-50);
+  --color-accent-100: var(--color-zinc-100);
+  --color-accent-200: var(--color-zinc-200);
+  --color-accent-300: var(--color-zinc-300);
+  --color-accent-400: var(--color-zinc-400);
+  --color-accent-500: var(--color-zinc-500);
+  --color-accent-600: var(--color-zinc-600);
+  --color-accent-700: var(--color-zinc-700);
+  --color-accent-800: var(--color-zinc-800);
+  --color-accent-900: var(--color-zinc-900);
+  --color-accent-950: var(--color-zinc-950); */
+
+  --color-accent-50: var(--color-neutral-50);
+  --color-accent-100: var(--color-neutral-100);
+  --color-accent-200: var(--color-neutral-200);
+  --color-accent-300: var(--color-neutral-300);
+  --color-accent-400: var(--color-neutral-400);
+  --color-accent-500: var(--color-neutral-500);
+  --color-accent-600: var(--color-neutral-600);
+  --color-accent-700: var(--color-neutral-700);
+  --color-accent-800: var(--color-neutral-800);
+  --color-accent-900: var(--color-neutral-900);
+  --color-accent-950: var(--color-neutral-950);
 
   /* --color-accent-50: var(--color-yellow-50);
   --color-accent-100: var(--color-yellow-100);
