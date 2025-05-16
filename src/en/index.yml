@@ -2,7 +2,22 @@ lang: en
 id: home
 layout: layouts/home.vto
 bodyClass: body-home
-title: Home
+title: Home Top
+description: "eSolia is your Japan local IT partner, providing a full range of IT professional services to support your business success in Japan."
+tags:
+  - "Japan IT Support"
+  - "Japan IT Consulting"
+  - "Japan Project Management"
+  - "Bilingual Web Development"
+  - "Bilingual Web Localization"
+  - "SaaS Database"
+  - "Cloud Services"
+  - "Procurement Processing and Inventory Control"
+  - "Information Security"
+  - "IT Asset Management"
+  - "Helpdesk"
+  - "Multilingual Support"
+  - "Japan KK Corporation"
 script: /js/fathom-post-list-event.js
 alert: 
   update: "Update"
