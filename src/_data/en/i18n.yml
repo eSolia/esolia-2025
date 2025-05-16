@@ -39,6 +39,21 @@ contact:
   aria_label: Contact us via eSolia main site
   description: |
     Please click the button to contact us via our main site. We will get back to you from there. We look forward to assisting you!
+contact_info:
+  title: Get in Touch
+  site: Headquarters
+  description: |
+    If you have any questions or inquiries about this page, don't hesitate to contact us.
+  addr1: Shiodome City Center 5F (Work Styling)
+  addr2: 1-5-2 Higashi-Shimbashi, Minato-ku, Tokyo, Japan, 105-7105
+  tel: +81-3-4577-3380
+  fax: +81-3-4577-3309
+  email: hello@esolia.co.jp
+  tel_label: Telephone
+  fax_label: Fax
+  email_label: Email
+  aria_label: Contact us via eSolia main site
+  url: https://esolia.com/info-request/
 nav:
   toc: Table of Contents
   next_post: Newer post →
