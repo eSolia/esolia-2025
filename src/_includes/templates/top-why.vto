@@ -28,7 +28,7 @@
             <h2 class="bg-accent-500 pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ whyesolia.section }}</h2>
           </div> 
         </div> 
-        <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-500 text-shadow-xs mt-12 text-balance">  
+        <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-500 text-shadow-2xs mt-12 text-balance">  
           {{ whyesolia.title }}
         </h3> 
         <p class="prose prose-stone text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
@@ -38,7 +38,7 @@
       <dl class="grid gap-12 lg:grid-cols-2 mt-8 lg:mt-12 lg:max-w-2xl lg:ml-auto"> 
         {{ for reason of whyesolia.list |> shuffle }}
         <div> 
-          <dt class="font-display text-sky-500 text-shadow-xs text-lg sm:text-lg md:text-xl lg:text-2xl tracking-tighter">{{ reason.name }}</dt> 
+          <dt class="font-display text-sky-500 text-shadow-2xs text-lg sm:text-lg md:text-xl lg:text-2xl tracking-tighter">{{ reason.name }}</dt> 
           <dd class="prose prose-stone text-accent-50 text-base mt-4 text-pretty"> {{ reason.description }} </dd> 
         </div>
         {{ /for }}
