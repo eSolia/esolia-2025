@@ -3,25 +3,9 @@
   <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-12">  
     <div class="flex flex-col flex-shrink-0 gap-8 md:flex-row md:gap-12 md:items-end no-external-icon"> 
       <div> 
-        <div class="relative max-w-xs"> 
-          <div class="absolute inset-0 flex items-center" aria-hidden="true"> 
-            <div class="w-3/4 md:hidden ml-6">
-              <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
-            </div>
-            <div class="w-full hidden md:block">
-              <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
-            </div>
-          </div> 
-          <div class="relative flex justify-left md:justify-center"> 
-            <h2 class="bg-accent-500 pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ hireus.section }}</h2>
-          </div>
-        </div> 
-        <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-500 text-shadow-2xs mt-12 text-balance">  
-          {{ hireus.title }}
-        </h3> 
-        <p class="prose prose-stone text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
-          {{ hireus.subtitle }}
-        </p> 
+        {{ comp.top_section({ tag: "h2", bg: "dark", text: hireus.section, cssclass: "max-w-xs" }) }}
+        {{ comp.top_title({ tag: "h3", bg: "dark", text: hireus.title }) }}
+        {{ comp.top_subtitle({ tag: "p", bg: "dark", text: hireus.subtitle }) }}
         <div class="mt-6 border-t border-accent-400">
           <dl class="divide-y divide-accent-400">
             {{ for step of hireus.steps }}
