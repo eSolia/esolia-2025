@@ -4,6 +4,10 @@ id: subscribe-thanks
 layout: layouts/page.vto
 title: Thanks for Subscribing!
 url: /thank-you/
+category: utility
+tags:
+  - thanks
+contact: false
 ---
 
 Thank you sincerely for subscribing to the eSolia IT Tips Blog newsletter. 

@@ -2,30 +2,14 @@
 <section class="bg-white overflow-hidden relative"> 
   <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-24">  
     <div class="w-full max-w-xl"> 
-      <div class="relative">
-        <div class="absolute inset-0 flex items-center" aria-hidden="true">
-          <div class="w-3/4 md:hidden ml-6">
-            <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
-          </div>
-          <div class="w-full hidden md:block">
-            <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
-          </div>
-        </div>
-        <div class="relative flex justify-left md:justify-center">
-          <h2 class="bg-white pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ services.section }}</h2>
-        </div>
-      </div>
-      <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-900 text-shadow-xs text-balance mt-4 md:mt-6">
-          {{ services.title }}  
-      </h3> 
-      <p class="prose prose-stone prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
-        {{ services.subtitle }}
-      </p> 
-  </div> 
+      {{ comp.top_section({ tag: "h2", text: services.section }) }}
+      {{ comp.top_title({ tag: "h3", text: services.title }) }}
+      {{ comp.top_subtitle({ tag: "p", text: services.subtitle }) }}
+    </div> 
     <div class="flex flex-col flex-shrink-0 gap-8 md:flex-row md:gap-12 mt-12 md:items-center no-external-icon"> 
       <ul role="list" class="list-disc marker:text-sky-400 flex flex-col gap-y-2 max-w-xl w-full ml-4"> 
         {{ for service of services.list |> shuffle }}
-        <li class="prose prose-stone prose-base text-accent-700"> {{ service.name }} </li>
+        <li class="prose prose-zinc prose-base prose-li:text-accent-700"> {{ service.name }} </li>
         {{ /for }}
       </ul> 
       <a 
@@ -34,7 +18,10 @@
         rel="noopener" 
         title="{{ services.ctacopy }}" 
         aria-label="{{ services.ctaaria }}"
-        class="flex flex-col size-32 text-sm md:text-base lg:text-2xl xl:text-3xl text-center md:size-32 shrink-0 lg:size-52 2xl:size-64 text-white hover:bg-yellow-600 hover:text-accent-200 duration-300 items-center justify-center rounded-full bg-yellow-500"> 
+        class="flex flex-col size-32 text-sm md:text-base lg:text-2xl xl:text-3xl text-center md:size-32 shrink-0 lg:size-52 2xl:size-64
+          text-white hover:bg-yellow-600 hover:text-accent-200 duration-300 items-center justify-center rounded-full
+          bg-yellow-500/[0.7] 
+          bg-[url('/assets/leaf.svg')] bg-repeat bg-fixed bg-[size:50px_25px] inset-shadow-sm/50">
         <span>{{ services.ctatop }}</span> <span>{{ services.ctabottom }}</span> 
       </a> 
     </div>  

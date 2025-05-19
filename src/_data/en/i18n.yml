@@ -4,6 +4,8 @@ home:
   company: eSolia
   company_long: eSolia Inc.
   company_address: Shiodome City Center 5F (Work Styling), 1-5-2 Higashi-Shimbashi, Minato-ku, Tokyo, Japan, 105-7105
+  skip_to_main_content_label: Skip to main content
+  skip_to_main_content_aria: Skip to main content skip link
 archive: 
   title: Archive
   description: Browse our archive of past articles. Use categories and tags to quickly find the topics that interest you, or search from the magnifying glass icon in the navigation bar at the top of the page.
@@ -39,6 +41,21 @@ contact:
   aria_label: Contact us via eSolia main site
   description: |
     Please click the button to contact us via our main site. We will get back to you from there. We look forward to assisting you!
+contact_info:
+  title: Get in Touch
+  site: Headquarters
+  description: |
+    If you have any questions or inquiries about this page, don't hesitate to contact us.
+  addr1: Shiodome City Center 5F (Work Styling)
+  addr2: 1-5-2 Higashi-Shimbashi, Minato-ku, Tokyo, Japan, 105-7105
+  tel: +81-3-4577-3380
+  fax: +81-3-4577-3309
+  email: hello@esolia.co.jp
+  tel_label: Telephone
+  fax_label: Fax
+  email_label: Email
+  aria_label: Contact us via eSolia main site
+  url: https://esolia.com/info-request/
 nav:
   toc: Table of Contents
   next_post: Newer post →

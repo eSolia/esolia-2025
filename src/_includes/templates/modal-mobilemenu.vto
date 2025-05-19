@@ -16,7 +16,7 @@
       {{ if alternates && alternates.length > 1 }}
       {{- for alt of alternates }}{{ if alt.lang !== lang }}
       <li> 
-        <a href="{{ alt.url }}" title="{{ alt.title |> escape }}" class="text-white bg-pink-500 hover:text-accent-50 hover:bg-pink-600">{{ if alt.lang == "ja" }}日本語{{ else }}English{{ /if }}
+        <a href="{{ alt.url }}" title="{{ alt.title |> escape }}" class="text-white bg-sky-500 hover:text-accent-50 hover:bg-sky-600">{{ if alt.lang == "ja" }}日本語{{ else }}English{{ /if }}
         </a>
       </li>
       {{ /if }}{{ /for }}
@@ -25,7 +25,7 @@
       <li>
         <a 
           href="{{ item.href }}" 
-          class="text-accent-800 hover:text-pink-600 {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
+          class="text-accent-800 hover:text-sky-600 {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
           {{- if item.target === '_blank' }}rel="noopener"{{ /if -}}
           role="menuitem"
           aria-label="{{ item.aria_label }}"

@@ -4,6 +4,8 @@ home:
   company: イソリア
   company_long: 株式会社イソリア
   company_address: 〒105-7105 東京都港区東新橋1-5-2 汐留シティセンター5F（ワークスタイリング）
+  skip_to_main_content_label: メインコンテンツへスキップ
+  skip_to_main_content_aria: メインコンテンツへスキップするためのリンク
 archive: 
   title: アーカイブ
   description: 過去の記事を一覧でご紹介しています。カテゴリやタグを活用して、興味のある情報にすばやくアクセスできます。または、ページ上部のナビゲーションバーにある虫眼鏡アイコンから検索してください。
@@ -41,6 +43,21 @@ contact:
   url: https://esolia.co.jp/info-request/
   description: |
     サービス導入をご検討の際は、ぜひ本サイトのフォームよりお問い合わせください。担当より迅速にご連絡いたします。
+contact_info:
+  title: お問い合わせ
+  site: 本社
+  description: |
+    当ページに関するご質問やご不明な点がございましたら、ご遠慮なくご連絡下さい。
+  addr1: 〒105-7105 東京都港区東新橋一丁目5番2号
+  addr2: 汐留シティセンター5階 (Work Styling)
+  tel: +813-4577-3380
+  fax: +813-4577-3309
+  email: hello@esolia.co.jp
+  tel_label: 電話
+  fax_label: FAX
+  email_label: メール
+  aria_label: 当社本サイトにてお問い合わせをする
+  url: https://esolia.co.jp/info-request/
 nav:
   toc: 目次
   next_post: より新しいポスト →

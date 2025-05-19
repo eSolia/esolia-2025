@@ -1,0 +1,59 @@
+<!-- ===== page-contact.vto TEMPLATE START ===== -->
+<div class="bg-white py-8 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl divide-y divide-accent-100 lg:mx-0 lg:max-w-none">
+      <div class="grid grid-cols-1 gap-10 py-16 lg:grid-cols-3">
+        <div>
+          <h2 class="text-4xl font-semibold tracking-tight text-pretty text-accent-900">{{ i18n.contact_info.title }}</h2>
+          <p class="mt-4 text-base/7 text-accent-600">{{ i18n.contact_info.description }}</p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+          <div class="rounded-2xl bg-accent-50 p-10 shadow-md ring-1 ring-accent-900/5">
+            <h3 class="text-base/7 font-semibold text-accent-900">{{ i18n.contact_info.site }}</h3>
+            <address class="mt-3 space-y-1 text-sm/6 text-gray-600 not-italic">
+              <p>{{ i18n.contact_info.addr1 }}</p>
+              <p>{{ i18n.contact_info.addr2 }}</p>
+            </address>
+            <dl class="mt-3 space-y-1 text-sm/6 text-accent-600">
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">{{ i18n.contact_info.email_label }}</span>
+                  <img
+                  class="size-5 fill-sky-500"
+                  src='{{ "envelope" |> icon("phosphor", "duotone") }}'
+                  inline>
+                </dt>
+                <dd>
+                  <a class="font-semibold text-sky-600" href="mailto:{{ i18n.contact_info.email }}">{{ i18n.contact_info.email }}</a>
+                </dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">{{ i18n.contact_info.tel_label }}</span>
+                  <img
+                  class="size-5 fill-sky-500"
+                  src='{{ "phone-call" |> icon("phosphor", "duotone") }}' inline>
+                </dt>
+                <dd>
+                  <a class="font-semibold text-sky-600" href="tel:{{ i18n.contact_info.tel }}">{{ i18n.contact_info.tel }}</a>
+                </dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">{{ i18n.contact_info.fax_label }}</span>
+                  <img
+                  class="size-5 fill-sky-500"
+                  src='{{ "scroll" |> icon("phosphor", "duotone") }}' inline>
+                </dt>
+                <dd>
+                  <span class="font-semibold text-sky-600">{{ i18n.contact_info.fax_label }} {{ i18n.contact_info.fax }}</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===== page-contact.vto TEMPLATE END ===== -->

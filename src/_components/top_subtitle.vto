@@ -1,0 +1,15 @@
+{{# Use: 
+{{ comp.subtitle({ tag: "p", text: services.subtitle }) }}
+{{ comp.subtitle({ tag: "p", text: somevar }) }}
+{{ comp.subtitle({ tag: "p", bg: "dark", text: whyesolia.subtitle }) }}
+#}}
+
+{{ if bg === "dark" }}
+<{{ tag }} class="prose prose-zinc text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
+  {{ text |> replace("YEARS_IN_BUSINESS", (new Date().getFullYear() - 1999)) }}
+</{{ tag }}>
+{{ else }}
+<{{ tag }} class="prose prose-zinc prose-base prose-p:text-accent-900 sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
+  {{ text |> replace("YEARS_IN_BUSINESS", (new Date().getFullYear() - 1999)) }}  
+</{{ tag }}>
+{{ /if }}

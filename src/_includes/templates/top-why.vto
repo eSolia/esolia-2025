@@ -1,10 +1,11 @@
 <!-- ===== top-why.vto TEMPLATE START ===== -->
-<section class="bg-accent-500 relative overflow-hidden"> 
-  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-12">  
-    <img
+<section class="relative overflow-hidden min-h-[60vh] flex items-center justify-center [background-image:url('/assets/ryoji-iwata-T1FvAeD59o0-unsplash.jpg')] [background-attachment:fixed] bg-cover bg-center bg-accent-700"> 
+  <div class="absolute inset-0 bg-accent-500/95 z-0"></div>
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-12 relative z-10">  
+    {{# <img
       class="absolute w-full h-full opacity-[0.2] z-0 -left-30 2xs:-left-35 1xs:-left-37 xs:-left-40 sm:-left-53 md:-left-63 lg:-left-70 xl:-left-90 1xl:-left-110 2xlb:-left-115 3xl:-left-120 4xl:-left-125 -bottom-0 rotate-110 size-60 fill-accent-400"
       src='{{ "flower-tulip" |> icon("phosphor", "duotone") }}'
-      inline>
+      inline> #}}
   {{# <img 
       src="/assets/symbol_nocolor_bgtransparent.svg" 
       alt="#_" 
@@ -15,31 +16,23 @@
 
     <div class="px-8 py-12 mx-auto max-w-8xl md:px-16"> 
       <div class="flex flex-col max-w-2xl lg:ml-auto"> 
-        <div class="relative max-w-xl"> 
-          <div class="absolute inset-0 flex items-center" aria-hidden="true"> 
-            <div class="w-3/4 md:hidden ml-6">
-              <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
-            </div>
-            <div class="w-full hidden md:block">
-              <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
-            </div>
-          </div> 
-          <div class="relative flex justify-left md:justify-center"> 
-            <h2 class="bg-accent-500 pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ whyesolia.section }}</h2>
-          </div> 
-        </div> 
-        <h3 class="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter font-display text-sky-500 text-shadow-xs mt-12 text-balance">  
-          {{ whyesolia.title }}
-        </h3> 
-        <p class="prose prose-stone text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
-          {{ whyesolia.subtitle }}
-        </p> 
+        {{ comp.top_section({ tag: "h2", bg: "dark", text: whyesolia.section, cssclass: "max-w-xl" }) }}
+        {{ comp.top_title({ tag: "h3", bg: "dark", text: whyesolia.title }) }}
+        {{ comp.top_subtitle({ tag: "p", bg: "dark", text: whyesolia.subtitle }) }}
       </div> 
       <dl class="grid gap-12 lg:grid-cols-2 mt-8 lg:mt-12 lg:max-w-2xl lg:ml-auto"> 
         {{ for reason of whyesolia.list |> shuffle }}
-        <div> 
-          <dt class="font-display text-sky-500 text-shadow-xs text-lg sm:text-lg md:text-xl lg:text-2xl tracking-tighter">{{ reason.name }}</dt> 
-          <dd class="prose prose-stone text-accent-50 text-base mt-4 text-pretty"> {{ reason.description }} </dd> 
+        <div class="flex flex-col"> 
+          <dt class="flex items-center gap-x-2 font-display text-sky-500 text-shadow-2xs text-lg sm:text-lg md:text-xl lg:text-2xl tracking-tighter">
+            <img
+              class="size-6 fill-accent-200"
+              src="{{ reason.icon |> icon("phosphor", "duotone") }}"
+              inline>
+            {{ reason.name }}
+          </dt> 
+          <dd class="prose prose-zinc text-accent-50 text-base mt-4 text-pretty"> 
+            {{ reason.description }} 
+          </dd> 
         </div>
         {{ /for }}
       </dl> 

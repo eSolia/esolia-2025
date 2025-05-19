@@ -1,6 +1,6 @@
 <!-- ===== top-nav.vto TEMPLATE START ===== -->
-<section class="bg-white relative z-20 rounded-t-md"> 
-  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-4">     
+<section class="bg-white/80 sticky top-0 z-20 rounded-t-md backdrop-blur shadow-sm"> 
+  <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-2 lg:py-3">     
     <div class="flex justify-between items-center">
       <a
         aria-label="{{ i18n.nav.return_home }}"
@@ -13,7 +13,7 @@
           loading="lazy"
           fetchpriority="high"
           decoding="async"
-          class="ml-2 w-32 2xs:w-38 1xs:w-40 xs:w-44 sm:ml-1 sm:w-48 md:-ml-10 md:w-57 lg:w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-opacity duration-300"
+          class="ml-2 w-32 2xs:w-38 1xs:w-40 xs:w-44 sm:ml-1 sm:w-48 md:-ml-10 md:w-57 lg:w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-opacity duration-300 scale-110"
           src="/assets/logo_horiz_darkblue_bgtransparent_2.svg"
       /></a>
         {{# Start right nav grouping #}}
@@ -45,7 +45,7 @@
           {{# Mobile menu #}}
           <div class="pointer-events-auto md:hidden"> 
               <button type="button" id="mobile-menu-button" aria-label="{{ i18n.nav.mobile_nav_name }}"
-                      class="rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-esoliaamber-600 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-sky-600 dark:text-accent-200 hover:text-esoliaamber-700 dark:hover:text-esoliaamber-500">
+                      class="rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-accent-800/5 hover:bg-esoliaamber-700 ring-accent-900/5 backdrop-blur-sm transition dark:bg-accent-800/90 dark:ring-white/10 dark:hover:ring-white/20 text-sm font-medium text-sky-600 dark:text-accent-200 hover:text-white dark:hover:text-esoliaamber-500">
                 {{ i18n.nav.mobile_nav_name }}
               </button>
             </div>

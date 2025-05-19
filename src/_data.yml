@@ -1,6 +1,7 @@
 logo: /assets/logo_horiz_darkblue_bgtransparent.svg
 extra_head: []
 lang: ja
+default_keywords: ["イソリア", "バイリンガル IT", "プロ", "プロフェッショナル", "東京ITサービス", "和英", "ヘルプデスク"]
 site:
   author: "イソリア"
   title: "会社概要トップ"
@@ -50,7 +51,7 @@ metas:
   author: "イソリア"
   image: "=image || /assets/esolia-main-site-default-ja.png"
   icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
-  keywords: ["イソリア", "バイリンガル IT", "プロ", "プロフェッショナル", "東京ITサービス", "和英", "ヘルプデスク"]
+  keywords: "=tags || =default_keywords"
   twitter: "@esolia_inc"
   fediverse: "@esolia.com@bsky.brid.gy"
   color: ["#ffbc68", "#2d2f63"]
@@ -125,7 +126,7 @@ en:
     author: "eSolia"
     image: "=image || /assets/esolia-main-site-default-en.png"
     icon: "/assets/symbol_darkblue_bgtransparent_2.svg"
-    keywords: ["eSolia", "bilingual", "professional", "tokyo it service", "japan it helpdesk", "japan", "english"]
+    keywords: "=tags"
     twitter: "@esolia_inc"
     fediverse: "@esolia.com@bsky.brid.gy"
     color: ["#ffbc68", "#2d2f63"]
