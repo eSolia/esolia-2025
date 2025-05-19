@@ -1,0 +1,35 @@
+{{# Use: 
+{{ comp.top-section({ tag: "h2", text: services.section }) }}
+{{ comp.top-section({ tag: "h2", text: somevar }) }}
+{{ comp.top-section({ tag: "h2", bg: "dark", text: testimonials.section, cssclass: "max-w-xl" }) }}
+#}}
+
+{{ if bg === "dark" }}
+<div class="relative {{ cssclass }}"> 
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-3/4 md:hidden ml-6">
+      <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
+    </div>
+    <div class="w-full hidden md:block">
+      <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
+    </div>
+  </div>
+  <div class="relative flex justify-left md:justify-center">
+    <{{ tag }} class="bg-yellow-500 rounded pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-white font-light [font-variant:small-caps]">{{ text }}</{{ tag }}>
+  </div>
+</div>
+{{ else }}
+<div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-3/4 md:hidden ml-6">
+      <div class="h-0.5 bg-gradient-to-r from-yellow-500 to-transparent opacity-100 dark:from-yellow-400"></div>
+    </div>
+    <div class="w-full hidden md:block">
+      <div class="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-100 dark:via-yellow-400"></div>
+    </div>
+  </div>
+  <div class="relative flex justify-left md:justify-center">
+    <{{ tag }} class="bg-white pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ text }}</{{ tag }}>
+  </div>
+</div>
+{{ /if }}
