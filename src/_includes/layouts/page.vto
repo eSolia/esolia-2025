@@ -4,7 +4,7 @@ bodyClass: body-tag
 ---
 <!-- ===== page.vto LAYOUT START ===== -->
   {{ include "templates/top-nav.vto" }}
-<main class="grow" data-pagefind-body>
+<main id="main-content" class="grow" data-pagefind-body>
   <section class="bg-white overflow-hidden relative"> 
     <div class="2xl:max-w-7xl mx-auto px-8 md:px-16 max-w-6xl py-12 lg:pt-24">  
       <div class="flex flex-col gap-4 lg:grid-cols-3"> 
@@ -14,7 +14,7 @@ bodyClass: body-tag
 
           {{ if toc.length }}{{ include "templates/page-toc.vto" }}{{ /if }}
 
-          <div class="prose prose-stone prose-a:font-semibold prose-a:text-sky-900 hover:prose-a:text-sky-800 prose-headings:text-accent-900 prose-headings:font-display   prose-blockquote:text-accent-400 prose-code:text-accent-400 prose-strong:text-accent-700 prose-img:rounded-xl prose-pre:rounded-xl prose-pre:scrollbar-hide mt-12">
+          <div class="prose prose-zinc prose-a:font-semibold prose-a:text-sky-900 hover:prose-a:text-sky-800 prose-headings:text-accent-900 prose-headings:font-display   prose-blockquote:text-accent-400 prose-code:text-accent-400 prose-strong:text-accent-700 prose-img:rounded-xl prose-pre:rounded-xl prose-pre:scrollbar-hide mt-12">
             {{ content }}
           </div>
         </div>
