@@ -68,6 +68,32 @@
   .transition-max-w {
     transition: max-width 0.5s ease-in-out;
   }
+
+  .scroll-watcher {
+    position: fixed; /* Keeps it at the top of the viewport */
+    top: 0;          /* Positions it at the very top */
+    left: 0;         /* Positions it at the very left */
+    width: 100%;     /* IMPORTANT: Make it span the full width of the viewport */
+    height: 2px;     /* IMPORTANT: Set a small height for a thin horizontal bar */
+    z-index: 9999;   /* Ensure it's on top of other content */
+    background-color: #A1A1AA; /* Your desired color */
+    opacity: 50%; /* Start with 50% opacity */
+    /* Initial state for horizontal growth */
+    transform: scaleX(0); /* Start with 0 width, but maintain original height */
+    transform-origin: center; /* Crucial: makes it grow from left to right */
+
+    /* Animation setup */
+    animation: scroll-watcher linear; 
+    animation-timeline: scroll(y); /* Ties animation to vertical scroll */
+  }
+
+  @supports (animation-timeline: scroll()) {
+    @keyframes scroll-watcher {
+      to {
+        transform: scaleX(1); /* End with full width */
+      }
+    }
+  }
 }
 
 /* prose-a:text-sky-900 dark:prose-a:text-sky-200  prose-a:decoration-sky-700 prose-a:underline  */

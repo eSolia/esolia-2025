@@ -14,20 +14,20 @@ function loadVendorScript(src, attributes, callback) {
 }
   
 // Swap logo on scroll and make nav bg more opaque
-window.addEventListener('scroll', () => {
-  const largeLogo = document.getElementById('large-logo');
+//window.addEventListener('scroll', () => {
+  // const largeLogo = document.getElementById('large-logo');
   // const smallLogo = document.getElementById('small-logo');
   // const topNavBG = document.getElementById('top-nav-bg');
-  const scrollPosition = window.scrollY;
+  // const scrollPosition = window.scrollY;
 
   // Handle logo swap
-  if (scrollPosition > 10) {
-      largeLogo.classList.add('opacity-0');
+ // if (scrollPosition > 10) {
+  //    largeLogo.classList.add('opacity-0');
       // smallLogo.classList.remove('opacity-0');
-  } else {
-      largeLogo.classList.remove('opacity-0');
+  //} else {
+   //   largeLogo.classList.remove('opacity-0');
       // smallLogo.classList.add('opacity-0');
-  }
+  //}
 
   // Handle nav opacity changes based on scroll position
   // if (scrollPosition > 50) {
@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
   //     topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
   //     topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
   // }
-});
+//});
 
 // Theme Toggle with Alpine.js
 // document.addEventListener('alpine:init', () => {
@@ -217,3 +217,5 @@ document.addEventListener('DOMContentLoaded', function() {
   } // End check for mobile menu modal elements
 
 }); // End DOMContentLoaded listener
+
+
