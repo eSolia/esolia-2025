@@ -5,11 +5,11 @@
 #}}
 
 {{ if bg === "dark" }}
-<{{ tag }} class="prose prose-zinc text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
+<{{ tag }} class="prose prose-neutral text-white prose-base sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
   {{ text |> replace("YEARS_IN_BUSINESS", (new Date().getFullYear() - 1999)) }}
 </{{ tag }}>
 {{ else }}
-<{{ tag }} class="prose prose-zinc prose-base prose-p:text-accent-900 sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
+<{{ tag }} class="prose prose-neutral prose-base prose-p:text-accent-900 sm:prose-md md:prose-xl mt-6 md:mt-8 text-balance">  
   {{ text |> replace("YEARS_IN_BUSINESS", (new Date().getFullYear() - 1999)) }}  
 </{{ tag }}>
 {{ /if }}
