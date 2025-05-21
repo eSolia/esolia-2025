@@ -261,3 +261,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-evaluate state on window resize
     window.addEventListener('resize', handleDetailsState);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.getElementById("top-nav");
+  const sentinel = document.getElementById("nav-sentinel");
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        nav.setAttribute("data-pinned", "true");
+      } else {
+        nav.setAttribute("data-pinned", "false");
+      }
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(sentinel);
+});
+
+
+

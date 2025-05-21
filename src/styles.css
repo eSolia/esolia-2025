@@ -450,4 +450,20 @@ details[open] > summary {
   margin-top: 0;
 }
 
+#top-nav {
+  transition: border-radius 0.3s ease, backdrop-filter 0.6s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#top-nav[data-pinned="true"] {
+  border-radius: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.95); /* slightly more opaque */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);   /* stronger shadow */
+}
+#top-nav[data-pinned="true"] #large-logo {
+  scale: 1.0;
+  filter: brightness(100%);
+}
+
+
 /* lume-google-fonts-here */
