@@ -5,7 +5,7 @@
     set pageCats = search.pages(`type=category lang=${lang}`, "category=desc-locale")
   }}
   {{ if pageCats.length }}
-    <div class="text-stone-500 ml-1 mt-2">
+    <div class="text-accent-500 ml-1 mt-2">
       <nav class="">
         <ul class="flex flex-wrap space-x-2 space-y-2">
           {{ for page of pageCats }}

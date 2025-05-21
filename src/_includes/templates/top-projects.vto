@@ -14,44 +14,24 @@
   // Define gradient class combinations including dark mode.
     const gradientOptions = [
     {
-      // All sky gradient
-      light: 'bg-gradient-to-tr from-sky-800 via-sky-600 to-sky-700',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
+      // accent gray gradient 1
+      light: 'bg-gradient-to-br from-accent-200 to-accent-50',
+      dark: 'dark:bg-gradient-to-br dark:from-accent-900 dark:to-accent-700'
     },
     {
-      // All Sky gradient
-      light: 'bg-gradient-to-br from-sky-900 via-sky-600 to-sky-500',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
+      // accent gray gradient 2
+      light: 'bg-gradient-to-br from-accent-200 to-accent-50',
+      dark: 'dark:bg-gradient-to-br dark:from-accent-900 dark:to-accent-700'
     },
     {
-      // All sky gradient
-      light: 'bg-gradient-to-tl from-sky-800 via-sky-600 to-sky-700',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
+      // accent gray gradient 3
+      light: 'bg-gradient-to-bl from-accent-50 to-accent-100',
+      dark: 'dark:bg-gradient-to-tr dark:from-accent-900 dark:to-accent-700'
     },
     {
-      // All Sky gradient
-      light: 'bg-gradient-to-bl from-sky-900 via-sky-600 to-sky-500',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:via-sky-700 dark:to-sky-600' 
-    },
-    {
-      // Sky-cyan gradient
-      light: 'bg-gradient-to-br from-sky-700 to-cyan-500',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:to-cyan-700' 
-    },
-    {
-      // Sky-cyan gradient
-      light: 'bg-gradient-to-bl from-sky-700 via-sky-800 to-cyan-500',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 via-sky-950 dark:to-cyan-700' 
-    },
-    {
-      // Teal-cyan-sky gradient
-      light: 'bg-gradient-to-br from-teal-700 via-cyan-500 to-sky-600',
-      dark: 'dark:bg-gradient-to-br dark:from-teal-900 via-cyan-800 dark:to-sky-700' 
-    },
-    {
-      // Sky-teal gradient
-      light: 'bg-gradient-to-br from-sky-700 to-teal-500',
-      dark: 'dark:bg-gradient-to-br dark:from-sky-900 dark:to-teal-700' 
+      // accent gray gradient 4
+      light: 'bg-gradient-to-bl from-accent-100 to-accent-50',
+      dark: 'dark:bg-gradient-to-br dark:from-accent-900 dark:to-accent-700'
     }
     // Add more objects if needed
     ];
@@ -65,18 +45,18 @@
     }}
     <article class="relative isolate flex flex-col overflow-hidden rounded-2xl
     {{ selectedGradient.light }} {{ selectedGradient.dark }} 
-    grayscale opacity-90 shadow-md px-8 pt-8 pb-8 sm:pt-10 lg:pt-12">
-      <div class="absolute inset-0 -z-10 rounded-2xl bg-accent-100 blur opacity-50"></div>
-      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-accent-900/10 ring-inset blur opacity-25"></div>
+    shadow-md px-8 pt-8 pb-8 sm:pt-10 lg:pt-12 backdrop-blur-sm">
+      {{# <div class="absolute inset-0 -z-10 rounded-2xl bg-accent-100 blur opacity-50"></div> #}}
+      {{# <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-accent-900/10 ring-inset opacity-40"></div> #}}
       <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6">
-        <time datetime="{{ project['DateYYYY-MM-DD'] }}" class="mr-8 text-accent-700">{{ if lang === "ja" }}{{ project['DateJP'] }}{{ else }}{{ project['Date'] }}{{ /if }}</time>
+        <time datetime="{{ project['DateYYYY-MM-DD'] }}" class="mr-8 text-accent-950">{{ if lang === "ja" }}{{ project['DateJP'] }}{{ else }}{{ project['Date'] }}{{ /if }}</time>
         </div>
-        <h3 class="mt-3 text-lg/6 font-semibold text-white">
+        <h3 class="mt-3 text-lg/6 font-semibold text-accent-950">
             <span class="absolute inset-0"></span>
             {{ if lang === "ja" }}{{ project['顧客タイプ'] }}{{ else }}{{ project['Client Type'] }}{{ /if }}
         </h3>
-        <div class="text-white mt-5 text-sm/6 leading-6">
-          {{ if lang === "ja" }}{{ project['記事'] |> md(true) }}{{ else }}{{ project['Description'] |> md(true) }}{{ /if }}
+        <div class="prose prose-neutral prose-sm text-accent-950 mt-5 text-sm/6 leading-6">
+          {{ if lang === "ja" }}{{ project['記事'] |> md }}{{ else }}{{ project['Description'] |> md }}{{ /if }}
         </div>
       </article>
     {{ /for }}

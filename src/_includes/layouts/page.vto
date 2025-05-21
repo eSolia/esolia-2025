@@ -9,12 +9,12 @@ bodyClass: body-tag
     <div class="2xl:max-w-7xl mx-auto px-8 md:px-16 max-w-6xl py-12 lg:pt-24">  
       <div class="flex flex-col gap-4 lg:grid-cols-3"> 
         <div class="max-w-xl"> 
-          <h1 class="text-3xl  sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter font-display text-accent-800 text-balance">  {{ title }}  </h1> 
+          <h1 class="text-3xl  sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter font-display text-accent-900 text-balance">  {{ title }}  </h1> 
           {{# <p class="text-lg sm:text-xl md:text-2xl text-accent-500 mt-8 font-display text-balance">  {{ date }}  </p>  #}}
 
           {{ if toc.length }}{{ include "templates/page-toc.vto" }}{{ /if }}
 
-          <div class="prose prose-zinc prose-a:font-semibold prose-a:text-sky-900 hover:prose-a:text-sky-800 prose-headings:text-accent-900 prose-headings:font-display   prose-blockquote:text-accent-400 prose-code:text-accent-400 prose-strong:text-accent-700 prose-img:rounded-xl prose-pre:rounded-xl prose-pre:scrollbar-hide mt-12">
+          <div class="prose prose-neutral prose-a:font-semibold prose-a:text-sky-900 hover:prose-a:text-sky-800 prose-headings:text-accent-900 prose-headings:font-display   prose-blockquote:text-accent-400 prose-code:text-accent-400 prose-strong:text-accent-700 prose-img:rounded-xl prose-pre:rounded-xl prose-pre:scrollbar-hide mt-12">
             {{ content }}
           </div>
         </div>
