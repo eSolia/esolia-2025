@@ -1,3 +1,20 @@
+// Load this first
+(function() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/windows phone/i.test(userAgent)) {
+        document.body.classList.add('os-windows-phone');
+    } else if (/android/i.test(userAgent)) {
+        document.body.classList.add('os-android');
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        document.body.classList.add('os-ios');
+    } else if (/Mac/i.test(userAgent)) {
+        document.body.classList.add('os-mac');
+    } else if (/Win/i.test(userAgent)) { // This would catch most Windows desktops/laptops
+        document.body.classList.add('os-windows');
+    }
+})();
+
 // Function to load a script from a CDN with additional attributes
 function loadVendorScript(src, attributes, callback) {
   var script = document.createElement('script');
@@ -218,4 +235,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); // End DOMContentLoaded listener
 
+// For TOC details opening
+// This script will automatically open the Table of Contents (ToC) on medium and larger screens
+document.addEventListener('DOMContentLoaded', () => {
+    const tocDetails = document.getElementById('toc-details');
+    if (!tocDetails) {
+        console.warn('Table of Contents details element not found!');
+        return;
+    }
+    const handleDetailsState = () => {
+        const isMediumOrLargeScreen = window.matchMedia('(min-width: 768px)').matches;
 
+        if (isMediumOrLargeScreen) {
+            // On medium and larger screens:
+            // The 'open' attribute is set in the HTML. We DO NOT modify it here.
+            // This allows the user to freely open/close the ToC, and their action will persist.
+        } else {
+            // On smaller screens:
+            // Ensure the ToC is always closed by default (remove 'open' if present).
+            tocDetails.removeAttribute('open');
+        }
+    };
+    // Set initial state on page load
+    handleDetailsState();
+    // Re-evaluate state on window resize
+    window.addEventListener('resize', handleDetailsState);
+});
