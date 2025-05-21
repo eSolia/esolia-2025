@@ -10,16 +10,16 @@
 
 @layer base {
   a {
-    @apply text-stone-500 dark:text-stone-100 hover:text-sky-600 dark:hover:text-sky-400; /* Example base link styles */
+    @apply text-accent-500 dark:text-accent-100 hover:text-sky-600 dark:hover:text-sky-400; /* Example base link styles */
     transition: color 0.15s ease-in-out;
     text-decoration-thickness: 1px; /* Set your desired default thickness here as well */
     text-decoration-color: theme('colors.zinc.500'); /* Match the text color */
   }
 
   /* You could also style specific link states globally */
-  a:focus {
+  /* a:focus {
     @apply outline-none ring-2 ring-sky-700/50 ring-offset-2;
-  }
+  } */
 }
 @layer components {
   /* Apply base styles to tables with not-prose */
@@ -28,7 +28,7 @@
   }
 
   table.not-prose thead {
-    @apply bg-stone-50 text-stone-700 dark:bg-stone-600 dark:text-stone-300 text-left;
+    @apply bg-stone-50 text-accent-700 dark:bg-stone-600 dark:text-accent-300 text-left;
   }
 
   table.not-prose th,
@@ -44,11 +44,11 @@
     @apply divide-y divide-stone-200 dark:divide-stone-700;
   }
   table.not-prose caption {
-    @apply caption-bottom text-left p-2 text-xs text-stone-400;
+    @apply caption-bottom text-left p-2 text-xs text-accent-400;
   }
     /* Override the prose <a> tag hover classes */
   .prose :where(a) {
-    @apply hover:opacity-60;
+    @apply hover:opacity-70;
   }
 
   .prose figure + p {
@@ -303,7 +303,7 @@ body article > div > figure > picture > img {
 
 /* MDN keyboard shortcut style for kbd tag */
 kbd {
-  @apply bg-stone-200 rounded border border-stone-400 shadow-md text-stone-800 inline-block text-[0.85em] font-semibold leading-none px-1 py-0.5 whitespace-nowrap
+  @apply bg-stone-200 rounded border border-stone-400 shadow-md text-accent-800 inline-block text-[0.85em] font-semibold leading-none px-1 py-0.5 whitespace-nowrap
 }
 
 /*----------------------------

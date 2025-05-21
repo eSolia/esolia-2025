@@ -11,7 +11,7 @@ script: /js/fathom-post-list-event.js
         <div class="mx-auto max-w-2xl lg:max-w-5xl">
           <header class="max-w-2xl">
             <h1
-              class="text-4xl font-bold tracking-tight text-stone-800 sm:text-5xl dark:text-stone-100"
+              class="text-4xl font-bold tracking-tight text-accent-800 sm:text-5xl dark:text-accent-100"
             >
               <span class="font-light subpixel-antialiased">{{ site.title }}</span>
               <br class="block sm:hidden">
@@ -19,7 +19,7 @@ script: /js/fathom-post-list-event.js
                 class="bg-gradient-to-r from-esoliablue-800 via-esoliablue-700 to-esoliablue-900 dark:from-esoliablue-600 dark:via-esoliablue-500 dark:to-esoliablue-700 bg-clip-text text-transparent"
               >{{ i18n.archive.title }}</span>
             </h1>
-            <p class="mt-6 text-base text-stone-600 dark:text-stone-400">
+            <p class="mt-6 text-base text-accent-600 dark:text-accent-400">
               {{ i18n.archive.description }}
             </p>
 
@@ -41,7 +41,7 @@ script: /js/fathom-post-list-event.js
                 )
               }}
               {{ if pageCats.length }}
-                <div class="text-stone-500 ml-1 mt-6">
+                <div class="text-accent-500 ml-1 mt-6">
                   <nav class="">
                     <h2>{{ i18n.search.categories }}:</h2>
                     <ul class="flex flex-wrap space-x-2 space-y-2">
@@ -60,7 +60,7 @@ script: /js/fathom-post-list-event.js
 
               {{ set pageTags = search.pages(`type=tag lang=${lang}`, "tag") }}
               {{ if pageTags.length }}
-                <div class="text-stone-500 ml-1 mt-4">
+                <div class="text-accent-500 ml-1 mt-4">
                   <nav class="">
                     <h2>{{ i18n.search.tags }}:</h2>
                     <ul class="flex flex-wrap space-x-2 space-y-2">
@@ -68,7 +68,7 @@ script: /js/fathom-post-list-event.js
                         <li>
                           <a
                             href="{{ page.url }}"
-                            class="rounded-md bg-stone-50 dark:bg-stone-700 px-2 py-1 text-xs font-medium text-stone-600 dark:text-stone-50 ring-1 ring-stone-500/10 ring-inset hover:bg-stone-100 dark:hover:bg-stone-500 no-underline whitespace-nowrap"
+                            class="rounded-md bg-stone-50 dark:bg-stone-700 px-2 py-1 text-xs font-medium text-accent-600 dark:text-accent-50 ring-1 ring-stone-500/10 ring-inset hover:bg-stone-100 dark:hover:bg-stone-500 no-underline whitespace-nowrap"
                           >{{ page.tag }}</a>
                         </li>
                       {{ /for }}
