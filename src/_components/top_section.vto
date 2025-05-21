@@ -1,7 +1,7 @@
 {{# Use: 
-{{ comp.top-section({ tag: "h2", text: services.section }) }}
-{{ comp.top-section({ tag: "h2", text: somevar }) }}
-{{ comp.top-section({ tag: "h2", bg: "dark", text: testimonials.section, cssclass: "max-w-xl" }) }}
+{{ comp.top_section({ tag: "h2", text: services.section, id: "services" }) }}
+{{ comp.top_section({ tag: "h2", text: somevar, id: "someid" }) }}
+{{ comp.top_section({ tag: "h2", bg: "dark", text: testimonials.section, id: "testimonials", cssclass: "max-w-xl" }) }}
 #}}
 
 {{ if bg === "dark" }}
@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="relative flex justify-left md:justify-center">
-    <{{ tag }} class="bg-yellow-500 rounded pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-white font-light [font-variant:small-caps]">{{ text }}</{{ tag }}>
+    <{{ tag }} id="{{ id }}" class="bg-yellow-500 rounded pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-white font-light [font-variant:small-caps]"><a class="hover:text-sky-500" href="#{{ id }}">{{ text }}</a></{{ tag }}>
   </div>
 </div>
 {{ else }}
@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="relative flex justify-left md:justify-center">
-    <{{ tag }} class="bg-white pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]">{{ text }}</{{ tag }}>
+    <{{ tag }} id="{{ id }}" class="bg-white pl-0 pr-2 md:pl-2 text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-wider text-yellow-500 font-light [font-variant:small-caps]"><a class="text-yellow-500 hover:text-sky-500" href="#{{ id }}">{{ text }}</a></{{ tag }}>
   </div>
 </div>
 {{ /if }}
