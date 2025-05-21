@@ -103,6 +103,7 @@ site.use(nav());
 site.use(pagefind({
   element: "#search",
   resetStyles: false,
+  showSubResults: true,
 }));
 site.use(prism({
   theme: [
