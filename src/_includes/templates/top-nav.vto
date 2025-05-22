@@ -1,22 +1,35 @@
 <!-- ===== top-nav.vto TEMPLATE START ===== -->
 <div id="nav-sentinel" class="h-1"></div>
-<section id="top-nav" class="bg-white/80 sticky top-0 z-20 rounded-t-lg backdrop-blur-[0px] shadow-sm data-pinned="false"> 
+<section id="top-nav" class="bg-white/80 sticky top-0 z-20 rounded-t-lg backdrop-blur-[0px] shadow-sm" data-pinned="false"> 
   <div class="2xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-16 max-w-6xl py-2 lg:py-3">     
     <div class="flex justify-between items-center">
       <a
         aria-label="{{ i18n.nav.return_home }}"
         type="button"
-        class="pointer-events-auto block origin-left"
+        class="relative block pointer-events-auto block origin-left w-fit"
         href="/{{ if it.lang === "en"}}{{ it.lang }}/{{ /if }}"
-      ><img
+      >
+      <!-- Full logo (default) -->
+        <img
           id="large-logo"
           alt="{{ i18n.nav.logo_large_alt}}"
           loading="lazy"
           fetchpriority="high"
           decoding="async"
-          class="ml-2 w-32 2xs:w-38 1xs:w-40 xs:w-44 sm:ml-1 sm:w-48 md:-ml-10 md:w-57 lg:w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-all duration-500 ease-in-out scale-110 brightness-110"
+          class="ml-2 w-32 2xs:w-38 1xs:w-40 xs:w-44 sm:ml-1 sm:w-48 md:-ml-10 md:w-57 lg:w-64 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-all duration-500 ease-in-out delay-0 scale-110 brightness-110 opacity-100 sm:block"
           src="/assets/logo_horiz_darkblue_bgtransparent_2.svg"
-      /></a>
+        />
+      <!-- Small symbol logo (mobile, hidden initially) -->
+        <img
+          id="symbol-logo"
+          alt="{{ i18n.nav.logo_symbol_alt }}"
+          loading="lazy"
+          fetchpriority="high"
+          decoding="async"
+          class="absolute top-0 left-2 w-11 2xs:w-14 xs:w-15 sm:w-16 object-cover dark:grayscale dark:invert dark:saturate-[.1] transition-all duration-500 ease-in-out delay-150 scale-90 opacity-0 md:hidden"
+          src="/assets/symbol_darkblue_bgtransparent_2.svg"
+        />
+      </a>
         {{# Start right nav grouping #}}
         <div class="flex items-center space-x-1">
           <nav class="pointer-events-auto hidden md:block">

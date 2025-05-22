@@ -1,285 +1,195 @@
-// Load this first
-(function() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+// === OS Detection ===
+(() => {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const bodyClass = 
+    /windows phone/i.test(ua) ? 'os-windows-phone' :
+    /android/i.test(ua) ? 'os-android' :
+    /iPad|iPhone|iPod/.test(ua) && !window.MSStream ? 'os-ios' :
+    /Mac/i.test(ua) ? 'os-mac' :
+    /Win/i.test(ua) ? 'os-windows' : null;
 
-    if (/windows phone/i.test(userAgent)) {
-        document.body.classList.add('os-windows-phone');
-    } else if (/android/i.test(userAgent)) {
-        document.body.classList.add('os-android');
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        document.body.classList.add('os-ios');
-    } else if (/Mac/i.test(userAgent)) {
-        document.body.classList.add('os-mac');
-    } else if (/Win/i.test(userAgent)) { // This would catch most Windows desktops/laptops
-        document.body.classList.add('os-windows');
-    }
+  if (bodyClass) document.body.classList.add(bodyClass);
 })();
 
-// Function to load a script from a CDN with additional attributes
-function loadVendorScript(src, attributes, callback) {
-  var script = document.createElement('script');
+// === Utility: Load External Script ===
+function loadVendorScript(src, attributes = {}, callback) {
+  const script = document.createElement('script');
   script.src = src;
-  // script.async = true;
-  // Set additional attributes
-  for (var key in attributes) {
-      if (attributes.hasOwnProperty(key)) {
-          script.setAttribute(key, attributes[key]);
-      }
-  }
+  Object.entries(attributes).forEach(([key, value]) => {
+    script.setAttribute(key, value);
+  });
   script.onload = callback;
   document.head.appendChild(script);
 }
-  
-// Swap logo on scroll and make nav bg more opaque
-//window.addEventListener('scroll', () => {
-  // const largeLogo = document.getElementById('large-logo');
-  // const smallLogo = document.getElementById('small-logo');
-  // const topNavBG = document.getElementById('top-nav-bg');
-  // const scrollPosition = window.scrollY;
 
-  // Handle logo swap
- // if (scrollPosition > 10) {
-  //    largeLogo.classList.add('opacity-0');
-      // smallLogo.classList.remove('opacity-0');
-  //} else {
-   //   largeLogo.classList.remove('opacity-0');
-      // smallLogo.classList.add('opacity-0');
-  //}
+// === Load Fathom Analytics ===
+loadVendorScript('https://cdn.usefathom.com/script.js', {
+  'data-site': 'OIXGEUHR',
+  'defer': ''
+}, () => {
+  console.log('Fathom Analytics loaded');
+});
 
-  // Handle nav opacity changes based on scroll position
-  // if (scrollPosition > 50) {
-  //     topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/70', 'dark:bg-stone-700/70');
-  //     topNavBG.classList.add('bg-stone-50/95', 'dark:bg-stone-700/95');
-  // } else if (scrollPosition > 30 && scrollPosition <= 50) {
-  //     topNavBG.classList.remove('bg-stone-50/50', 'dark:bg-stone-700/50', 'bg-stone-50/95', 'dark:bg-stone-700/95');
-  //     topNavBG.classList.add('bg-stone-50/70', 'dark:bg-stone-700/70');
-  // } else if (scrollPosition > 10 && scrollPosition <= 30) {
-  //     topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
-  //     topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
-  // } else {
-  //     topNavBG.classList.remove('bg-stone-50/70', 'dark:bg-stone-700/70', 'bg-stone-50/95', 'dark:bg-stone-700/95');
-  //     topNavBG.classList.add('bg-stone-50/50', 'dark:bg-stone-700/50');
-  // }
-//});
-
-// Theme Toggle with Alpine.js
-// document.addEventListener('alpine:init', () => {
-//   Alpine.data('themeToggle', () => ({
-//       darkMode: localStorage.getItem('darkMode') === 'true' || false,
-//       init() {
-//           this.$watch('darkMode', value => {
-//               localStorage.setItem('darkMode', value);
-//               document.body.classList.toggle('dark', value);
-//           });
-//           // Ensure the correct class is applied on page load
-//           document.body.classList.toggle('dark', this.darkMode);
-//       }
-//   }));
-// });
-  
-// Load Mastodon Comments from a local file
+// === Register Mastodon Comments ===
 import Comments from "./comments.js";
 customElements.define("mastodon-comments", Comments);
 
-// Load Alpine.js with defer
-// loadVendorScript('https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', { 'defer': '' }, function() {
-//   console.log('Alpine.js loaded with defer');
-// });
-
-// Load Fathom Analytics script with data-site attribute and defer
-loadVendorScript('https://cdn.usefathom.com/script.js', { 'data-site': 'OIXGEUHR', 'defer': '' }, function() {
-  console.log('Fathom Analytics loaded with defer and data-site attribute');
-});
-
-// Handle keydown event for anchor tags with role="button"
-const buttons = document.querySelectorAll('a[role="button"]');
-buttons.forEach(button => {
-  button.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      this.click();
-    }
-  });
-});
-
-// SEARCH AND MOBILE MENU MODAL CONTROL
-// Ensure the script runs after the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+// === DOM-Dependent Logic ===
+document.addEventListener('DOMContentLoaded', () => {
   console.log('--- DOM Content Loaded ---');
-  // --- Search Modal Control ---
-  // Get references to the search modal elements
-  const searchModal = document.getElementById("searchModal");
-  const searchButton = document.getElementById("search-button"); // Select the button by its ID
-  const searchModalCloseButton = document.getElementById("modal-close"); // Use a distinct ID for clarity
 
-  // Check if all search modal elements were found before adding listeners
-  if (searchModal && searchButton && searchModalCloseButton) {
-
-    // Open search modal on button click
-    searchButton.addEventListener("click", function() { // Use addEventListener
-      searchModal.style.display = "block";
-      // Focus on the Pagefind input if it exists after the modal is shown
-      const pageFind = searchModal.querySelector(".pagefind-ui__search-input");
-      if (pageFind) {
-        pageFind.focus();
-      }
+  // === Accessibility: Role="button" Keyboard Support ===
+  document.querySelectorAll('a[role="button"]').forEach(button => {
+    button.addEventListener('keydown', e => {
+      if (e.key === 'Enter') button.click();
     });
+  });
 
-    // Close search modal on close button click
-    searchModalCloseButton.addEventListener("click", function () { // Use addEventListener
-      searchModal.style.display = "none";
-    });
+  // === Utility: Trap Focus ===
+  function trapFocus(container) {
+    const focusables = container.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
 
-    // Close search modal on clicking outside the modal content (on the modal background)
-    window.addEventListener("click", function(event) { // Add listener to window
-        if (event.target === searchModal) { // Use === for precise target check
-            searchModal.style.display = "none";
-        }
-    });
-
-    // Close search modal on Escape key press
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') { // Use event.key for modern browsers
-        if (searchModal.style.display === 'block') { // Check if visible
-          searchModal.style.display = 'none';
+    container.addEventListener('keydown', e => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
         }
       }
     });
 
-    // Open search modal on Cmd+K (Mac) or Ctrl+K (Windows/Linux)
-    document.addEventListener('keydown', function(event) {
-        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-        const isCmdOrCtrl = isMac ? event.metaKey : event.ctrlKey;
+    if (first) first.focus();
+  }
 
-        if (isCmdOrCtrl && event.key === 'k') {
-            event.preventDefault(); // Prevent browser's default search shortcut
-            searchModal.style.display = 'block';
-            const pageFind = searchModal.querySelector(".pagefind-ui__search-input");
-            if (pageFind) {
-              pageFind.focus();
-            }
-        }
+  // === Search Modal ===
+  (() => {
+    const modal = document.getElementById("searchModal");
+    const openBtn = document.getElementById("search-button");
+    const closeBtn = document.getElementById("modal-close");
+
+    if (!(modal && openBtn && closeBtn)) return;
+
+    const open = () => {
+      modal.style.display = "block";
+      const input = modal.querySelector(".pagefind-ui__search-input");
+      if (input) input.focus();
+      trapFocus(modal);
+    };
+
+    const close = () => {
+      modal.style.display = "none";
+      openBtn.focus();
+    };
+
+    openBtn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    window.addEventListener("click", e => { if (e.target === modal) close(); });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && modal.style.display === "block") close();
+      const isMac = navigator.platform.toUpperCase().includes("MAC");
+      if ((isMac ? e.metaKey : e.ctrlKey) && e.key === "k") {
+        e.preventDefault(); open();
+      }
     });
+  })();
 
-  } // End check for search modal elements
+  // === Mobile Menu Modal ===
+  (() => {
+    const overlay = document.getElementById("mobile-menu-modal-overlay");
+    const panel = document.getElementById("mobile-menu-modal-panel");
+    const openBtn = document.getElementById("mobile-menu-button");
+    const closeBtn = document.getElementById("mobile-menu-close-button");
 
-  // --- Mobile Menu Modal Control ---
-  // Get references to the mobile menu modal elements
-  const mobileMenuOverlay = document.getElementById("mobile-menu-modal-overlay");
-  const mobileMenuPanel = document.getElementById("mobile-menu-modal-panel");
-  const mobileMenuButton = document.getElementById("mobile-menu-button"); // The "Menu" button
-  const mobileMenuCloseButton = document.getElementById("mobile-menu-close-button"); // The close X button inside the modal
+    if (!(overlay && panel && openBtn && closeBtn)) return;
 
-  console.log({mobileMenuButton}, {mobileMenuCloseButton}, {mobileMenuOverlay}, {mobileMenuPanel}); // Log the elements to check if they are null
-  // Check if the elements are null
+    const show = () => {
+      overlay.classList.remove("hidden", "opacity-0", "pointer-events-none");
+      panel.classList.remove("hidden", "translate-x-full");
+      void overlay.offsetWidth; void panel.offsetWidth;
+      overlay.classList.add("opacity-100");
+      panel.classList.add("translate-x-0");
+      trapFocus(panel);
+    };
 
-  // Check if all mobile menu modal elements were found before adding listeners
-  if (mobileMenuOverlay && mobileMenuPanel && mobileMenuButton && mobileMenuCloseButton) {
-    console.log('All mobile menu elements found. Attempting to attach listeners.');
-      // Function to show the mobile menu modal
-      function showMobileMenuModal() {
-        console.log('--- Calling showMobileMenuModal ---'); // Check if this logs
-        if (mobileMenuOverlay && mobileMenuPanel) {
-          console.log('Removing hidden class from overlay and panel'); // Check if this logs
-          mobileMenuOverlay.classList.remove("hidden");
-          mobileMenuPanel.classList.remove("hidden");
-        } else {
-          console.log('Error: Modal elements are null inside showMobileMenuModal'); // Should NOT log if previous checks work
-        }
-      }
+    const hide = () => {
+      overlay.classList.remove("opacity-100");
+      overlay.classList.add("opacity-0", "pointer-events-none");
+      panel.classList.remove("translate-x-0");
+      panel.classList.add("translate-x-full");
+      setTimeout(() => {
+        overlay.classList.add("hidden");
+        panel.classList.add("hidden");
+        openBtn.focus();
+      }, 300);
+    };
 
-      // Function to hide the mobile menu modal
-      function hideMobileMenuModal() {
-        console.log('--- Calling hideMobileMenuModal ---'); // Check if this logs
-        if (mobileMenuOverlay && mobileMenuPanel) {
-          console.log('Adding hidden class to overlay and panel'); // Check if this logs
-          mobileMenuOverlay.classList.add("hidden");
-          mobileMenuPanel.classList.add("hidden");
-        } else {
-            console.log('Error: Modal elements are null inside hideMobileMenuModal'); // Should NOT log
-        }
-      }
+    openBtn.addEventListener("click", show);
+    closeBtn.addEventListener("click", hide);
+    overlay.addEventListener("click", e => { if (e.target === overlay) hide(); });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && !panel.classList.contains("hidden")) hide();
+    });
+  })();
 
-      // --- Event Listeners ---
+  // === Table of Contents (ToC) Auto-Close on Small Screens ===
+  (() => {
+    const path = window.location.pathname;
+    const isRootOrLangRoot = /^\/([a-z]{2}\/)?$/.test(path);
+    if (isRootOrLangRoot) return;
 
-      // Open modal on "Menu" button click
-      mobileMenuButton.addEventListener("click", function() {
-        console.log('--- Mobile menu button clicked ---');
-          showMobileMenuModal();
-      });
+    const toc = document.getElementById('toc-details');
+    if (!toc) {
+      console.warn('No Table of Contents found');
+      return;
+    }
 
-      // Close modal on close button click
-      mobileMenuCloseButton.addEventListener("click", function () {
-          hideMobileMenuModal();
-      });
+    const updateToC = () => {
+      const isWide = window.matchMedia('(min-width: 768px)').matches;
+      if (!isWide) toc.removeAttribute('open');
+    };
 
-      // Close modal when clicking outside the panel (on the overlay)
-       // Use click event on the overlay itself, not the window for more precise targeting
-      mobileMenuOverlay.addEventListener("click", function(event) {
-           if (event.target === mobileMenuOverlay) { // Check if the clicked element is the overlay
-               hideMobileMenuModal();
-           }
-       });
+    updateToC();
+    window.addEventListener('resize', updateToC);
+  })();
 
+  // === Sticky Nav + Logo Swap ===
+  (() => {
+    const nav = document.getElementById("top-nav");
+    const sentinel = document.getElementById("nav-sentinel");
+    const largeLogo = document.getElementById("large-logo");
+    const symbolLogo = document.getElementById("symbol-logo");
 
-      // Close modal on Escape key press
-      document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-          // Check if the modal is currently visible (check if the panel does NOT have the hidden class)
-          if (!mobileMenuPanel.classList.contains('hidden')) {
-            hideMobileMenuModal();
+    if (!(nav && sentinel && largeLogo && symbolLogo)) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isPinned = !entry.isIntersecting;
+        nav.setAttribute("data-pinned", isPinned ? "true" : "false");
+
+        if (window.innerWidth <= 640) {
+          if (isPinned) {
+            largeLogo.classList.add("opacity-0", "scale-95");
+            largeLogo.classList.remove("opacity-100", "scale-110");
+
+            symbolLogo.classList.remove("opacity-0", "scale-90");
+            symbolLogo.classList.add("opacity-100", "scale-100");
+          } else {
+            largeLogo.classList.remove("opacity-0", "scale-95");
+            largeLogo.classList.add("opacity-100", "scale-110");
+
+            symbolLogo.classList.add("opacity-0", "scale-90");
+            symbolLogo.classList.remove("opacity-100", "scale-100");
           }
         }
-      });
+      },
+      { threshold: 0 }
+    );
 
-  } // End check for mobile menu modal elements
-
-}); // End DOMContentLoaded listener
-
-// For TOC details opening
-// This script will automatically open the Table of Contents (ToC) on medium and larger screens
-document.addEventListener('DOMContentLoaded', () => {
-    const tocDetails = document.getElementById('toc-details');
-    if (!tocDetails) {
-        console.warn('Table of Contents details element not found!');
-        return;
-    }
-    const handleDetailsState = () => {
-        const isMediumOrLargeScreen = window.matchMedia('(min-width: 768px)').matches;
-
-        if (isMediumOrLargeScreen) {
-            // On medium and larger screens:
-            // The 'open' attribute is set in the HTML. We DO NOT modify it here.
-            // This allows the user to freely open/close the ToC, and their action will persist.
-        } else {
-            // On smaller screens:
-            // Ensure the ToC is always closed by default (remove 'open' if present).
-            tocDetails.removeAttribute('open');
-        }
-    };
-    // Set initial state on page load
-    handleDetailsState();
-    // Re-evaluate state on window resize
-    window.addEventListener('resize', handleDetailsState);
+    observer.observe(sentinel);
+  })();
 });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.getElementById("top-nav");
-  const sentinel = document.getElementById("nav-sentinel");
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        nav.setAttribute("data-pinned", "true");
-      } else {
-        nav.setAttribute("data-pinned", "false");
-      }
-    },
-    { threshold: 0 }
-  );
-
-  observer.observe(sentinel);
-});
-
-
-
