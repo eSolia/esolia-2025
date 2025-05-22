@@ -76,6 +76,10 @@ nav:
   logo_symbol_alt: eSolia symbol-type logo linking to site top
   mobile_nav_name: Menu
   aria_label: Navigation menu links
+  mobile_menu_title: Main Navigation Menu
+  mobile_menu_label: Mobile Menu
+  mobile_menu_close: Close Menu
+  mobile_menu_open: Open Menu
 post:
   by: by
   reading_time: Reading Time
@@ -93,6 +97,7 @@ search:
   filter_by_category: Filter by Category
   close_link: Close (Esc)
   tooltip: <kbd>Cmd</kbd>+<kbd>k</kbd> (Mac) or <br><kbd>Ctrl</kbd>+<kbd>k</kbd> (Win/Linux) <br>to Search
+  search_menu_label: Search
 comments:
   title: Comments
   description: |

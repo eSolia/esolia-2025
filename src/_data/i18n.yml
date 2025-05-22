@@ -78,6 +78,10 @@ nav:
   logo_symbol_alt: サイトのトップへリンクするイソリア社シンボルタイプのロゴマーク
   mobile_nav_name: メニュー
   aria_label: ナビゲーションメニューのリンク
+  mobile_menu_title: メインナビゲーションメニュー
+  mobile_menu_label: モバイルメニュー
+  mobile_menu_close: メニューを閉じる
+  mobile_menu_open: メニューを開く
 post:
   by: 著者
   reading_time: 読了目安
@@ -95,6 +99,7 @@ search:
   filter_by_category: カテゴリーでフィルター
   close_link: 閉じる (Esc)
   tooltip: <kbd>Cmd</kbd>+<kbd>k</kbd> (Mac) または <br><kbd>Ctrl</kbd>+<kbd>k</kbd> (Win/Linux) <br>で検索
+  search_menu_label: 検索
 comments:
   title: Comments
   description: |
