@@ -68,35 +68,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === Search Modal ===
   (() => {
-    const modal = document.getElementById("searchModal");
-    const openBtn = document.getElementById("search-button");
-    const closeBtn = document.getElementById("modal-close");
+  const modal = document.getElementById("searchModal");
+  const openBtn = document.getElementById("search-button");
+  const closeBtn = document.getElementById("modal-close");
 
-    if (!(modal && openBtn && closeBtn)) return;
+  if (!(modal && openBtn && closeBtn)) return;
 
-    const open = () => {
-      modal.style.display = "block";
-      const input = modal.querySelector(".pagefind-ui__search-input");
-      if (input) input.focus();
-      trapFocus(modal);
-    };
+  function trapFocus(container) {
+    const focusables = container.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
 
-    const close = () => {
-      modal.style.display = "none";
-      openBtn.focus();
-    };
-
-    openBtn.addEventListener("click", open);
-    closeBtn.addEventListener("click", close);
-    window.addEventListener("click", e => { if (e.target === modal) close(); });
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape" && modal.style.display === "block") close();
-      const isMac = navigator.platform.toUpperCase().includes("MAC");
-      if ((isMac ? e.metaKey : e.ctrlKey) && e.key === "k") {
-        e.preventDefault(); open();
+    container.addEventListener('keydown', e => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
       }
     });
+
+    if (first) first.focus();
+  }
+
+  function focusPagefindInput(modal, closeBtn) {
+  closeBtn.setAttribute("tabindex", "-1");
+
+  let attempts = 0;
+  const maxAttempts = 30;
+
+  const tryFocus = () => {
+    const input = modal.querySelector(".pagefind-ui__search-input");
+      if (input) {
+        console.log("✅ Found Pagefind input, forcing focus...");
+        setTimeout(() => {
+          input.focus();
+          setTimeout(() => input.focus(), 50); // Force it again after 50ms
+          closeBtn.setAttribute("tabindex", "0");
+        }, 10);
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        console.log(`🔄 Waiting for Pagefind input... attempt ${attempts}`);
+        setTimeout(tryFocus, 100);
+      } else {
+        console.warn("❌ Pagefind input not found after max attempts.");
+        closeBtn.setAttribute("tabindex", "0");
+      }
+    };
+    tryFocus();
+  }
+
+
+  const modalContent = document.getElementById("searchModalContent");
+
+  const open = () => {
+    modal.style.display = "block";
+    requestAnimationFrame(() => {
+      modalContent.classList.remove("scale-95", "opacity-0");
+      modalContent.classList.add("scale-100", "opacity-100");
+    });
+    focusPagefindInput(modal, closeBtn);
+    trapFocus(modal);
+  };
+
+  const close = () => {
+    modalContent.classList.remove("scale-100", "opacity-100");
+    modalContent.classList.add("scale-95", "opacity-0");
+    setTimeout(() => {
+      modal.style.display = "none";
+      closeBtn.classList.remove("opacity-0");
+      openBtn.focus();
+    }, 300); // Match transition duration
+  };
+
+
+  openBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  window.addEventListener("click", e => { if (e.target === modal) close(); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && modal.style.display === "block") close();
+    const isMac = navigator.platform.toUpperCase().includes("MAC");
+    if ((isMac ? e.metaKey : e.ctrlKey) && e.key === "k") {
+      e.preventDefault(); open();
+    }
+  });
   })();
+
 
   // === Mobile Menu Modal ===
   (() => {
@@ -109,24 +169,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const show = () => {
       overlay.classList.remove("hidden", "opacity-0", "pointer-events-none");
-      panel.classList.remove("hidden", "translate-x-full");
-      void overlay.offsetWidth; void panel.offsetWidth;
+      panel.classList.remove("hidden", "translate-x-full", "scale-95", "opacity-0");
+
+      // Trigger reflow
+      void overlay.offsetWidth;
+      void panel.offsetWidth;
+
       overlay.classList.add("opacity-100");
-      panel.classList.add("translate-x-0");
+      panel.classList.add("translate-x-0", "scale-100", "opacity-100");
+
       trapFocus(panel);
     };
 
     const hide = () => {
       overlay.classList.remove("opacity-100");
       overlay.classList.add("opacity-0", "pointer-events-none");
-      panel.classList.remove("translate-x-0");
-      panel.classList.add("translate-x-full");
+
+      panel.classList.remove("translate-x-0", "scale-100", "opacity-100");
+      panel.classList.add("translate-x-full", "scale-95", "opacity-0");
+
       setTimeout(() => {
         overlay.classList.add("hidden");
         panel.classList.add("hidden");
         openBtn.focus();
-      }, 300);
+      }, 300); // Match transition duration
     };
+
 
     openBtn.addEventListener("click", show);
     closeBtn.addEventListener("click", hide);

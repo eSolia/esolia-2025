@@ -1,11 +1,11 @@
 <!-- ===== modal-search.vto TEMPLATE START ===== -->
 <div id="searchModal" 
-  class="fixed top-0 left-0 z-1000 w-full h-full overflow-auto hidden"
+  class="fixed top-0 left-0 z-1000 w-full h-full overflow-auto hidden bg-white/95 dark:bg-accent-800/95"
   role="dialog"
   aria-labelledby="searchModalLabel"
   aria-modal="true"
   aria-describedby="search">
-  <div class="relative w-3/4 h-3/4 mx-auto mt-24 overflow-auto p-5 bg-white/95 dark:bg-stone-800/95 border border-stone-100 dark:border-stone-700/40 rounded-lg shadow-md">
+  <div id="searchModalContent" class="relative w-3/4 h-3/4 mx-auto mt-24 overflow-auto p-5 bg-white/95 dark:bg-accent-800/95 border border-accent-100 dark:border-accent-700/40 rounded-lg shadow-md transform scale-95 opacity-0 transition-all duration-300 ease-out">
     <div class="block text-right items-right font-bold text-sm">
       <a id="modal-close" href="#">{{ i18n.search.close_link }}</a>
       <div id="searchModalLabel" class="sr-only">{{ i18n.search.search_menu_label }}</div>

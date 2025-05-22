@@ -465,5 +465,16 @@ details[open] > summary {
   filter: brightness(100%);
 }
 
+/* Reduced motion for search modal and mobile menu */
+@media (prefers-reduced-motion: reduce) {
+  #searchModalContent,
+  #mobile-menu-modal-panel {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
 
 /* lume-google-fonts-here */
