@@ -259,7 +259,7 @@ site.use(googleFonts({
   },
 }));
 site.use(tailwindcss({
-  config: "./tailwind.config.js",
+  config: "tailwind.config.js",
 }));
 site.use(source_maps());
 

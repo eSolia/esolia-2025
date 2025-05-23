@@ -32,7 +32,7 @@ aria-labelledby="mobileMenuModalTitle">
       <li role="none">
         <a 
           href="{{ item.href }}" 
-          class="text-accent-900 hover:text-sky-600 animate-fade-in delay-100 {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
+          class="text-accent-900 hover:text-sky-600 animate-fade-in {{- if item.target === '_blank'  }} after:content-['_↗']{{ /if -}}"
           {{- if item.target === '_blank' }}rel="noopener"{{ /if -}}
           role="menuitem"
           aria-label="{{ item.aria_label }}"
