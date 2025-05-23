@@ -21,7 +21,7 @@ script: /js/fathom-post-list-event.js
 alert: 
   update: "最新情報"
 hero: 
-  title: "社内IT部門と<br class='hidden lg:block'>同様に<wbr>日本の現場を<br class='hidden lg:block'>支えます"
+  title: "社内IT部門と<br class='hidden lg:block'>同様に日本の<br class='hidden lg:block'>現場を支えます"
   copy: "eSoliaは、専任のITチームと同等のスキルと専門性を備えたチームとして、日本拠点におけるIT課題の解決をサポートします。多言語に対応したプロフェッショナルが、海外本社と日本チームの間のスムーズなコミュニケーションを実現し、ローカルベンダーとの交渉にも的確に対応します。私たちは、確立された運用プロセスを活用し、明確なドキュメンテーションと丁寧なコミュニケーションを通じて、常にクライアントの期待を上回る価値を提供します。"
   ticker: "日本オフィス移転IT支援 — オンサイトおよびリモートITサポート — プロジェクト管理 — ウェブ開発 — SaaSデータベース — クラウドサービス — 調達処理と在庫管理 — 情報セキュリティ — ITコンサルティング — ヘルプデスク —"
   images: 
