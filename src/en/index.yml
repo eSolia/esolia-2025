@@ -22,7 +22,7 @@ script: /js/fathom-post-list-event.js
 alert: 
   update: "Update"
 hero: 
-  title: "Your Japan IT Professional Services Partner"
+  title: "Your Japan IT <br>Professional Services Partner"
   copy: "eSolia works as a team, bringing to bear all the skills a typical IT department has, to resolve your Japan challenges. We are multilingual professionals who communicate effectively with both the HQ and Japan teams, negotiating on your behalf with local vendors. We work hard to exceed your mandate, using our well-developed support systems to document and communicate clearly."
   ticker: "Japan office build-out — onsite and remote IT support — project management — web development — SaaS database — cloud services — procurement processing and inventory control — Information Security — IT consulting — helpdesk —"
   images: 

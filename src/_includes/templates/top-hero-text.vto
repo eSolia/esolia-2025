@@ -1,35 +1,22 @@
 <!-- ===== top-hero-text.vto TEMPLATE START ===== -->
-<section class="overflow-hidden relative z-10 lg:hidden"> 
-  <div class="bg-esoliablue-800 py-4 bg-[url('/assets/leaf-blue.svg')] bg-repeat bg-fixed bg-[size:50px_25px]"> 
-    <div class="2xl:max-w-7xl mx-auto px-8 sm:px-6 md:px-16">
-      <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl tracking-tighter font-display text-shadow-2xs text-balance 
-                 text-white mt-0 mb-0">
+<section class="relative z-10 overflow-hidden">
+  <!-- Full-width blue background -->
+  <div class="w-full bg-esoliablue-800 bg-[url('/assets/leaf-blue.svg')] bg-repeat bg-fixed bg-[size:50px_25px]">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl tracking-tighter font-display text-shadow-2xs text-white mt-0 mb-0">
         {{ hero.title }}
       </h1>
     </div>
   </div>
 
-  <div class="bg-white py-6"> <div class="2xl:max-w-7xl mx-auto px-8 sm:px-6 md:px-16">
-      <p class="prose prose-neutral prose-base prose-p:text-accent-950 text-pretty mt-0">
+  <!-- White content section -->
+  <div class="w-full bg-white">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-6 place-items-center">
+      <p class="prose prose-neutral prose-base prose-p:text-accent-950 xl:max-w-[80ch] text-pretty mt-0">
         {{ hero.copy }}
       </p>
     </div>
   </div>
 </section>
 
-<section class="bg-white overflow-hidden relative z-10 hidden lg:block lg:pt-10 lg:pb-0">
-  <div class="2xl:max-w-7xl mx-auto px-8 sm:px-6 md:px-16">
-    <div class="grid items-top gap-4 lg:grid-cols-4 max-w-5xl mx-auto">
-      <div class="lg:col-span-2">
-        <h1 class="text-[3.5rem]/15 xl:text-6xl tracking-tighter font-display text-shadow-2xs text-balance 
-                   text-esoliablue-800 p-0 mt-0 mb-0">
-          {{ hero.title }}
-        </h1>
-      </div>
-      <p class="prose prose-neutral prose-base prose-p:text-accent-950 lg:col-span-2 text-pretty lg:-mt-2">
-        {{ hero.copy }}
-      </p>
-    </div>
-  </div>
-</section>
 <!-- ===== top-hero-text.vto TEMPLATE END ===== -->
