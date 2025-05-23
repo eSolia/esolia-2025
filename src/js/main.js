@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             largeLogo.classList.remove("opacity-100", "scale-110");
 
             symbolLogo.classList.remove("opacity-0", "scale-90");
-            symbolLogo.classList.add("opacity-100", "scale-100");
+            symbolLogo.classList.add("opacity-100", "scale-110");
           } else {
             largeLogo.classList.remove("opacity-0", "scale-95");
             largeLogo.classList.add("opacity-100", "scale-110");
