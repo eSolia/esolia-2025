@@ -66,6 +66,10 @@
   }
 }
 @layer utilities {
+  body.os-ios .bg-fixed {
+    background-attachment: scroll;
+  }
+
   .transition-max-w {
     transition: max-width 0.5s ease-in-out;
   }
