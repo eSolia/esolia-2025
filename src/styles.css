@@ -1,3 +1,4 @@
+/* @config "../tailwind.config.js"; */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
@@ -86,7 +87,7 @@
     animation: scroll-watcher linear; 
     animation-timeline: scroll(y); /* Ties animation to vertical scroll */
   }
-
+  /* Keyframes */
   @supports (animation-timeline: scroll()) {
     @keyframes scroll-watcher {
       to {
@@ -94,6 +95,88 @@
       }
     }
   }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes rightMarquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-forward {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Animation Utility Classes */
+  .animate-marquee {
+    animation: var(--animate-marquee);
+  }
+  .animate-rightMarquee {
+    animation: var(--animate-rightMarquee);
+  }
+  .animate-slowMarquee {
+    animation: var(--animate-slowMarquee);
+  }
+  .animate-verticalMarquee {
+    animation: var(--animate-verticalMarquee);
+  }
+  .animate-wiggle {
+    animation: var(--animate-wiggle);
+  }
+  .animate-fade-in {
+    animation: var(--animate-fade-in);
+  }
+  .animate-fade-in-forward {
+    animation: var(--animate-fade-in-forward);
+  }
+  .animate-fade-in-backward {
+    animation: var(--animate-fade-in-backward);
+  }
+  .animate-fade-in-out {
+    animation: var(--animate-fade-in-out);
+  }
+  .animate-fade-out {
+    animation: var(--animate-fade-out);
+  }
+
 }
 
 /* prose-a:text-sky-900 dark:prose-a:text-sky-200  prose-a:decoration-sky-700 prose-a:underline  */
@@ -269,6 +352,12 @@
   --animate-rightMarquee: rightMarquee 300s linear infinite;
   --animate-slowMarquee: marquee 300s linear infinite;
   --animate-verticalMarquee: vertical 30s linear infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.75s ease-in;
+  --animate-fade-in-forward: fade-in 0.5s ease-out forwards;
+  --animate-fade-in-backward: fade-in 0.5s ease-in backwards;
+  --animate-fade-out: fade-out 0.5s ease-out;
+  --animate-fade-in-out: fade-in-out 0.5s ease-in-out;
 }
 
 .lede {
